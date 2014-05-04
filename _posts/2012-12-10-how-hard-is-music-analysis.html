@@ -1,0 +1,97 @@
+---
+title: How hard is music analysis? Five type of musical events
+layout: post
+type: post
+disqus: y 
+---
+<p>The post is the first of a few on my current CS interest, music analysis. Let's walk through how we would think about analyzing an MP3 file. This is not a very technical post, so non-CS folks, don't run away just yet~</p>
+<p>The average citizen understands basic musical concepts: a song is made of notes, notes have various duration and pitches, and by varying duration and pitch, we get melody. In fact, even without formalized musical concepts, plenty of evidence from tribal cultures show that the brain appears to have an innate understanding of music and rhythm.</p>
+<p>Now, how do we get a computer to understand the same concepts?</p>
+<p>First of all, what is sound? Physically, what we perceive as sound is vibrating air molecules that hit the eardrum at particular intensities and frequencies.</p>
+<p><a href="/images/2012/12/EyeofTheTigerWaveform.jpg" data-lightbox="waveformimg1"><img src="/images/2012/12/EyeofTheTigerWaveform.jpg" title="EyeofTheTigerWaveform" class="aligncenter size-full wp-image-296" /></a><br />
+<audio controls>
+  <source src="/images/2012/12/EyeOfTheTigerSnippet.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+</p>
+<p>Above shows the opening of <em>Eye of The Tiger</em>. This is called a waveform - it represents the vibration that your speakers will produce, how the intensity of a sound varies with time. The guitar notes in the beginning are distinguishable as tiny peaks and on the right, we see the set of three accented notes iconic to the 80's song as large peaks. So far so good. We need to look at peaks.</p>
+<p>What about a segment of <em>Star Wars</em>?</p>
+<p><a href="/images/2012/12/StarWarsWaveForm.jpg" data-lightbox="waveformimg2"><img src="/images/2012/12/StarWarsWaveForm.jpg" title="StarWarsWaveForm" class="aligncenter size-full wp-image-304" /></a><br />
+<audio controls>
+  <source src="/images/2012/12/StarWarsSnippet.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+</p>
+<p>Well the waveform certainly doesn't seem to give us much useful information. Peak detection is not going to do much here. Furthermore, volume is certainly not the only thing that matters in music - pitch does too right?</p>
+<p>Pitch, as we perceive it, is just a measure of the frequency at which air molecules oscillate back and forth. Deep bass will reach lower frequencies, a trumpet will reach higher frequencies. Now what also oscillates back and forth? Sine waves!</p>
+<p><a href="/images/2012/12/Sine.png" data-lightbox="sineimg"><img src="/images/2012/12/Sine.png" title="Sine" class="aligncenter size-full wp-image-306" /></a><center><em>A beautiful sine wave courtesy of wikipedia.</em></center></p>
+<p>Sine waves have different amplitudes and frequencies. Sounds like volume and pitch? Indeed. Using the magic of mathematics, Fourier showed in the early 19th century that it was possible to approximate any function with a sum of sines and coses of various amplitudes and frequencies. In fact, if you add up enough of them (infinitely many), it is possible to represent any function - including discontinuous functions and nowhere differentiable fractal curves - as a sum of periodic sines and coses. That includes sound! It is quite outlandish if you think about it. Those are called <a href="http://en.wikipedia.org/wiki/Fourier_series">fourier series</a> and it is possible to convert functions back and forth between their <em>time domain representation</em> (the familiar one) and their <em>frequency domain</em> representation: i.e., information about the amplitude and frequencies of the sine waves that make up the function. A nice technique to do that is the <a href="http://en.wikipedia.org/wiki/Fourier_transform">Fourier Transform</a> and the algorithm that does it, making your iPod work, is the <a href="http://en.wikipedia.org/wiki/Fast_Fourier_transform">Fast Fourier Transform (FFT)</a>.</p>
+<p>I'm sure many readers already know this, but I probably lost some other in that last paragraph. And that's part of my point. While the problem of representing a time domain function in its frequency domain is a solved problem, the process is complicated. The human brain is pretty darn good to be able to do something similar. <em>Of course, it's also a matter of having different type of sensors in the ear that responds to different frequencies, but nonetheless.</em></p>
+<p>Applying a variant of the FFT, the Short-Time Fourier Transform (STFT), which is essentially just doing FFTs on 43ms intervals of the song at the time, we'd get this, for the above <em>Star Wars</em> segment.</p>
+<p><a href="/images/2012/12/StarWarsWaveSpectrum.jpg" data-lightbox="swimg"><img src="/images/2012/12/StarWarsWaveSpectrum.jpg" title="StarWarsWaveSpectrum" class="aligncenter size-full wp-image-311" /></a></p>
+<p>The graph shows low intensity sounds on the bottom and high intensity sounds on the top, with color indicating intensity. Notice those bright spots in the middle. They correspond to the twinkles in the song. The technical term used in the field of audio analysis for such events are <em>onsets</em> - a point in time where volume increases considerably. They correspond notes, naturally. The STFT works! This graph is called a <em>spectrum</em>.</p>
+<p><b>Five types of musical events</b></p>
+<p>Now, everything I've written so far is basic signal processing theory. I could have taken the lazy route and copied it from a textbook if I wished, which I implemented in a program as a basic exercise. Now that we've got the base, what next?</p>
+<p>Let's see what is involved if we want to detect notes. Just notes; not pitch, not beat, certainly not instruments or god forbid, lyrics. Just notes.</p>
+<p><b>1. Onsets</b></p>
+<p>Well we've seen <b>onsets</b>. <img src="/images/2012/12/Onset.png" class="aligncenter size-full wp-image-313" /></p>
+<p>They can be described as an increase of volume at a particular frequency; our typical idea of a musical note. Piano songs have easily identifiable onsets.</p>
+<p><a href="/images/2012/12/LettingGoSpectrum.jpg" data-lightbox="lettinggoimg"><img src="/images/2012/12/LettingGoSpectrum.jpg" title="LettingGoSpectrum" class="aligncenter size-full wp-image-320" /></a><br />
+<audio controls>
+  <source src="/images/2012/12/LettingGoSnippet.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+<em>Letting Go - Isaac Shepard</em></p>
+<p>There are many ways this could be detected, such as finding local maxima or some form of pattern detection. It is not a hard problem.</p>
+<p><b>2. Vertical Onsets</b></p>
+<p>What happens with percussion instruments?</p>
+<p><a href="/images/2012/12/TheWorldSpectrum.jpg" data-lightbox="theworldimg"><img src="/images/2012/12/TheWorldSpectrum.jpg" title="TheWorldSpectrum" class="aligncenter size-full wp-image-352" /></a><br />
+<audio controls>
+  <source src="/images/2012/12/TheWorldSnippet.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+<em>The World - Nightmare</em></p>
+<p>Here the onsets are clearly not localized at any given frequency. On the other hand, they still represent sharp increases in volume. In fact, it allows them to be easier to see, for our eyes, if nothing else. Since that is the case, perhaps we can use some techniques from the field of computer vision - such as edge detection.</p>
+<p><a href="/images/2012/12/TheWorldGradient.jpg" data-lightbox="theworldgradient"><img src="/images/2012/12/TheWorldGradient.jpg" title="TheWorldGradient" class="aligncenter size-full wp-image-356" /></a></p>
+<p>Applying a one-directional gradient (derivative) on the spectrum and elimination non-maxima points appears to give useful information. At this point, we can just look for strong vertical lines. Many instruments, including non-percussive ones and usually the bulkier ones, will produce a similar spectrum.</p>
+<p><b>3. Horizontal Onsets</b></p>
+<p>When it comes to piano and drums, the moment we hit a note, a loud sound is produced. It is explosive. On the other hand, certain type of instruments, such as strings, are generally used differently. The raise in volume corresponding to a note is more progressive and spread over a period of time. Furthermore, the note can be held at constant volume for a long duration. Such an event can still be picked up by looking at the gradient, but the signal will be weaker. It will be more difficult to distinguish from noise and, if mixed with other instruments, may have its signal buried, even with some relative threshold.</p>
+<p><a href="/images/2012/12/ToRealizeSpectrum.jpg" data-lightbox="torealizeimg"><img src="/images/2012/12/ToRealizeSpectrum.jpg" title="ToRealizeSpectrum" class="aligncenter size-full wp-image-363" /></a><br />
+<audio controls>
+  <source src="/images/2012/12/ToRealizeSnippet.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+<em>To Realize - Kan Gao</em></p>
+<p>This is a snippet of a string-only song, to illustrate my point. Taking the one-directional gradient, the onsets are still stronger than noise (brighter points in the graph), but setting a proper threshold is very error-prone.</p>
+<p><a href="/images/2012/12/ToRealizeGradient.jpg" data-lightbox="torealizegradient"><img src="/images/2012/12/ToRealizeGradient.jpg" title="ToRealizeGradient" class="aligncenter size-full wp-image-360" /></a></p>
+<p>On the other hand, rather vertical lines, we see horizontal stripes. Discontinuities along these stripes correspond to a new note which, more often than not, has a different pitch than the previous note and thus, is located at a higher or lower frequency. Taking the gradient in the other direction detects such signals quite nicely.</p>
+<p><a href="/images/2012/12/ToRealizeGradient2.jpg" data-lightbox="torealizegradient2"><img src="/images/2012/12/ToRealizeGradient2.jpg" title="ToRealizeGradient2" class="aligncenter size-full wp-image-361" /></a></p>
+<p>Each note appear in multiple frequency bands - in fact, it appears throughout the entire frequency spectrum! It's not completely unexpected that such a thing would happen. Chords, by definition, is a set of different notes at different pitches played simultaneously. However, there shouldn't be as many as 10 different notes in the same chord in a simple sound. Many of the horizontal stripes we detect are artifacts of the fast fourier transform, a repetition of the original note. They appear because we are working with discrete and non-periodic signal rather than real functions. </p>
+<p>The phenomenon is called spectral leakage. As far as note detection is concerned, they could be an issue if it causes multiple different instruments in different frequency bands to begin overlapping and masking each other. In general though, it could also give a margin of error in case the original signal is not detected. The algorithm becomes more complicated, but the accuracy is likely to remain unaffected (these are all conjectures by the way - I have yet to test such claims).</p>
+<p>Of course, if the goal was to detect pitch, the process would certainly become more difficult.</p>
+<p><b>4. Footprints</b></p>
+<p>Detecting horizontal onsets is simply a matter of iterating through a set of pixel on the time axis at a fixed frequency. Detecting straight lines in general is a harder problem, but are achievable with algorithms such as the Hough transform.</p>
+<p>Undulating lines are much more challenging. Some could already be seen in the <em>To Realize</em>'s spectrum. Instruments such a violin often involve alternating between two pitches continuously and the human voice and easily switch from one pitch to another continuously. The resulting patterns are reminiscent of footprints left on the snow, hence the name.</p>
+<p><a href="/images/2012/12/SeeWhoIAmSpectrum.jpg" data-lightbox="seewhoiamimg"><img src="/images/2012/12/SeeWhoIAmSpectrum.jpg" title="SeeWhoIAmSpectrum" class="aligncenter size-full wp-image-369" /></a><br />
+<audio controls>
+  <source src="/images/2012/12/SeeWhoIAmSnippet.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+<em>See Who I Am - Within Temptation</em></p>
+<p>Footprints may or may not need to be handled as a special case, but an algorithm that ignores their existence may fail to detect these entirely, or associate a separate event to every undulation.</p>
+<p><a href="/images/2012/12/SeeWhoIAmGradient2.jpg" data-lightbox="seewhoiamgradient"><img src="/images/2012/12/SeeWhoIAmGradient2.jpg" title="SeeWhoIAmGradient2" class="aligncenter size-full wp-image-367" /></a></p>
+<p>Just like every shoe as a different pattern, different singers and different lyrics will leave different types of footprints. For someone interested in analyzing lyrics this would be a difficult problem to tackle.</p>
+<p><b>5. Clusters</b></p>
+<p>Although I'm sure there's more, one last type of musical event I will talk about are clusters. These are typically loud sound effects, not necessarily instrumental, played in isolation. I'm sure many of you have heard this one before :</p>
+<p><a href="/images/2012/12/MindHeistSpectrum.jpg" data-lightbox="mindheightimg"><img src="/images/2012/12/MindHeistSpectrum.jpg" title="MindHeistSpectrum" class="aligncenter size-full wp-image-374" /></a><br />
+<audio controls>
+  <source src="/images/2012/12/MindHeistSnippet.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+<em>Mind Heist - Inception</em></p>
+<p>Similarly with strings, where does the note start? The volume increases progressively, so vertical edge detection does not work very well. Horizontal edge detection will not achieve much either as there are no horizontal stripes.</p>
+<p><a href="/images/2012/12/MindHeistGradient.jpg" data-lightbox="mindheightgradient"><img src="/images/2012/12/MindHeistGradient.jpg" title="MindHeistGradient" class="aligncenter size-full wp-image-372" /></a></p>
+<p>However, it would certainly be feasible to construct a measure of energy (as some researchers have done) to detect such clusters. The only problems is that since clusters are large, they require iteration and summation through large quantities of pixels, which needs to be carefully optimized to get a reasonable speed.</p>
+<p><b>Conclusion</b></p>
+<p>When it comes to music analysis, even note detection requires the capacity to handle many different kind of events. Pitch detection and feature detection would require even more clever techniques. On the other hand, the difficulty of this task only serve to make the problem more interesting. I will post further updates if I come across interesting discoveries in my research.</p>
+<p><em>Note : While I'm sure someone has published a paper classifying different type of music events in a spectrum, I have not found one while going through music analysis literature yet. The terms I use (except for onset) are not, in any way, technical or official.</em></p>

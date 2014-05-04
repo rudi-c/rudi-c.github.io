@@ -1,25 +1,24 @@
-title:            Scribble
-description:      A jekyll theme. Because I scribble.
-url:              # Site url.
-signoff:          # Your name.
-disqus_shortname: # disqus comment thread for post header options. ( leave blank if unwanted. )
+title:            Digital Freepen
+description:      Of everything you can write about in a digital world
+url:              digitalfreepen.com
+signoff:          Rudi Chen
+disqus_shortname: digitalfreepen 
 facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
-google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
+google_analytics: UA-36059196-1 
+
 
 links:
   - name:         About
     url:          /about
-  - name:         Blog
-    url:          http://muan.co
-    external:     true
-  - name:         Email
-    url:          mailto:hello@muan.co
-    external:     true
-  - name:         GitHub
-    url:          http://github.com/muan
-    external:     true
+  - name:         Writing
+    url:          /
+  - name:         Works
+    url:          /works
+  - name:         Resume
+    url:          /files/documents/CV-2014-03-11-CS-G-Web.pdf
+
 pygments:         true
-permalink:        pretty
+permalink:        /blog/:title
 markdown:         redcarpet
 redcarpet:
   extensions:

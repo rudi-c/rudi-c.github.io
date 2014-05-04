@@ -1,0 +1,51 @@
+---
+layout: page
+title: Observations and discussion
+type: page
+---
+<p><i>If you arrived directly on this page from a link, visit the <a href="/works/influence-game/">introduction and table of contents</a>.</i><br/><br/></p>
+<p>This section describes :</p>
+<ul>
+<li>Data obtained from a MCST test case.</li>
+<li>Observations made about the evolution of ANN with the MCST</li>
+<li>An analysis of possible shortcomings of the MCST
+<li>Conclusions and possible further studies</li>
+</ul>
+<p><strong><font style="font-size:14px">Sample MCST case study</font></strong></p>
+<p>We ran a simulation for 500 generations using MCST, 128 teams per generation, 4 columns, 6 rounds per column pairing during the evolution process. The final tournament consisted of 7800 teams in each column, 49% of the theoretical maximum. This corresponds to teams surviving for 2 generations on average. Notice that teams get replaced slightly more quickly than in the case of SCST.</p>
+<p>In the case of MCST, we have two options when it comes to measuring the performance of each team. We can make a plot of each team's ranking in the final tournament or make a plot of each team's number of wins in the final tournament. Of course, the two are very much related, but it makes more sense to talk about the number of wins with MCST since there is no longer a fixed total number of wins a column will have. Indeed, in our instance of the simulation, we get that :</p>
+<p>Total number of wins in column 1 : 137,751<br />
+Total number of wins in column 2 : 98,352<br />
+Total number of wins in column 3 : 117,518<br />
+Total number of wins in column 4 : 255,527</p>
+<p>Which shows that teams in column 4 are much stronger</p>
+<p>Graphs produced from the simulation :</p>
+<p><img src="/images/2012/09/BARankingColumn0.png"><br />
+<img src="/images/2012/09/BARankingColumn1.png"><br />
+<img src="/images/2012/09/BARankingColumn2.png"><br />
+<img src="/images/2012/09/BARankingColumn3.png"><br />
+<img src="/images/2012/09/BAWinsAllColumns.png"></p>
+<p>There are many observation we can make from those graphs. To begin with, column 4 evolves much more rapidly than the other three columns. Between generation 110 and 140, it seems to undergo an efficient mutation and from that point on, teams in column 4 are able to win against any team from any generation from the other columns. Since the number of rounds is limited, the number of wins from column 4 becomes a flat line.</p>
+<p>Th other columns keep evolving throughout the 500 generations, however slowly. Their evolution is more apparent from the graphs of Ranking vs Generation than on the graph of Wins vs Generation. Also, the shape of the former graphs vary significantly from one column to another.</p>
+<p>The graph of rankings from column 2 and 3 seems to indicate that a viable strategy is found early on, within the first 50 generations. Column 1 does so at a later time, around generation 100. This can be seen by locating the first red data point with a high ranking, under say, 2000. Once a team makes such a "breakthrough", successive generations become iterations of that first viable strategy and the learning rate decreases. Conceptually, it reaches a local minimum in the error function, similarly with SCST. Since our evolutionary algorithm does not allow for drastic changes between generations, it remains in that local minimum.</p>
+<p>Fortunately, we do notice that teams evolved with the MCST are capable of behavior with a higher degree of complexity. Comments on some of those improvements are included with the annotations in the youtube video below.</p>
+<p>http://www.youtube.com/watch?v=of9lnHcNfbo</p>
+<p>The video shows that teams in each column have evolved differently, exhibiting their own unique characteristics.</p>
+<ol>
+<li>Column 1, rather than confront the opposing team directly, prefers to get out of the center of the field as soon as the match begins. It does so by having the back row players move to its right (which is the left border in the video). Players in the front row remain still and maintain their territory in that area, unless approached by opponents, in which case it will escape by moving to its right and joining teammates in the border. Players that have reached the border advance to the opposite side of the field and disperse at the back of the field, ensuring greater coverage.
+<li>Column 2 has a team where all players advance directly upon the opponents. This does not appear to work very well as it is the worst performing column. It also has difficulty spreading out by moving along the edges.
+<li>Column 3 also advances directly towards the opponents. However, upon contact, it will move to its right, towards the border. It appears to use this strategy to remove some opponents from the field during the initial collision, then safely maximizing points by moving along the right and opposite borders, a two-step strategy.
+<li>Column 4 is the best performing column. Unlike other columns which avoid opponents getting too close, players in this column charge directly towards opponents and attempt to overwhelm their auras and break their position. This aggressive strategy allows its teams to gain significantly more wins.
+</ol>
+<p>In other words, many different patterns emerge and ANN behavior is more complex than with SCST.</p>
+<p><strong><font style="font-size:14px">Analysis of MCST</font></strong></p>
+<p>Observation of the matches between teams of various columns show the teams are adaptable to different scenarios. For example, players in Column 4 attack players in Column 1 on the side, diagonally, whereas they attack players in Column 3 in the middle, both approaches which are successful. Thus, the ANNs evolving using the MCST seem to be more intelligent. Now, defining what an "elaborate strategy", "interesting behavior" or even "better performance" is subjective - however, here, we believe the improvements are significant enough over the SCST that they do not require quantification.</p>
+<p>We do note a possible flaw with the MCST ranking technique. Consider, for example, a column with 16 teams. If none of the teams in that column has more than 2 wins, then there will be at most 3 groups of teams (teams with 0, 1, 2 wins), which does not provide a good distinction between the best teams of that column. Since it is not clear which teams are the best, there is a higher chance that weak teams are selected as parents for the next generation. Hence, teams in that column will evolve at a slower rate.</p>
+<p>With SCST, we were guaranteed to have <em>ceil(log2(n)) + 2</em> groups, and one clear winning team, better than all others. However, in the case of MCST, it is possible to have a situation where teams in Column A are sufficiently stronger than teams in Column B that Column B has no team with more than <em>k</em> wins. If k is small, then teams in Column B may have a difficulty determining its elites and thus, evolving. That will cause the gap between Column A and Column B to gradually increase.</p>
+<p>In other words, columns which win a higher number of the early matches will have an advantage during the evolutionary process, which will allow them to win even more matches. Fortunately, from our data, this self-inductive effect seems to be limited. Ways to lessen this phenomena include having a greater number of rounds per column pair-up, but does not solve it completely.</p>
+<p><strong><font style="font-size:14px">Conclusion</font></strong></p>
+<p>In the "Influence Game" project, the core engine that controls the behavior of artificial neural network is nothing but a summation of numbers. With that in consideration, the fact that it could exhibit a believable game play is quite marvelous. However, when ANNs are used in a competitive scenario, care must be taken so that weak local minima caused by self-competing scenarios are avoided. The Multi Column Swiss Tournament approach succeeds at mitigating such cases and improve the performance of Influence Game teams significantly.</p>
+<p><strong><font style="font-size:14px">Further studies</font></strong></p>
+<p>As mentioned previously, artificial neural networks have been highly successful at playing backgammon and one of the proposed explanations is the random nature of backgammon, which is inherently non-deterministic due to dice rolls being involved. Gerald Tesauro explains that "One important effect of the stochastic dice rolls is that they produce a degree of variability in the positions seen during training. As a result, the learner explores more of the state space than it would in the absence of such a stochastic noise source, and a possible consequence could be the discovery of new strategies and improved evaluations"<sup>3</sup>. </p>
+<p>The Influence Game is a deterministic game and introducing random factors to rules, such as player movements would produce a completely different game. However, can be done is to randomize the starting positions of players in each team. Previously, the would be arranged into two rows. Now suppose they are randomly distributed across certain areas of the board. Then a starting configuration may include a cluster a players from that same team in the same area, which we would expect to spread out in order to maximize territory. Such setups do not always occur when the starting position is predefined and we can observe from previous tests that players have some difficulty spreading out.</p>
+<p>Intuitively, the idea of adding random factors does suggest a higher rate of learning. However, Tesauro's experiments involved an entirely different kind of ranking and learning system for his ANNs. In a tournament setting, randomness could also introduce enough variability in tournament rankings to make elite selection difficult and thus, making evolution less efficient. Thus, it would be interesting to see if it is possible to introduce randomness in such a way to improve the performance of Influence Game teams to a next level.</p>

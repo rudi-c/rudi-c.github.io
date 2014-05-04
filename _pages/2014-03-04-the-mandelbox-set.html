@@ -1,0 +1,191 @@
+---
+layout: page
+title: The Mandelbox Set
+categories: []
+tags: []
+status: draft
+type: page
+published: false
+meta:
+  _edit_last: '1'
+  _wp_page_template: page-full.php
+  s2mail: 'yes'
+author:
+  login: Advecticity
+  email: rudichen@gmail.com
+  display_name: Rudi Chen
+  first_name: Rudi
+  last_name: Chen
+---
+<p>[tabs slidertype="top tabs"] </p>
+<p>[tabcontainer]<br />
+[tabtext]What is the Mandelbox Set?[/tabtext]<br />
+[tabtext]Escape Radius[/tabtext]<br />
+[tabtext]Inner Solid[/tabtext]<br />
+[/tabcontainer] </p>
+<p>[tabcontent]<br />
+[tab]Content goes here[/tab]<br />
+[tab]<br />
+[latex]<br />
+\newcommand{\iter}[2]{{#1}^{[#2]}}<br />
+\newcommand{\mboxset}{M_{n,\mu}}<br />
+\newcommand{\itfnv}{T_{\mu,\vec{v}}}<br />
+\newcommand{\itfnx}{T_{\mu,x_0}}<br />
+\newcommand{\bfold}{F_{box}}<br />
+\newcommand{\sfold}{F_{ball}}<br />
+\newcommand{\implies}{\Rightarrow}<br />
+\newcommand{\orbit}[1]{\left\{ \iter{#1}{n} \right\}}<br />
+[/latex]<br />
+<b>Theorem (Bounds for negative boxes): Let \( M_{n,\mu} \) be the Mandelbox Set in \( \mathbb{R}^n \) with scale parameter \( \mu < 0 \). Let \(\ \vec{v} = (v_1,...v_n) \in \mathbb{R}^n \). If \( |\max(v_1,...,v_n)| > 2 \), then \( \vec{v} \not\in M_{n,\mu} \).</b></p>
+<p>
+Proof : Suppose \( x = \max(v_1,...,v_n) \). We start by considering the case \( x > 2 \). </p>
+<p>
+The first iteration will involve a box fold, so we have that \( F_{box}(x) = 2-x, F_{ball}(F_{box}(x)) = c(2-x), c > 1 \). Therefore, \( T_\mu(x) = \mu F_{ball}(F_{box}(x)) + x > x \) as both \( \mu \) and \( c(2-x) \) are negative. Similarly, \( T_\mu^{[2]}(x) = T_\mu(T_\mu(x)) > T_\mu(x) \) and generally, \(T_\mu^{[n+1]}(x) > T_\mu^{[n]}(x) \).</p>
+<p>
+Thus, \( \{T_\mu^{[n]}(x) \} \) is an monotonically increasing sequence. It is also not bounded since \( T_\mu^{[n+1]}(x)-T_\mu^{[n]}(x) = \mu F_{ball}(F_{box}(T_\mu^{[n]}(x))) \) increases with \( n \). Hence, \( T_\mu^{[n]}(x) \to \infty \) so \( T_\mu^{[n]}(v) \to \infty \) also which by definition means \( \vec{v} \not\in \mathbb{R}^n \).</p>
+<p>
+The proof for the case where \( x < -2 \) is similar. Now, \( F_{box}(x) = -2-x > 0 \) so \( T_\mu(x) = \mu F_{ball}(F_{box}(x)) + x < x \) and we get that \( \{T_\mu^{[n]}(x) \} \) is an unbounded monotonically decreasing sequence.</p>
+<p>
+Since in both cases, \( T_\mu^{[n]}(x) \to -\infty \ \text{or} \ +\infty \), we must have that \( |\vec{v}| \to \infty \Rightarrow \vec{v} \not\in M_{n,\mu} \).</p>
+<p></br></p>
+<p><b>Corollary: For \( \mu < 0 \), the smallest box that contains every point in \( M_{n,\mu} \) is \( \underbrace{[-2,2] \times [-2,2] ... \times [-2,2]}_n \)</b></p>
+<p>
+Proof : To show this, we simply need to find a point \( \vec{v} \in M_{n,\mu} \) on each boundary of that box. Consider \( \vec{v} = (2, 0, ..., 0) \). Then </p>
+<p>\[ \begin{align*}<br />
+T_\mu(\vec{v}) &= \mu F_{ball}(F_{box}((2, 0, ..., 0)) + \vec{v} \\<br />
+               &= \mu F_{ball}((0, 0, ..., 0)) + \vec{v} \\<br />
+               &= \mu(0, 0, ..., 0) + \vec{v} = \vec{v}<br />
+\end{align*} \] </p>
+<p>So \( \vec{v} \) is a fixed point, which is bounded. Similarly, every other point at the center of every face of the box is a fixed point.</p>
+<p></br></p>
+<p><em><br />
+<b>Theorem (Bounds for positive boxes)</b>: Let \( M_{n,\mu} \) be the Mandelbox Set in \( \mathbb{R}^n \) with scale parameter \( \mu > 1 \). Let \(\ \vec{v} = (v_1,...v_n) \in \mathbb{R}^n \). If \( |\max(v_1,...,v_n)| > \frac{2(\mu+1)}{\mu-1} \), then \( \vec{v} \not\in M_{n,\mu} \).</em></p>
+<p>
+Proof : Again, suppose \( x = \max(v_1,...,v_n) \) and begin with the case \( x > \frac{2(\mu+1)}{\mu-1} \). First, notice \( \frac{2(\mu+1)}{\mu-1} > 2 \) so the first iteration will involve a box fold :<br />
+\[<br />
+\begin{align*}<br />
+T_\mu(x) &= \mu F_{ball}(F_{box}(x)) + x \\<br />
+         &= \mu F_{ball}(2-x) + x \\<br />
+         &< \mu(2-x) + x & \text{since } (2-x) \text{ is negative} \\<br />
+         &= 2\mu - x(\mu-1) & (1) \\<br />
+         &< 2\mu - 2(\mu+1) & \text{by assumption} \\<br />
+         & = -2<br />
+\end{align*}<br />
+\]<br />
+Since \( T_\mu(x) < -2 \), the second iteration \( T_\mu(T_\mu(x)) \) will also involve a box fold on the other side.<br />
+\[<br />
+\begin{align*}<br />
+T_\mu(x)^{[2]} &= \mu F_{ball}(F_{box}(T_\mu(x))) + x \\<br />
+               &= \mu F_{ball}(-2-T_\mu(x)) + x \\<br />
+               &> \mu(-2-T_\mu(x)) + x  & \text{since }-2-T_\mu(x) \text{ is positive} \\<br />
+               &> \mu(-2-(2\mu - x(\mu-1))) + x & \text{from } (1) \\<br />
+               &= -2\mu-\mu(2\mu - x(\mu-1)) + x \\<br />
+               &= -2\mu - 2\mu^2 + x\mu(\mu-1) + x \\<br />
+               &= -2\mu(\mu+1) + x(\mu^2-\mu+1) \\<br />
+               &> -x\mu(\mu-1) + x(\mu^2-\mu+1) & \text{by assumption} \\<br />
+               &=x(-\mu^2+\mu+\mu^2-\mu+1) = x<br />
+\end{align*}<br />
+\]<br />
+Hence, if \(x > \frac{2(\mu+1)}{\mu-1} \), \( T_\mu(x)^{[2]}(x) > x \). Using a similar method, we can also get that if \(x < -\frac{2(\mu+1)}{\mu-1} \), \( T_\mu(x)^{[2]}(x) < x \). Thus, by combining the two, we see that \( \{|T_\mu^{[n]}(x)| \} \) is a monotonically increasing sequence, and cannot be bounded.</p>
+<p>
+Hence \( |\vec{v}| \to \infty \Rightarrow \vec{v} \not\in M_{n,\mu} \) as needed.</p>
+<p></br></p>
+<p><b>Conjecture: For \( \mu > 1 \), the smallest box that contains every point in \( M_{n,\mu} \) is \( \underbrace{[-\frac{2(\mu+1)}{\mu-1},\frac{2(\mu+1)}{\mu-1}] \times [-\frac{2(\mu+1)}{\mu-1},\frac{2(\mu+1)}{\mu-1}] ... \times [-\frac{2(\mu+1)}{\mu-1},\frac{2(\mu+1)}{\mu-1}]}_n \)</b><br />
+</br></p>
+<p></br></br></br></br></br><br />
+[/tab]<br />
+[tab]<br />
+<b>Theorem (Interior of positive boxes): For \( 1 < \mu < 2 \), if \( \vec{v} \in \underbrace{[-k, k] \times [-k, k] \times ... \times [-k, k]}_n \) where \( k = \frac{2(\mu^2-\mu-2)}{1-\mu} \), then \( \vec{v} \in M_{n,\mu} \).</b></p>
+<p>
+Proof : In this proof, we want show that the orbit of points in a cube centered at (0, 0) of some dimension under iteration by \( \itfnv \) is bounded. Again, it is sufficient to look at the behavior of a single component of a point \( p \), say \( x_0 \).</p>
+<p>
+We begin by looking at the range of \( \iter{\itfnx}{n}(I) \) for some interval \( I = [a, b] \).</p>
+<p>
+\(<br />
+\newcommand{\since}{\ \text{since}\ }<br />
+(1)\ \itfnx([0,1]) \subseteq [x_0, 2\mu+x_0] \since \bfold([0,1]) = [0,1], \sfold([0,1]) = [0,2] \\<br />
+(2)\ \itfnx([1,2]) \subseteq [x_0, 2\mu+x_0] \since \bfold([1,2]) = [0,1], \sfold([0,1]) = [0,2] \\<br />
+(3)\ \itfnx([2,3]) \subseteq [-2\mu+x_0, x_0] \since \bfold([2,3]) = [-1,0], \sfold([-1,0]) = [-2,0] \\<br />
+(4)\ \itfnx([3,b]) \subseteq [\mu(2-b)+x_0, -\mu+x_0], b > 3 \since \bfold([3,b]) = [2-b,-1], \sfold([2-b,-1]) = [2-b,-1] \\<br />
+(5)\ \itfnx([-1,0]) \subseteq [-2\mu+x_0, x_0] \since \bfold([-1,0]) = [-1,0], \sfold([-1,0]) = [-2,0] \\<br />
+(6)\ \itfnx([-2,-1]) \subseteq [-2\mu+x_0, x_0] \since \bfold([-2,-1]) = [-1,0], \sfold([-1,0]) = [-2,0] \\<br />
+(7)\ \itfnx([-3,-2]) \subseteq [x_0, 2\mu+x_0] \since \bfold([-3,-2]) = [0,1], \sfold([0,1]) = [0,2] \\<br />
+(8)\ \itfnx([a,-3]) \subseteq [\mu+x_0, \mu(-2-a)+x_0], a < -3 \since \bfold([a,-3]) = [1,-2-a], \sfold([1,-2-a]) = [1,-2-a]<br />
+\)</p>
+<p>In order to show that we have points inside the Mandelbox, we need to find initial values \( x_0 \) such that the orbit \( \orbit{\itfnx(x_0)} \) is bounded.</p>
+<p>
+Suppose \( x_0 > 0 \). Notice that in the ranges \( (1)--(8) \), the maximum value of \( \itfnx(I) \) is \( 2\mu+x_0 \) except for \( (8) \) which has maximum value \( \mu(-2-a)+x_0 \). In order for \( \iter{\itfnx}{n} \) to diverge, we need \( \iter{\itfnx}{n}(x_0) \in [a, -3] \) for some \( n \), so we need \( a \) such that<br />
+\[<br />
+\begin{align*}<br />
+         & \mu(-2-a)+x_0 &>& 2\mu+x_0 \\<br />
+\implies & -2\mu-\mu a+x_0 &>& 2\mu+x_0 \\<br />
+\implies & \mu a &>& 4\mu \\<br />
+\implies & \iter{\itfnx}{n}(x_0) = a &<& -4<br />
+\end{align*}<br />
+\]</p>
+<p>The ranges \( (1)--(8) \) have minimum value \( -2\mu+x_0 \) except for \( (4) \) which has minimum value \( \mu(2-b)+x_0 \). Thus, in order to get \( \iter{\itfnx}{n}(x_0) < -4 \), we need \( \iter{\itfnx}{n-1}(x_0) \in [3, b] \) so we need \( b \) such that<br />
+\[<br />
+\begin{align*}<br />
+         & \mu(2-b)+x_0 &<& \iter{\itfnx}{n}(x_0) < -4 \\<br />
+\implies & 2\mu-\mu b+x_0 &<& -4 \\<br />
+\implies & \mu b &>& 2\mu+x_0+4 \\<br />
+\implies & b &> & 2 + \frac{x_0+4}{\mu}<br />
+\end{align*}<br />
+\]</p>
+<p>However, note that since the iteration always starts at \( x_0 \), cases \( (4), (8) \) will never occur if the required value \( 2 + \frac{x_0+4}{\mu} \) is larger than the maximum value range \( 2\mu+x_0 \) of the remaining cases. Therefore the orbit \( \orbit{\itfnx(x_0)} \) will be bounded  by \( 2\mu+x_0 \) if</p>
+<p>\[<br />
+\begin{align*}<br />
+         & 2 + \frac{x_0+4}{\mu} &>& 2\mu+x_0 \\<br />
+\implies & 2\mu+x_0+4 &>& 2\mu^2+x_0\mu \\<br />
+\implies & x_0-x_0\mu &>& 2\mu^2-2\mu-4 \\<br />
+\implies & x_0(1-\mu) &>& 2(\mu^2-\mu-2) \\<br />
+\implies & x_0 &<& 2\frac{\mu^2-\mu-2}{1-\mu} \quad \text{note sign inversion since } 1-\mu < 0<br />
+\end{align*}<br />
+\]</p>
+<p>This proves that whenever \( 0 <= x_0 < 2\frac{\mu^2-\mu-2}{1-\mu} \) for all components in the point, \( p \) will have bounded orbit and be in \( \mboxset \). A similar proof will yield that when \( -2\frac{\mu^2-\mu-2}{1-\mu} < x_0 <= 0 \) for all components, the point will also be in \( \mboxset \).</p>
+<p>This shows there exist a n-cube of half-length \( 2\frac{\mu^2-\mu-2}{1-\mu} \) centered at \( (0, 0) \) where every point in the cube is in \( \mboxset, 1 < \mu < 2 \). Q.E.D.</p>
+<p><b>Corollary: If \( 1 < \mu < 2 \), then \( \mboxset \) has box-counting dimension \( n \).</b></p>
+<p>
+Proof : The n-cube in the middle has box-counting dimension \( n \).</p>
+<p><b>Theorem (Interior of negative boxes): For \( -2 < \mu < -1 \), if \( \vec{v} \in \underbrace{[-k, k] \times [-k, k] \times ... \times [-k, k]}_n \) where \( k = 4+2\mu \), then \( \vec{v} \in M_{n,\mu} \).</b></p>
+<p>The proof is similar to the one for the interior of positive boxes. First we look at the range of \( \iter{\itfnx}{n}(I) \) for some interval \( I = [a, b] \), which is just the reverse of what we had previously.</p>
+<p>
+\(<br />
+(1)\ \itfnx([0,1]) \subseteq [2\mu+x_0, x_0] \\<br />
+(2)\ \itfnx([1,2]) \subseteq [2\mu+x_0, x_0] \\<br />
+(3)\ \itfnx([2,3]) \subseteq [x_0, -2\mu+x_0] \\<br />
+(4)\ \itfnx([3,b]) \subseteq [-\mu+x_0, \mu(2-b)+x_0], b > 3 \\<br />
+(5)\ \itfnx([-1,0]) \subseteq [x_0, -2\mu+x_0] \\<br />
+(6)\ \itfnx([-2,-1]) \subseteq [x_0, -2\mu+x_0] \\<br />
+(7)\ \itfnx([-3,-2]) \subseteq [2\mu+x_0, x_0] \\<br />
+(8)\ \itfnx([a,-3]) \subseteq [\mu(-2-a)+x_0, \mu+x_0], a < -3<br />
+\)</p>
+<p>Again, we look for initial values \( x_0 \) such that the orbit \( \orbit{\itfnx(x_0)} \) is bounded. Suppose \( x_0 > 0 \). Notice that the maximum value of \( \itfnx(I) \) is \( -2\mu+x_0 \) except for \( (4) \) which has maximum value \( \mu(2-b)+x_0 \). To get divergence, we need<br />
+\[<br />
+\begin{align*}<br />
+         & \mu(2-b)+x_0 &>& b \\<br />
+\implies & 2\mu-\mu b+x_0 &>& b \\<br />
+\implies & b+\mu b &<& 2\mu+x_0 \\<br />
+\implies & b(1+\mu) &<& 2\mu+x_0 \\<br />
+\implies & b &>& \frac{2\mu+x_0}{1+\mu} \quad \text{sign inversion since } 1+\mu < 0<br />
+\end{align*}<br />
+\]</p>
+<p>So know from the previous theorem on the bounds on negative boxes that we need \( x_0 < 2 \) for the point to be in \( \mboxset \). Therefore, we can only hit case \( (4) \) if after \( n \) iteration, \( \iter{\itfnx}{n}(x_0) > \frac{2\mu+x_0}{1+\mu} \). However, we know that in cases other than \( (4) \), the maximum value is \( -2\mu+x_0 \). Hence this will never happen if </p>
+<p>\[<br />
+\begin{align*}<br />
+         & -2\mu+x_0 &<& \frac{2\mu+x_0}{1+\mu} \\<br />
+\implies & (1+\mu)(-2\mu+x_0) &>& 2\mu+x_0 \quad \text{sign inversion since } 1+\mu < 0 \\<br />
+\implies & -2\mu+x_0-2\mu^2+\mu x_0 b &>& 2\mu+x_0 \\<br />
+\implies & -2\mu^2+\mu x_0 &>& 4\mu \\<br />
+\implies & -2\mu+x_0 &<& 4 \quad \text{sign inversion since } \mu < 0 \\<br />
+\implies & x_0 &<& 4+2\mu<br />
+\end{align*}<br />
+\]</p>
+<p>This proves that whenever \( 0 <= x_0 < 4+2\mu \) for all components in the point, \( p \) will have bounded orbit and be in \( \mboxset \). A similar proof will yield that when \( -(4+2\mu) < x_0 <= 0 \) for all components, the point will also be in \( \mboxset \).</p>
+<p>Hence there exist a n-cube of half-length \( 4+2\mu \) centered at \( (0, 0) \) where every point in the cube is in \( \mboxset, -2 < \mu < -1 \). Q.E.D.</p>
+<p><b>Corollary: If \( -2 < \mu < -1 \), then \( \mboxset \) has box-counting dimension \( n \).</b></p>
+<p>
+Proof : The n-cube in the middle has box-counting dimension \( n \).</p>
+<p>[/tab]<br />
+[/tabcontent] </p>
+<p>[/tabs]</p>
