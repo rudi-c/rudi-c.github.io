@@ -15,6 +15,10 @@
             {{ content }}
           </section>
         </div>
+        
+      {% if page.disqus == 'y' %}
+        {% include disqus.html %}
+      {% endif %}
     </div>
     {% include footer.html %}
   </body>
