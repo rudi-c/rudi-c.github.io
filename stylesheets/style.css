@@ -255,14 +255,6 @@ section.post {
     section.post h1 .date {
       color: #d0d0d0;
       font-size: 10px; }
-  section.post iframe {
-    width: 100%; }
-  section.post iframe, section.post img {
-    padding: 0;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px; }
 
 section.post, section > p {
   font-size: 14px;
