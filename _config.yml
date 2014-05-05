@@ -15,7 +15,7 @@ links:
   - name:         Works
     url:          /works
   - name:         Resume
-    url:          /files/documents/CV-2014-03-11-CS-G-Web.pdf
+    url:          /files/documents/CV-2014-05-04-CS-G-Web.pdf
 
 pygments:         true
 permalink:        /blog/:title
