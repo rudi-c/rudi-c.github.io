@@ -12,6 +12,6 @@ I'm also a Microsoft Student Partner at University of Waterloo, so I'm your cont
 
 Feel free to contact me at any time! Email at either **rudi.chen@studentpartner.com** for Microsoft and developer related questions and comments, or at **rudichen@gmail.com** for anything else.
 
-[[ My LinkedIn Profile ]](http://www.linkedin.com/in/rudichen)
+<a href="http://www.linkedin.com/in/rudichen" target="_blank">[ My LinkedIn Profile ]</a>
 
-[[ My Quora Profile ]](http://www.quora.com/Rudi-Chen)
+<a href="http://www.quora.com/Rudi-Chen" target="_blank">[ My Quora Profile ]</a>
