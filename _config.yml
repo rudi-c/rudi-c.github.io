@@ -17,7 +17,7 @@ links:
   - name:         Resume
     url:          /files/documents/CV-2014-05-04-CS-G-Web.pdf
 
-pygments:         true
+highlighter:      pygments
 permalink:        /blog/:title
 markdown:         redcarpet
 redcarpet:
