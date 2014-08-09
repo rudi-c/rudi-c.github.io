@@ -3,14 +3,13 @@ title: Compiler optimization contest (Part II) - Racket functional programming
 layout: post
 type: post
 disqus: y
-status: draft
 ---
 
 In the [previous post](/blog/compiler-optimization-i/), I talked about my participation in a compiler optimization contest, where the goal was to compile a program into the smallest possible executable. Three languages were allowed for the contest : C, C++ and Racket, a dialect of Lisp/Scheme. No one would reasonably choose to use C for a high-level program like a compiler, especially for a contest, so it was really a choice between C++ and Racket, two vastly different languages.
 
 Whereas the previous post focused on the compiler, this post will focus on the usage of the Racket language to write the compiler.
 
-As I intend for this post to be more of a discussion on programming languages than an enumeration of Racket features, the focus will lean more towards parts which I did not like than those which I did. However, overall, I quite like Racket.
+As I intend for this post to be more of a discussion on programming languages than an enumeration of Racket features, the focus will lean more towards parts which I did not like than those which I did. However, despite some dissatisfactions, I quite like Racket.
 
 *This is not meant to provide any definite answer on whether Racket is a good or bad language. In fact, much of the analysis will be written mostly with respect to my own personal programming preferences and in comparison to languages I am familiar with, mainly C++, Python, F#, C# and Java.*
 
@@ -36,14 +35,14 @@ It is much easier to read and less error-prone. The code below handles the gramm
 ; parse-tree -> expr
 (define (get-expr expr)
   (match expr
-    [`(("expr" "term") ,term) (get-term term)]
-    [`(("expr" "expr" "PLUS" "term") ,expr  _ ,term)
+    [`("expr term" ,term) (get-term term)]
+    [`("expr expr PLUS term" ,expr  _ ,term)
      (expr-binop 'NONE '+ (get-expr expr) (get-term term))]
-    [`(("expr" "expr" "MINUS" "term") ,expr _ ,term)
+    [`("expr expr MINUS term" ,expr _ ,term)
      (expr-binop 'NONE '- (get-expr expr) (get-term term))]))
 ```
 
-In contrast, the equivalent C++ code (including error checking, which needs to be explicit) you would need:
+In contrast, the equivalent C++ code (including error checking, which needs to be explicit) would need:
 
 ```cpp
 AstNode *getExpr(ParseTree tree)
@@ -136,9 +135,9 @@ Observe and contrast these two scenarios. If we represented our problem space as
 
 Which is better? Neither. If data points are more spread out along the x axis, we usually want to sort by x. If the data points are more spread out along the y axis, we usually want to sort by y.
 
-Functional languages, as long as they support classes, allows both, with perhaps a slight bias towards sorting by action.
+Functional languages, as long as they support classes, allow both, with perhaps a slight bias towards sorting by action.
 
-Imperative languages typically* strongly favors sorting by object. There is at least one common way of sorting by action, the [Visitor Pattern](http://en.wikipedia.org/wiki/Visitor_pattern). However, notice that to implement the pattern, you need at least multiple classes, inheritance (& polymorphism) - often overloaded functions. All wrapped in a terminology (accept, visit) that is not necessarily aligned with the actions being performed. Given that we are really only doing case analysis, pattern matching is a more elegant approach.
+Imperative languages typically* strongly favors sorting by object. There are ways of sorting by action, such as the [Visitor Pattern](http://en.wikipedia.org/wiki/Visitor_pattern). However, notice that to implement the pattern, you need at least multiple classes, inheritance (& polymorphism) - often overloaded functions. All wrapped in a terminology (accept, visit) that is not necessarily aligned with the actions being performed. Given that we are really only doing case analysis, pattern matching is a more elegant approach.
 
 > \* [C#](https://roslyn.codeplex.com/discussions/560339) and [Swift](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Patterns.html) are getting there.
 
@@ -177,15 +176,15 @@ While writing my compiler, I had a particularly complex recursive function that 
 
 Notice on line 6, I return `(void)`, which is a mistake - I want to return `empty`, which represents the empty list and is semantically very different. The problem is, the code didn't crash at that point. It crashed in a separate file thousands of function calls later when I finally made use of the return value. It also just so happened that this situation only occurred when running very large test cases, the kind for which unit tests are either impractical or require a lot of work. This made it a pain to comb through the output to trace the problem back to its source.
 
-In an imperative language, I can live with it - there are enough things that could go wrong that type errors aren't necessarily the biggest issue.
+> Racket [contracts](http://docs.racket-lang.org/guide/contract-func.html), which are a form of assertions, is a solution, but require two tradeoffs : more work for the programmer when the function returns a nested data structure and the need to verify the contract at runtime.
 
-In a functional language however, the range of bugs that could occur is significantly reduced by functional-style programming patterns, such as immutability. Thus, every time I wrote a new component to the compiler, the bugs that I have to fix are a dozen of little errors that could almost always be caught by static typing. However, after that's done, I occasionally have to fix a conceptual error, but the code more or less works.
+In an imperative language, I can live with it. Type-related errors are diluted among a sea of other possible errors - off by one errors during iteration (happens less with structural recursion), wrong assumptions about the values of particular variables at particular times, null pointer exceptions, etc. So static typing reduces the frequency of some types of bugs, but not all.
 
-In F#, which is a statically-typed functional language, 99% of the time, if the code compiles, only conceptual errors will remain, if any. It just works.
+In a functional language, functional-style programming patterns such as immutability already eliminate a vast range of likely bugs. In Racket, most errors that I need to iron out could have been caught with static typing. In contrast, F# is a statically-typed functional language and my experience is that 99% of the time, if the algorithm is correct and the code compile, it will just work.
 
-I much prefer to catch error at compile-time than runtime. Even if I have enough tests to catch all possible type errors at runtime, it still takes time to run those tests, more than it takes to compile the program.
+I strongly prefer to catch error at compile-time than runtime. Even if I have enough tests to catch all possible type errors at runtime, it still takes time to run those tests, more than it takes to compile the program.
 
-I don't really mind the inconvenience of having to specify types. For function declarations, I would already have the types (the contract) in a comment. If the language has type inference, I don't even need to specify types elsewhere in the program for the most part.
+I don't really mind the inconvenience of having to specify types. For function declarations, I would already have the types (the contract) in a comment. If the language has [Type Inference](http://en.wikipedia.org/wiki/Type_inference), I don't even need to specify types elsewhere in the program for the most part.
 
 ```rkt
 ; This is an example of a contract.
@@ -209,33 +208,35 @@ let sqr-add (x : int) (y : int) =
     (x + y)
 ```
 
-It's also nice to be able to mix different types in a collection. In my compiler, I have lists of either lists or structs, as well as hashtables whose keys and values can both be either integers or structs. However, I find that situations requiring mixed types only involve a few types. For these purposes, [Discriminated Unions](http://msdn.microsoft.com/en-us/library/dd233226.aspx) handle this quite well and are both lightweight in syntax and lightweight in execution.
+It's also nice to be able to mix different types in a collection, which is easy to do easy dynamic typing. In my compiler, I have lists of either lists or structs, as well as hashtables whose keys and values can both be either integers or structs. 
+
+However, I find that situations requiring mixed types only involve a few types. For these purposes, [Algebraic Data Types (Haskell)](http://www.haskell.org/haskellwiki/Algebraic_data_type), [Discriminated Unions (F#)](http://msdn.microsoft.com/en-us/library/dd233226.aspx) and their equivalents handle this quite well. They are both lightweight in syntax and lightweight in execution.
 
 ```fsharp
-// A commonly-used union type.
+// A commonly-used union type to prevent null pointer exceptions.
 type Option<'a> =
     | Some of 'a
     | None
 
 // We could use this for nested list of integers representing n-way trees.
 type NestedList =
-    | Node of NestedList
+    | Node of List<NestedList>
     | Item of int
 ```
 
-There exists a variant of Racket called [Typed Racket](http://docs.racket-lang.org/ts-guide/), but we did not have the option of using it and I am not convinced at first glance that adding types to a language that was not designed for it upfront leads to very elegant syntax (I reserve the right to change my mind on this statement, should I get the time to look into it more).
+There exists a variant of Racket called [Typed Racket](http://docs.racket-lang.org/ts-guide/), but I am not convinced at first glance that adding types to a language that was not designed for it upfront leads to very elegant syntax (I reserve the right to change my mind on this statement, should I get the time to look into it more).
 
-Finally, given that functional languages still aren't mainstream, there are enough barriers to their adoption that I do not want performance to be an argument against using them - and statically typed languages are typically faster since more information is available to the compiler (again, this is up for contention, but the very fact that it *might* be an issue suffices for my point).
+Finally, given that functional languages still aren't mainstream, there are enough barriers to their adoption that I do not want performance to be an argument against using them - and statically typed languages are typically faster since more information is available to the compiler for optimization (again, this is up for contention, but the very fact that it *might* be an issue suffices for my point).
 
 
-Closures vs Classes
--------------------
+Classes vs Nested Functions
+---------------------------
 
 Generating [SSA instructions](http://en.wikipedia.org/wiki/Static_single_assignment_form) for my compiler involved recursion, but it also involved carrying around state during the recursion. In addition to returning the SSA instructions, I needed to build or keep track of :
 
-1) The set of variables being read in the current block (i.e. { })
+1) The set of variables being read in the current code block.
 
-2) The set of variables being written in the current block.
+2) The set of variables being written in the current code block.
 
 3) Various miscellaneous information such as whether a variable needs to be on the stack.
 
@@ -247,10 +248,10 @@ How might we do this?
 
 We could have <del>global variables</del> no, of course not. Very funny.
 
-We could pass along the state for every parameter and return everything we need to aggregate as a tuple.
+We could pass along the state at every function call and return everything we need to aggregate as a tuple.
 
 ```rkt
-; Note that values == tuple
+; In this context, `values` is used like a tuple
 (define (big-fun state1 state2 state3 state4 state5 lst)
   (cond
     [(empty? lst) (values x y z)]
@@ -261,7 +262,7 @@ We could pass along the state for every parameter and return everything we need 
      (values (f x) (g y) (h z))]))
 ```
 
-Having to type all the arguments every time we make a recursive call and having to unpack all the return values becomes quickly unmaintainable. We could alias the recursive call with a local lambda, but that quickly breaks down too when we need corecursion.
+Having to type all the arguments every time we make a recursive call and having to unpack all the return values becomes quickly unmaintainable. We could alias the recursive call with a local helper function, but that quickly breaks down too when we need mutual recursion.
 
 We could turn the recursion into a loop inside a function, and use local variables.
 
@@ -277,7 +278,7 @@ void foo()
 }
 ```
 
-This is error-prone and does not work with corecursion either without [complicated solutions](http://en.wikipedia.org/wiki/Trampoline_(computing)).
+This is error-prone and does not work with mutual recursion either without [complicated solutions](http://en.wikipedia.org/wiki/Trampoline_(computing)).
 
 We could have a class, and put the state in the class' fields. This would be the standard approach in OOP languages, since any task that requires carrying around a large amount of state is probably significant enough to warrant a class.
 
@@ -292,14 +293,14 @@ class SsaBuilder
        ...
    } 
 
-   void CoRecursiveFunction(...)
+   void MutuallyRecursiveFunction(...)
    {
        ...
    }
 }
 ```
 
-This isn't actually too different from using global variables, but it is better practice. The state is private to the class and instanced along with the class so we don't need to clean it up if we need to use the class more than once.
+This is similar to using a global variable, but in better practice. The state is private to the class and instanced along with the class so we don't need to clean it up if we need to use the class more than once.
 
 Basic software engineering 101 so far.
 
@@ -332,7 +333,7 @@ In my code to generate SSA instructions, my co-recursive functions look like:
   (define nopropagate (hash-ref proc-analysis analysis-nopropagate))
   (match stmt
     ...
-    [(...) (gen-ssa-expr state expr)] ; corecursive call
+    [(...) (gen-ssa-expr state expr)] ; mutually recursive call
     ...
     ))
 
@@ -382,7 +383,7 @@ However, overall the solution is simple and all the functions are top level.
 
 This is similar to passing around a mutable struct, except that unpacking is harder.
 
-**3) Use closures**
+**3) Use nested functions**
 
 I took a different approach for constant propagation and copy propagation.
 
@@ -407,19 +408,19 @@ I took a different approach for constant propagation and copy propagation.
   (ssa-proc id params type (propagate stmts) locals))
 ```
 
-Here, `copy-constant-propagate-proc` is an outer function representing the root action I want to undertake, likely the one to be exported. However, the outer function is not recursive. Inner functions are recursive, and since they have been defined inside the outer function, all the parameters and definitions of the outer function are in the scope of the inner function, unless shadowed. This uses the concept of [closures](http://en.wikipedia.org/wiki/Closure_(computer_programming)).
+Here, `copy-constant-propagate-proc` is an outer function representing the root action I want to undertake, likely the one to be exported. However, the outer function is not recursive. Inner functions are recursive, and since they have been defined inside the outer function, all the parameters and definitions of the outer function are in the scope of the inner function, unless shadowed. This uses the concept of [nested functions](http://en.wikipedia.org/wiki/Nested_function).
 
 Notice that this is extremely similar to using classes. We have the definitions (fields) on top followed by helper functions (methods) and end with an initial function call (with classes, probably the constructor or a run() method).
 
-In fact, conceptually, it makes more sense than using a class. Fundamentally, we are trying to execute an action (here, perform constant propagation). Thus, it makes more sense for the action to be represented by a function than a class such as `ConstantPropagationMaker`. OOP programmers have an unfortunate tendency to turn everything into nouns, especially in Java (see [Execution in the Kingdom of Nouns](http://steve-yegge.blogspot.ca/2006/03/execution-in-kingdom-of-nouns.html)). Of course, in this case, it is unavoidable without first-class support for closures.
+In fact, conceptually, it makes more sense than using a class. Fundamentally, we are trying to execute an action (here, perform constant propagation). Thus, it makes more sense for the action to be represented by a function than a class such as `ConstantPropagationMaker`. OOP programmers have an unfortunate tendency to turn everything into nouns, especially in Java (see [Execution in the Kingdom of Nouns](http://steve-yegge.blogspot.ca/2006/03/execution-in-kingdom-of-nouns.html)). Of course, in this case, it is unavoidable without first-class support for nested functions.
 
-In practice, I find using closures a little bit more messy than using a class, but it does have less syntatic/OOP cruft surrounding it, so I wouldn't say one is better than the other.
+In practice, I find using nested functions a little bit more messy than using a class, but it does have less syntactic/OOP cruft surrounding it, so I wouldn't say one is better than the other.
 
-My only issue with functional languages here isn't so much that the language doesn't support carrying around large amounts of state, but that it is not taught. In imperative languages, state comes more naturally, which makes this a less of an issue. 
+The difficulty with functional languages here is not that they don't support carrying around large amounts of state, but that it is not taught. In imperative languages, not only does state comes more naturally, but the average programming article will have a focus on state.
 
-Textbooks and tutorials for functional languages at the beginner level tend to focus on the neat little things functional programming can do when applied to toy problems. Past the beginner level, resources are scattered all over and it is hard to come up with a "standard" solution (I will argue later in the post why I think it is important to have standard solutions).
+Beginner level material for an OOP language might teach you how to make a simple game. Games happen to involve carrying around state. In contrast, beginner level level material for functional languages tend to focus on how elegantly problems can be decomposed into subcomponents. This happens not to involve a lot of state. Past the beginner level, resources are scattered all over and it is difficult to establish what "standard" solutions are (I will discuss later in the post why I think it is important to have standard solutions).
 
-A similar difficult arises concerning extensibility.
+A similar difficulty arises concerning extensibility.
 
 
 Extensibility
@@ -442,13 +443,24 @@ This is easy right?
 (displayln (node-newfield some-node))
 ```
 
-Except that this causes a lot of problems. Everywhere this struct is pattern-matched against will need to be updated, since pattern matching works be specifying every single field (even when they are left unused with `_`). Furthermore, we often need to pattern match larger structs using `(match-define (struct field ..))` to unpack all the fields for more convenient access (as mentioned when I talked about passing mutable states).
+Except that this breaks pattern matching. Every clause in which the struct appears will need to be updated, since pattern matching works by specifying every single field (even when they are left unused with `_`). Furthermore, we often like to pattern match against larger structs using `(match-define (struct field ..))` to unpack all the fields for more convenient access (as mentioned when I talked about passing mutable states).
 
 **2) Use classes**
 
-We could go back to the object-oriented way, but we lose pattern matching. While I did not have the time to learn Racket classes & objects for the compiler contest, [the documentation](http://docs.racket-lang.org/reference/mzlib_class.html) makes me think that classes were added to Racket for the sake of having classes. The documentation mainly talks about formal syntax and even after skimming it a few times, I still don't know how I would access a field of an object. Racket's documentation is usually pretty good, which makes me think classes are just not considered important. Racket simply isn't designed for objects.
+We could go back to the object-oriented way, but we lose pattern matching. While I did not have the time to learn Racket classes & objects for the compiler contest, [the documentation](http://docs.racket-lang.org/guide/classes.html) makes me think that classes were added to Racket for the sake of having classes. The syntax for accessing a field and calling methods is `(send object fieldname)`. Would anyone really want to use that? Racket simply isn't designed for objects.
 
-**3) Use an internal dictionary**
+**3) Create a wrapper structure**
+
+Why not create another structure?
+
+```rkt
+(define typed-structure (original-structure type))
+```
+
+This is clean if we *have* the new structure, but someone needs to construct it. When there are many different structures and they are nested into each other, this is a lot of work.
+
+
+**4) Use an internal dictionary**
 
 One method I've seen suggested was to include a hashtable field for every struct that may need to be extended. This is like adding a "misc" field. This method has merits - we can extend the struct by adding keys to the hashtable, access those keys only when needed and leave the rest of the code intact.
 
@@ -465,27 +477,29 @@ What if we want to copy the struct? We will need to copy the internal hashtable.
 
 That would require defining a slew of new functions. We could achieve it with a macro, but this feels like work that I should not have to do just to be able to extend structs without twisting my arm around.
 
-From a performance perspective, how will the compiler optimize this? All the compiler sees is a hashtable, indexed by strings or [symbols](http://docs.racket-lang.org/reference/symbols.html). Unlike Javascript, the hashtable accesses are explicit and indistiguishable from fields. Error message for non-existing fields will be more obscure. This is like a second layer of interpreted syntax on top of an interpreted language, which can't be very good.
+From a performance perspective, how will the compiler optimize this? All the compiler sees is a hashtable, indexed by strings or [symbols](http://docs.racket-lang.org/reference/symbols.html). Even the programmer will have more difficulty keeping track of allowed fields.
+
+Unlike Javascript, the hashtable accesses are explicit and indistinguishable from fields. Error messages for non-existing fields will be about missing keys. This is like a second layer of interpreted syntax on top of an interpreted language, which can't be very good.
 
 
-**4) Use an external dictionary**
+**5) Use an external dictionary**
 
-If we think about our program (here, compiler) as a pipeline, structs will be needed a various stages of the pipeline (e.g. the AST is only needed up until SSA generation). It may also be that certain fields are only needed in specific stages of the pipeline.
+If we think about our program (here, compiler) as a pipeline, structs will be needed at various stages of the pipeline (e.g. the AST is only needed up until SSA generation). It may also be that certain fields are only needed in specific stages of the pipeline.
 
-As such, we could have a hashtable of values, indexed by the things we want those values to label. In the compiler, this occured naturally for symbol tables, where the argument and return types of a procedure were stored not in the procedure, but in the symbol table. I also used this approach during register allocation to annotate the instruction in which each variable last appears.
+As such, we could have a hashtable of values, indexed by the things we want those values to label. In the compiler, this occurred naturally for symbol tables, where the argument and return types of a procedure were stored not in the procedure, but in the symbol table. I also used this approach during register allocation to annotate the instruction in which each variable last appears.
 
 ```rkt
-; Symbol table indexed by value (good if indexing with strings/symbols)
+; Symbol table indexed with value equality (good if keys are strings/symbols)
 (define symbol-table (make-hash))
-; Symbol table indexed by reference (good if indexing with objects)
+; Symbol table indexed with reference equality (good if keys are objects)
 (define var-appearances (make-hasheq))
 ```
 
 Those coming from the imperative world will probably think this approach is very strange, but it is reasonable in a functional context. In fact, conceptually, it may make more sense than adding fields to a class, because the field we are adding is more a property of the pipeline stage we are in than the object itself. We would rather avoid bloating the class with temporary annotations from all the different pipeline stages.
 
-This still causes a performance hit and has issues with error handling, but is localized to a single field, so it's not as bad.
+This still causes a performance hit and has similar issues with reporting helpful error messages for the programmer, but is localized to a single field, so it's not as bad.
 
-On the other hand, this approach is only viable if the use of the extra field is highly localized. Otherwise, we still need to pass the hashtable around which then offloads the syntatic cost to other parts of the program.
+On the other hand, this approach is only viable if the use of the extra field is highly localized. Otherwise, we still need to pass the hashtable around which then offloads the syntactic cost to other parts of the program.
 
 We can see that all of these approaches have their tradeoffs.
 
@@ -501,7 +515,7 @@ In Racket (and all the Lisp variants in general), everything is an S-expression.
 
 That is, everything is either an atom (e.g. `element1`) or a list of things, denoted with `()`. It is common for the first element to be a function and the rest of the elements to be the arguments the function is applied to (e.g. `(+ 1 2)`).
 
-Outside of [esoteric languages](http://en.wikipedia.org/wiki/Brainfuck), you will be hard pressed to find a syntax as uniform as S-expression. This has various benefits, [in particular in regards to macros](http://stackoverflow.com/questions/267862/what-makes-lisp-macros-so-special) - the Lisp family's powerful macros reign supreme.
+Outside of [esoteric languages](http://en.wikipedia.org/wiki/Brainfuck), you will be hard pressed to find a syntax as uniform as S-expressions. This has various benefits, [in particular in regards to macros](http://stackoverflow.com/questions/267862/what-makes-lisp-macros-so-special) - the Lisp family's powerful macros reign supreme.
 
 However, at the same time, this severely reduces the range of permissible syntax, and some would be a lot more appropriate in certain contexts. My two main gripes are with structs and hashtables which the compiler needed everywhere.
 
@@ -512,12 +526,16 @@ With structs, I need to type the name of the struct in addition to the field I w
 (obj-field myobj)
 
 ; Increment an element in a hashtable.
-; Contrast with mytable[mykey]++. 
-; Even mytable[mykey] = mytable[mykey] + 1 isn't as bad.
-(hash-set! mytable mykey (add1 (hash-ref mytable mykey)))
+; Contrast with mytable[mykey] += 2
+; Even mytable[mykey] = mytable[mykey] + 2 isn't as bad.
+(hash-set! mytable mykey (+ (hash-ref mytable mykey) 2))
+
+; Alternatively, create new lambda functions. Not the most
+; straightforward way of coding.
+(hash-update! mytable mykey (λ (val) (+ 2 val)))
 ```
 
-By the nature of S-expressions, even macros won't allow the typical `.` and `[]`. Certain forms are just naturally more readable when it is not in prefix notation. Sure, you can define some helper functions for things like incrementing in a hash table, but in which files are they going to be? What if I want to do something just slightly different? The more of this kind of work I need to do just to make the code readable, the less beneficial the language becomes.
+By the nature of S-expressions, even macros won't allow the typical `.` and `[]`. Certain forms are just naturally more readable when it not in prefix notation. Sure, you can define some helper functions for things like incrementing in a hash table, but in which files are they going to be? What if I want to do something just slightly different? The more of this kind of work I need to do just to make the code readable, the less beneficial the language becomes.
 
 Returning tuples are also a mess to deal with. In Racket :
 
@@ -543,14 +561,21 @@ let foo =
 let x, y = foo()
 ```
 
-On a toy example, this might not look too bad, but it becomes quickly annoying to deal with when writing co-recursive functions that sum to 100s of lines.
+On a toy example, this might not look too bad, but it becomes quickly annoying to deal with when writing mutually recursive functions that sum to 100s of lines.
+
+For mathematical expressions, prefix notation isn't natural. It's one thing to ask programmers accustomed to loops to use recursion. It's another to ask people to switch from a universal notation learned in 1st grade.
+
+```rkt
+; a * b + (c + d) * f
+(+ (* a b) (* (+ c d) f))
+```
 
 To avoid extremely long nested expressions, it is good practice to split them up and name some of the intermediate expressions. That also bloats the code.
 
 ```rkt
 ; Either use define or let
 
-; Define is verbose - compare (define ...) with let ... = in F#
+; Define is verbose - compare (define ...) with let ... = from the ML family
 (define intermediate1 (...))
 
 ; Let is verbose - so many parentheses! Also, adds a level of nesting
@@ -559,7 +584,9 @@ To avoid extremely long nested expressions, it is good practice to split them up
   (dostuff (... intermediate2 ...)))
 ```
 
-At this point, it will probably appear like I am nitpicking insignificant syntax details and indeed, it would not be the main consideration when choosing a language. Still, I think the requirement that everything be S-expressions might be too restrictive of a constraint.
+At this point, it will probably appear like I am nitpicking insignificant syntax details and indeed, it would not be an important consideration when choosing a language. Still, I think the requirement that everything be S-expressions might be too restrictive of a constraint.
+
+> Alternative syntax like [Sweet-expressions](readable.sourceforge.net/) help with readability, to a limited extent.
 
 
 Macros & Customization
@@ -577,17 +604,15 @@ Python lies somewhere in the middle. There are a lot of ways to do things but du
 
 There's no problem with *me* using some macros to do a few more things nicely, but what about the next person? What macros will they use? If we're talking about helper functions (like increment in a hashtable), how will they name their helper function?
 
-By using too many macros, everyone effectively ends up doing things differently, heck, almost using different languages. Learning the language also becomes more difficult - our brain uses pattern matching too, and we usually pick up on programming patterns when we see them more than once. If all the existing articles, blog posts, tutorials, code snippets are different, pattern matching becomes hard. If that is the case, how can the language itself (and it's user base) grow?
+By using too many macros, everyone effectively ends up doing things differently, heck, almost using different languages. Learning the language also becomes more difficult. Our brain uses pattern matching too, and we usually pick up on programming patterns when we see them more than once. If all the existing articles, blog posts, tutorials, code snippets are different, pattern matching becomes difficult. If that is the case, how can the language itself (and it's user base) grow?
 
-So while in theory, there are a lot of solutions to many of my issues in this post, I'm not convinced the kind that involves macros or defining helper functions are the good ones. In my opinion, Python is a language that does it right (C# is pretty good too - sufficiently standardized to be as good as Java for entreprise, much better language features. Alas, there are way too many roadblocks for it to replace Java).
+So while in theory, there are a lot of solutions to many of my issues in this post, I'm not convinced the kind that involves macros or defining helper functions are the good ones. In my opinion, Python is a language that does it right (C# is pretty good too - sufficiently standardized to be as good as Java for enterprise, much better language features. Alas, there are way too many roadblocks for it to replace Java).
 
 
-Racket Debugging & Profilling
+Racket Debugging & Profiling
 -----------------------------
 
-While writing my compiler, I never quite managed to get [instrumentation and error tracing](http://docs.racket-lang.org/errortrace/using-errortrace.html) to work. I can live without instrumentation, but Racket's default error handling is really subpar. All too often, when an exception occurred, I would either get no stacktrace (and no line number) or an incomplete, unhelpful one. That made debugging rather tedious at times.
-
-As a decent stacktrace is fundamental for the programmer, I am somewhat dissapointed that it does not come by default.
+Racket's default error handling is subpar. In a lot of cases, I would either get no stacktrace (and no line number) or an incomplete, unhelpful one (e.g. `define-values` with the wrong number of values). That made debugging rather tedious at times. There's [errortrace](http://docs.racket-lang.org/errortrace/using-errortrace.html), but shouldn't line numbers for error reports come by default? As for the instrumentation, I never managed to get it to report anything useful.
 
 
 Conclusion

@@ -3,12 +3,11 @@ title: Compiler optimization contest (Part I) - In the Zone
 layout: post
 type: post
 disqus: y
-status: draft
 ---
 
 "Foundations of Sequential Programs" is a second-year course at University of Waterloo, which teaches how high-level imperative programs are understood, compiled and ultimately translated into machine code. The course begins with an introduction to writing in MIPS assembly, assemblers and linkers. Then, it moves on the parsers and ends with compiling a (very small) subset of C++.
 
-The best part of the course is the compiler optimization contest that concludes it. The goal is to make the compiler required for the last three assignments produce the smallest machine code for a hidden input program (it is much easier to evaluate which code is smallest than which code is fastest). This post is a log (written after the contest) of how I got 2nd place.
+The best part of the course is the compiler optimization contest that concludes it. The goal is to extend our compiler to produce the smallest machine code for a hidden input program (it is much easier to evaluate which code is smallest than which code is fastest). This post is a log (written after the contest) of how I got 2nd place.
 
 *Note : This contest happens every time the course is offered, but I am not too concerned about publicizing my solution. The core of it (SSA + register allocation) is difficult enough that anyone capable of implementing it should be able to achieve a high score in the contest without my help.* 
 
@@ -49,7 +48,7 @@ int wain(int a, int b) {
 }
 ```
 
-Notice the language has pointers, memory allocation and procedures. However, it has a number of restrictions. All declarations must appear in the beginning of the procedure. Every procedure returns an int and can only call previously declared procedures (recursion is allowed, but not corecursion). If statements always have an else block. There are only two types : integers and integer pointers.
+Notice the language has pointers, memory allocation, procedures, and a number of restrictions. All declarations must appear in the beginning of the procedure. Every procedure returns an int and can only call previously declared procedures (recursion is allowed, mutual recursion isn't). If statements always have an else block. There are only two types : integers and integer pointers.
 
 The language is compiled to 32-bit MIPS, giving us 32 registers to work with.
 
@@ -58,9 +57,9 @@ Before the contest
 
 In all of our assignments for this course, we have the choice between using C, C++ or Racket (a dialect of Scheme/Lisp taught in first year). I went with Racket. 
 
-The choice was easy: lately, I have been finding programming in classical C-style imperative languages (Java/C#/C++) less exciting than it used to be. I don't feel I improve very much by writing code in those languages anymore. Like going to the gym and lifting 15lb weights when I could be lifting 25lb, I found the need for some heavier weight to work out my mental muscles. Functional Programming (FP) requires more thinking upfront, but leads to concise code that requires less debugging. Real-world constraints (ecosystem, support on particular mobile platforms, jobs, etc) make opportunities to use functional languages rare, so I try to use them whenever I do get the chance.
+The choice was easy: lately, I have been finding programming in classical C-style imperative languages (Java/C#/C++) less exciting than it used to be. I don't feel I improve very much by writing code in those languages anymore. Like going to the gym and lifting 15lb weights when I could be lifting 25lb, I found the need for some heavier weight to work out my mental muscles. Functional Programming (FP) requires more thinking upfront, but leads to concise code that requires significantly less debugging. Real-world constraints (ecosystem, support on particular mobile platforms, jobs, etc) make opportunities to use functional languages rare, so I try to use them whenever I do get the chance.
 
-Compilers are the kind of programs where using FP makes a lot of sense. They inherently require a great deal of recursion and tree traversal, for which languages like Racket arer optimized.
+Compilers are the kind of programs where using FP makes a lot of sense. They inherently require a great deal of recursion and tree traversal, for which languages like Racket are optimized.
 
 The compiler ultimately ended up being the largest functional program I have ever written - I reflect on lessons learned from this experience in [Part II](/blog/compiler-optimization-ii/).
 
@@ -91,7 +90,7 @@ Whereas the AST is a much more lightweight representation, ultimately represente
 (struct test (op e1 e2))
 ```
 
-While the assignments did not require the use of an AST, it will help make life much easier.
+While the assignments did not require the use of an AST, it makes life much easier.
 
 
 July 6th-July 11th
@@ -148,7 +147,7 @@ temp1 = x1 * 2;
 x2 = temp1 + 1;
 ```
 
-Such that each variable is assigned exactly once (incrementing a counter whenever a variable is reassigned, creating a "new" variable), and expressions are flattened to have a direct correspondence with assembly instructions via the use of temporary variables. In this form, each variable is immutable - they only ever represent a single value. This helps make subsequent analysis much easier.
+Such that each variable is assigned exactly once (incrementing a counter whenever a variable is reassigned, creating a "new" variable), and expressions are flattened to have a closer correspondence with assembly instructions via the use of temporary variables. In this form, each variable is immutable - they only ever represent a single value. This helps make subsequent analysis much easier.
 
 Generating these SSA statements for assignment and arithmetic expressions is fairly straightforward and only took me a few hours. The intermediate results are stored in a few structs.
 
@@ -165,7 +164,7 @@ This is fairly straightforward, but quite time consuming to implement. I handled
 
 It also took a lot of debugging to make sure variables are always assigned to valid registers and it ended up with somewhat brittle code. If I were to redo register allocation, I would consider allowing any operations on virtual registers (e.g. add $40, $11, $89) and dealing push/pop in a separate pass. By the time my compiler could handle all expressions and assignments, I was already well into Sunday.
 
-Dealing with branches is much harder. Code such as
+Dealing with branches is also challenging. Code such as
 
 ```cpp
 x = 0;
@@ -205,9 +204,9 @@ July 14th (Mon) - July 16th (Wed)
 
 Implementing branches took considerably more time than expected. While phi functions are simple to understand conceptually, figuring out what to do with them during register allocation was more challenging.
 
-Most resources (Wikipedia, lecture slides from other universities, etc) explain how to generate SSA, but not how to deal with SSA during register allocation. It did not appear too hard at first and I did not yet have a clear picture of how the various edge cases would influence the requirements. So rather than starting with a working algorithm design upfront and implementing it, which is everyone's ideal scenario, I ended up writing code, bumping into an edge case, fixing the edge case using a ad-hoc solution, bumping into another edge case, repeatedly. For example, after I finally had a solution for while loops, I couldn't handle nested while loops. After I got that working, loops would occasionally fail when I need to spill registers, due to the complexity of my register allocation.
+Most resources (Wikipedia, lecture slides from other universities, etc) explain how to generate SSA, but not how to deal with SSA during register allocation. It did not appear too hard at first but I did not yet have a clear picture of how the various edge cases would influence the requirements. So rather than starting with a working algorithm design upfront and implementing it, which is everyone's ideal scenario, I ended up writing code, bumping into an edge case, fixing the edge case using a ad-hoc solution, bumping into another edge case, repeatedly. For example, after I finally had a solution for while loops, I couldn't handle nested while loops. After I got that working, loops would occasionally fail when I need to spill registers, due to the complexity of my register allocation.
 
-I eventually managed to get while loops working. Unfortunately, that took until 4 AM on Wednesday - I did not succeed in completing if statements. The assignment was due on 5 PM on the same day, so after the day's classes, I implemented the class solution from 3:00 to 4:30 and passed all the automated tests. The solution I submitted was a 100 lines, less than 10x the optimized compiler I had so far.
+I eventually managed to get while loops working. Unfortunately, that took until 4 AM on Wednesday - I did not succeed in completing if statements. The assignment was due on 5 PM on the same day, so after the day's classes, I implemented the class solution from 3:00 to 4:30 and passed all the automated tests. The solution I submitted was a 100 line file, less than 10x the optimized compiler I had so far.
 
 Despite these difficulties, implementing the optimized compiler was already a lot of fun. In recent months, I found myself having difficulty finding a sufficiently interesting problem that I could get into and focus on for a long time (when I don't, I tend to procrastinate, checking emails/facebook every 15 minutes). This is a problem, because most of my best work happened while I was fully focused - in "The Zone", so to speak. Being in The Zone feels like transforming into a super saiyan, where I get to use all my programming abilities to the fullest extent.
 
@@ -238,7 +237,7 @@ if (x == 0) {
 
 Then both `a` and `b` need to be stored in memory on the stack (or at the very least, have a corresponding stack address) as we can't take the address of a register. However, do they always need to be on the stack? Is it possible to know whether a pointer points to a stack variable or a heap location?
 
-There is an interesting paper that [extends SSA numbering](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.17.1802) that deal with analysis of pointers in the context of SSA. The method presented is quite understandable, but it is not immediately clear whether there will be a substantial benefit to implementing it. 
+There is an interesting paper that [extends SSA numbering](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.17.1802) that deal with analysis of pointers in the context of SSA. The method presented is quite understandable, but it was not clear that the time investment to implement it would pay off for the contest.
 
 For the sake of getting something working, I chose a simpler approach, which is an initial pass over the AST to make a list of all local variables whose address gets taken (&'ed) and store them on the stack. They are loaded from the stack whenever they are read, and stored to stack whenever they are written.
 
@@ -292,7 +291,7 @@ Then, I need slots to store some local variable. While most local variables will
 
 Finally, I need a few more slots to allow for register spilling.
 
-There are still inefficiencies in my calling convention. When I evaluate procedure parameters (i.e. `foo(expr1, expr2, ..., exprn)`), the result of each expression is not stored immediately on the stack. This avoids function calls inside the parameter expression from clobbering parameters of the outer function being written to the stack, but it can involve extra instructions (the registers containing the early parameters might need to moved onto and back from the stack during spilling, if the latter parameters expressions require a lot of registers).
+There are still inefficiencies in my calling convention. When I evaluate procedure parameters (i.e. `foo(expr1, expr2, ..., exprn)`), the result of each expression is not stored immediately on the stack. This avoids function calls inside the parameter expression from clobbering parameters of the outer function call being written to the stack, but it can involve extra instructions (the registers containing the early parameters might need to moved onto and back from the stack during spilling, if the later parameters expressions require a lot of registers).
 
 Implementing pointers and procedures went fairly smoothly. It seems that after doing a lot of upfront work with SSA and register allocation, the pace accelerates.
 
@@ -303,7 +302,7 @@ July 21st (Mon)
 ---------------
 *debugging*
 
-That one test case seems to elude me. I already have a solid testing framework set up where I used Racket's unit testing framework to make `(system* ...) calls`, but my tests don't seem to be catching the bug.
+That one test case seems to elude me. I already have a solid testing framework set up where I used Racket's unit testing framework to make `(system* ...) calls` to run the compiler, assembler, linker and simulator, but my tests don't seem to be catching the bug.
 
 To find the bug, I created some pretty nasty stress tests, including a call to a function of 32 parameters where each parameter expression is another call to a function of 32 parameters. But to no avail.
 
@@ -377,13 +376,15 @@ For subtraction, I create a special wrapper "minus", that allows me to combine a
 => (+ (+ c 4) (+ (minus 3) (minus (- c d))))
 => (+ (+ c 4) (+ -3 (+ (minus c) (minus d))))
 => (- (+ c 4 -3) (+ c d))
+=> (- (+ 4 -3) (+ d))
+=> (- (+ 4 -3) d)
 ```
 
 In other words, separating positive and negative terms into two groups. This also cancelling identifiers that appear on both sides (`c`, in the above example).
 
-Not every term will necessarily be an integer. Some could be pointers which invalidates certain reductions. For example, int\* - int is defined, but not int - int\*. For addition (without subtraction), we don't actually need to do anything. A flattened tree of nested addition will always contain at most one int* term, otherwise it would not pass the type checker. For pointer subtraction, we simply avoid flattening the parse tree.
+Not every term will necessarily be an integer. Some could be pointers which invalidates certain reductions. For example, int\* - int is defined, but not int - int\*. For addition (without subtraction), we don't actually need to do anything. A flattened tree of nested addition will always contain at most one int* term, otherwise it would not pass the type checker. For pointer subtraction, we simply avoid flattening the parse tree at that node.
 
-There are other arithmetic properties that allow further reduction. For example,
+There are other arithmetic properties that allow further reductions. For example,
 
 ```rkt
 (+ x 0) => x
@@ -392,6 +393,12 @@ There are other arithmetic properties that allow further reduction. For example,
 ```
 
 However, note that multiplication by zero is a little tricky. If x is an expression containing a function call, the function call could have a side effect such as printing. In that case, removing the function call changes the behavior of the program.
+
+Then there is division by zero, which we have no choice but to leave there and let the program crash at runtime.
+
+```rkt
+(/ x 0) => (/ x 0)
+```
 
 Implementing constant folding wasn't too hard, summing up to a ~200 line Racket file. In fact, unlike the rest of the compiler, it was a clean, pure functional implementation. I did, however, struggle with an infinite loop bug. Again, it was a really dumb bug, which I somehow failed to catch (the student #1 on the leaderboard helped me find it after a bit of code review).
 
@@ -543,7 +550,7 @@ expr -> expr1 + expr2
 
 Does it matter whether we evaluate `expr1` first, or `expr2` first? It turns out that it does. Suppose evaluating `expr1` requires 2 registers and `expr2` requires 3 registers. If we evaluate `expr1` first, we need to store the result in a register before evaluating `expr2`. Then, `expr2` requires 3 more registers. Thus, we use a total of 4 registers.
 
-However, if we evaluate `expr2` first, we use three registers and then store the result in one of those registers. The other two can be used to evaluate `expr1`. Thus, we use a total of 3 registers. Thus, it is always better to evaluate the subexpression that uses the most registers first.
+However, if we evaluate `expr2` first, we use three registers and then store the result in one of those registers. The other two can be used to evaluate `expr1`. Thus, we use a total of 3 registers. It is always better to evaluate the subexpression that uses the most registers first.
 
 Apparently, this optimization gave substantial gains to a lot of people in past offerings of this course. However, I suppose that because I already had full register allocation implemented, I only got a tiny gain of 24 bytes, down to **60,932 bytes**. I still hoped for more though, using less registers should imply less instructions to handle spilling.
 
@@ -573,7 +580,7 @@ c = x * y;
 e = c + c;
 ```
 
-This optimization is similar to [Common Subexpression Elimination (CSE)](http://en.wikipedia.org/wiki/Common_subexpression_elimination). According to wikipedia, GVN handles some cases that CSE can't (such as the above, where the expressions on the RHS are different) but can't handle some cases that CSE can. I opted to implement GVN over CSE as it requires less work when our program is already in SSA form.
+This optimization is similar to [Common Subexpression Elimination (CSE)](http://en.wikipedia.org/wiki/Common_subexpression_elimination). According to wikipedia, GVN handles some cases that CSE can't (such as the above, where the expressions on the RHS are different) but can't handle some cases that CSE can. I opted to implement GVN over CSE as it requires less work given that my program is already in SSA form.
 
 Implementing GVN got a small reduction, down to **58,428 bytes**.
 
@@ -596,7 +603,7 @@ add $3, $6, $7
 
 Which contains redundant instructions. The variable `a` needs to be loaded from the stack because a pointer points to it, but it doesn't need to be loaded twice in a row if no memory write occurs between the two memory reads.
 
-So I removed all the redundant memory reads and writes. Unfortunately, this did not reduce the output size `at all`. I suppose there aren't many test cases with stack references. Bummer.
+So I removed all the redundant memory reads and writes. Unfortunately, this did not reduce the output size *at all*. I suppose there aren't many test cases with stack references. Bummer.
 
 At this point, I only had a few hours left and 4,000 bytes to match the 1st place score. I could still think of a lot of little optimizations, but a dozen optimizations that save 100-200 bytes each wouldn't be sufficient. I needed something better. But what? I had already implemented most major optimizations.
 
