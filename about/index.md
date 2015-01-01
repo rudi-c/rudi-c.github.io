@@ -15,3 +15,51 @@ Feel free to contact me at any time! Email at either **rudi.chen@studentpartner.
 <a href="http://www.linkedin.com/in/rudichen" target="_blank">[ My LinkedIn Profile ]</a>
 
 <a href="http://www.quora.com/Rudi-Chen" target="_blank">[ My Quora Profile ]</a>
+
+--------------------------------------------------------------------------------
+
+Reading List
+============
+<center>*some subset of it*</center>
+
+News/Magazines
+--------------
+
+[Hacker News](https://news.ycombinator.com/) for a daily selection of interesting links relevant in the tech industry, and for being the only website where the comments on an article are occasionally more insightful than the article itself.
+
+[The Verge](http://theverge.com/) for an aggregation of tech news, as well as occasional random interesting articles about science, media, etc. Like Hacker News, but more like a regular news site.
+
+[Google News](https://news.google.com/) for most non-tech news stories.
+
+[Anandtech](http://www.anandtech.com/) occasionally when I'm in the mood to be a hardware geek.
+
+Blogs/Articles/Essays
+---------------------
+
+[Coding Horror](http://blog.codinghorror.com/)
+
+[Joel on Software](http://www.joelonsoftware.com/) no longer active, but tons of timeless articles.
+
+[Paul Graham's Essays](http://www.paulgraham.com/articles.html)
+
+[The Architecture of Open Source Applications](http://aosabook.org/en/index.html)
+
+Books
+-----
+
+How To Win Friends And Influence People - Dale Carnegie
+
+Zero To One - Peter Thiel
+
+Thinking, Fast and Slow - Daniel Kahneman
+
+1984 - George Orwell
+
+Code Complete - Steve McConnell
+
+Other
+-----
+
+[XKCD](http://xkcd.com/)
+
+[PhD Comics](http://phdcomics.com/comics.php)
