@@ -2,9 +2,9 @@ title:            Digital Freepen
 description:      Of everything you can write about in a digital world
 url:              digitalfreepen.com
 signoff:          Rudi Chen
-disqus_shortname: digitalfreepen 
+disqus_shortname: digitalfreepen
 facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
-google_analytics: UA-36059196-1 
+google_analytics: UA-36059196-1
 
 
 links:
@@ -15,7 +15,7 @@ links:
   - name:         Works
     url:          /works
   - name:         Resume
-    url:          /files/documents/CV-2014-05-04-CS-G-Web.pdf
+    url:          /files/documents/CV-2014-01-08.pdf
 
 highlighter:      pygments
 permalink:        /blog/:title
