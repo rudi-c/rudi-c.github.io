@@ -8,9 +8,7 @@ type: page
 
 A random fact about myself? I practice pen spinning (look it up if you've never hear that term!) and [have once appeared on national television](http://www.youtube.com/watch?v=K5SxsDS0fHk). I'm not one of the best out there, but I know quite a few tricks.
 
-I'm also a Microsoft Student Partner at University of Waterloo, so I'm your contact guy for any questions you might have regarding app development, Imagine Cup, getting free Microsoft software, etc.
-
-Feel free to contact me at any time! Email at either **rudi.chen@studentpartner.com** for Microsoft and developer related questions and comments, or at **rudichen@gmail.com** for anything else.
+Feel free to contact me at any time! Email at **rudichen@gmail.com**.
 
 <a href="http://www.linkedin.com/in/rudichen" target="_blank">[ My LinkedIn Profile ]</a>
 
