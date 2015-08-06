@@ -18,7 +18,7 @@ Feel free to contact me at any time! Email at **rudichen@gmail.com**.
 
 Reading List
 ============
-<center>*some subset of it*</center>
+<center>*some small subset of it*</center>
 
 News/Magazines
 --------------
@@ -51,7 +51,11 @@ Zero To One - Peter Thiel
 
 Thinking, Fast and Slow - Daniel Kahneman
 
-1984 - George Orwell
+Connected - Nicholas A. Christakis, James H. Fowler
+
+1984, Animal Farm - George Orwell
+
+Brave New World - Aldous Huxley
 
 Code Complete - Steve McConnell
 
