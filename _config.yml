@@ -17,8 +17,6 @@ links:
   - name:         Resume
     url:          /files/documents/CV-2014-01-08.pdf
 
-highlighter:      pygments
-permalink:        /blog/:title
 markdown:         redcarpet
 redcarpet:
   extensions:
