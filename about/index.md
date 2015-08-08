@@ -3,12 +3,14 @@ layout: page
 title: About
 type: page
 ---
-<a style="float: left; margin: 5px 15px 0px 0px;" href="/images/2012/09/ProfilePic.jpg"><img src="/images/2012/09/ProfilePic-300x300.jpg" width="160" /></a>
+<a style="float: left; margin: 5px 15px 0px 0px;" href="/images/profile_pic.jpg"><img src="/images/profile_pic.jpg" width="160" /></a>
 <p>My name is Rudi, second-year student in Computer Science at University of Waterloo and this is my personal blog where I will post my projects, comments about tech, math, random tidbits that might be useful, random tidbits that might not be useful but hopefully interesting.</p>
 
 A random fact about myself? I practice pen spinning (look it up if you've never hear that term!) and [have once appeared on national television](http://www.youtube.com/watch?v=K5SxsDS0fHk). I'm not one of the best out there, but I know quite a few tricks.
 
-Feel free to contact me at any time! Email at **rudichen@gmail.com**.
+Email at **rudichen@gmail.com**.
+
+<a href="https://github.com/rudi-c" target="_blank">[ My Github ]</a>
 
 <a href="http://www.linkedin.com/in/rudichen" target="_blank">[ My LinkedIn Profile ]</a>
 
@@ -42,8 +44,15 @@ Blogs/Articles/Essays
 
 [The Architecture of Open Source Applications](http://aosabook.org/en/index.html)
 
-Books
------
+Misc
+----
+
+[XKCD](http://xkcd.com/)
+
+[PhD Comics](http://phdcomics.com/comics.php)
+
+Nice books that I've read
+--------------------
 
 How To Win Friends And Influence People - Dale Carnegie
 
@@ -59,9 +68,29 @@ Brave New World - Aldous Huxley
 
 Code Complete - Steve McConnell
 
-Other
------
+Lean In - Sheryl Sandberg
 
-[XKCD](http://xkcd.com/)
+Steve Jobs - Walter Isaacson
 
-[PhD Comics](http://phdcomics.com/comics.php)
+Books that I want to read
+-------------------------
+
+Creativity, Inc
+
+Freakonomics
+
+The Art of War
+
+The Tipping Point
+
+The Design of Everyday Things
+
+Power of Mind
+
+Chimpanzee Politics: Power and Sex among Apes
+
+The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution
+
+Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future
+
+The Name of the Wind
