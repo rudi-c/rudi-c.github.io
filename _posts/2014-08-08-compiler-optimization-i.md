@@ -9,7 +9,7 @@ disqus: y
 
 The best part of the course is the compiler optimization contest that concludes it. The goal is to extend our compiler to produce the smallest machine code for a hidden input program (it is much easier to evaluate which code is smallest than which code is fastest). This post is a log (written after the contest) of how I got 2nd place.
 
-*Note : This contest happens every time the course is offered, but I am not too concerned about publicizing my solution. The core of it (SSA + register allocation) is difficult enough that anyone capable of implementing it should be able to achieve a high score in the contest without my help.* 
+*Note : This contest happens every time the course is offered, but I am not too concerned about publicizing my solution. The core of it (SSA + register allocation) is difficult enough that anyone capable of implementing it should be able to achieve a high score in the contest without my help.*
 
 The language
 ------------
@@ -55,7 +55,7 @@ The language is compiled to 32-bit MIPS, giving us 32 registers to work with.
 Before the contest
 ------------------
 
-In all of our assignments for this course, we have the choice between using C, C++ or Racket (a dialect of Scheme/Lisp taught in first year). I went with Racket. 
+In all of our assignments for this course, we have the choice between using C, C++ or Racket (a dialect of Scheme/Lisp taught in first year). I went with Racket.
 
 The choice was easy: lately, I have been finding programming in classical C-style imperative languages (Java/C#/C++) less exciting than it used to be. I don't feel I improve very much by writing code in those languages anymore. Like going to the gym and lifting 15lb weights when I could be lifting 25lb, I found the need for some heavier weight to work out my mental muscles. Functional Programming (FP) requires more thinking upfront, but leads to concise code that requires significantly less debugging. Real-world constraints (ecosystem, support on particular mobile platforms, jobs, etc) make opportunities to use functional languages rare, so I try to use them whenever I do get the chance.
 
@@ -66,7 +66,7 @@ The compiler ultimately ended up being the largest functional program I have eve
 A previous assignment consisted of implementing symbol tables and type checking, so I already had the infrastructure needed to work with the [parse tree](http://en.wikipedia.org/wiki/Parse_tree). In particular, I had already written code to construct an [abstract syntax tree (AST)](http://en.wikipedia.org/wiki/Abstract_syntax_tree) from the parse tree (also known as concrete syntax tree). The difference is that parse tree is a direct representation of the grammar rules and contains a lot of cruft such as parentheses and brackets, e.g.
 
 ```
-statement → IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE 
+statement → IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
 ```
 
 Whereas the AST is a much more lightweight representation, ultimately represented by a few structs holding only relevant data.
@@ -160,7 +160,7 @@ Generating these SSA statements for assignment and arithmetic expressions is fai
 
 The harder part is register allocation. I began with a timetable of the first and last occurrence of each variable as it appears - i.e., the lifespan. When a variable is assigned (recall that in SSA, this only happens once for each variable), a mapping of that variable to a register is added to the symbol table. If there are no more free registers, a variable needs to be pushed to a virtual register (e.g. $32). Variables might need to be loaded from virtual registers when they are read. When a variable is seen for the last time, it can be removed from the symbol table, freeing up a register.
 
-This is fairly straightforward, but quite time consuming to implement. I handled all of this at the same time, which involved a fair amount of repetitive code that needed to push and pop registers to virtual registers and update the symbol table in exactly the right order. 
+This is fairly straightforward, but quite time consuming to implement. I handled all of this at the same time, which involved a fair amount of repetitive code that needed to push and pop registers to virtual registers and update the symbol table in exactly the right order.
 
 It also took a lot of debugging to make sure variables are always assigned to valid registers and it ended up with somewhat brittle code. If I were to redo register allocation, I would consider allowing any operations on virtual registers (e.g. add $40, $11, $89) and dealing push/pop in a separate pass. By the time my compiler could handle all expressions and assignments, I was already well into Sunday.
 
@@ -281,7 +281,7 @@ top of the stack frame
 4 * ...
 4 * (n+m+p+q) $max-encountered
 Bottom of the stack frame (current $30)
-``` 
+```
 
 The top of the stack frame needs to contain procedure parameters. This is because parameters are written to the stack frame by the caller, whose frame is adjacent to the callee's stack frame. To make my code more consistent, parameters are loaded into registers at the beginning of the procedure. The parameters on the stack are then never accessed again, except through pointer operations.
 
@@ -298,7 +298,7 @@ Implementing pointers and procedures went fairly smoothly. It seems that after d
 Unfortunately, I can't pass one of the assignment's automated tests.
 
 
-July 21st (Mon) 
+July 21st (Mon)
 ---------------
 *debugging*
 
@@ -309,27 +309,27 @@ To find the bug, I created some pretty nasty stress tests, including a call to a
 A few people have already submitted their program to the bonus (which contains the code that our compiler needs to compile while producing the shortest assembly). To get bonus marks, the output of the compiler needs to be less than 180,000 bytes. A few people have obtained a score of 200,000 bytes (as seen on the leaderboard), suggesting that an straight implementation of the solution shown in class will yield ~200,000 bytes.
 
 
-July 22nd (Tue) 
+July 22nd (Tue)
 ---------------
 *debugging with black-box testing*
 
 After two days, I still couldn't find what causes my compiler to fail the automated assignment tests (the particular one I am failing is a blind test, meaning that I can't see what it is), despite correcting a variety of other mistakes along the way. Finally, I decided to resort to "extreme" measures. I disabled optimizations in my compiler in a binary search manner and kept testing the partial compiler at every step. This allowed me to narrow down on the problem.
 
-Finally, as expected, the source of the failure is a dumb mistake - I forgot to check for &'ed variables in println statements. Duh! 
+Finally, as expected, the source of the failure is a dumb mistake - I forgot to check for &'ed variables in println statements. Duh!
 
 After fixing the bug, I submitted my compiler for automated testing again and obtained a score of **109,876 bytes**, which is a bit over half the "baseline" score. This put me in second place.
 
 After two weeks, I finally have a working compiler.
 
 
-July 23rd (Wed) 
+July 23rd (Wed)
 ---------------
 *down to 3rd*
 
 Some person that I don't know submits a compiler producing 90k bytes, putting me in 3rd place. That's fine, I barely even got started.
 
 
-July 24th (Thu) - July 25th (Fri) 
+July 24th (Thu) - July 25th (Fri)
 ---------------------------------
 *constant folding*
 
@@ -362,7 +362,7 @@ which does not contain any node where both children are constants. However, simp
 The approach I took is to flatten the expression tree for addition and multiplication, which allows combining constants together. In prefix notation, this would lead to reductions as such :
 
 ```rkt
-(+ (+ a 1) (+ b 2)) 
+(+ (+ a 1) (+ b 2))
 => (+ a 1 b 2)
 => (+ a b 1 2)
 => (+ a b 3)
@@ -425,7 +425,7 @@ Up until now, every time I made a call to a procedure (including `new/delete/pri
 Can't work on the compiler more this weekend though. I have three assignments due next week (the last day of classes) that I kept pushing back to work on the compiler contest.
 
 
-July 27th (Sun) - July 28th (Mon) 
+July 27th (Sun) - July 28th (Mon)
 ---------------------------------
 *OS, Numerical, constants table, copy propagation*
 
@@ -479,7 +479,7 @@ by storing the location of the constants table in a fixed register (here, `$29`)
 
 This optimization saved a humble 2k bytes, down to **80,836 bytes**.
 
-Another easy optimization is [Copy Propagation](http://en.wikipedia.org/wiki/Copy_propagation). Given code involving the immediate assignment of one variable to another 
+Another easy optimization is [Copy Propagation](http://en.wikipedia.org/wiki/Copy_propagation). Given code involving the immediate assignment of one variable to another
 
 ```cpp
 x1 = a1;
@@ -494,7 +494,7 @@ x2 = a1 + b1;
 
 by substituting all instances of `x1` with `a1`. However, my ad-hoc implementation of SSA and phi functions does not allow certain cases of copy propagation to spread into branches, so this optimization is only half functional. It would be too much work at this point to go back and fix it, and probably not worth the effort. I still get a reasonable reduction, down to **79,928 bytes**.
 
-July 29th 
+July 29th
 ---------
 *constant propagation, rank ordering, dead procedures*
 
@@ -562,7 +562,7 @@ July 30th
 
 This is the last day for the contest. I am sitting quite solidly in 2nd place, but still a distance away from 1st, whose compiler outputs 54,316 bytes.
 
-A cool technique to eliminate redundant code is [Global Value Numbering (GVN)](http://en.wikipedia.org/wiki/Global_value_numbering). The idea is to assign each variable and expression (of 1 node) a number, which represents an identifier of a possible value at some point during execution. If we have 
+A cool technique to eliminate redundant code is [Global Value Numbering (GVN)](http://en.wikipedia.org/wiki/Global_value_numbering). The idea is to assign each variable and expression (of 1 node) a number, which represents an identifier of a possible value at some point during execution. If we have
 
 ```cpp
 c = x * y;
@@ -626,7 +626,7 @@ x = a + b;
 return x + y;
 ```
 
-which suggests that reordering instructions to appear as late as possible could be beneficial, keeping in mind that certain instructions can't be moved, notably memory operations and printing. 
+which suggests that reordering instructions to appear as late as possible could be beneficial, keeping in mind that certain instructions can't be moved, notably memory operations and printing.
 
 I initially thought that this would be too hard to implement in the three hours that I had left (it's very easy to mess up instruction reordering) but it turned out to be fairly easy. Implicitly, all this optimization does is a topological sort on instructions implemented in a specific way.
 
@@ -662,20 +662,20 @@ Final scoreboard (top 10)
 -------------------------
 
 <!-- Make sure these lines end with two or more spaces (markdown line break) -->
-1   |  11382  |  54316 <- [Geoffry Song](https://github.com/goffrie)    
-2   |  11365  |  57760 <- me  
-3   |  11735  |  88372 <- Liang Chen  
-4   |  11487  |  90916 <- [Shane Creighton-Young](https://github.com/srcreigh)  
-5   |  11371  |  104532  
-6   |  11351  |  106432  
-7   |  11391  |  127964  
-8   |  11379  |  141644  
-9   |  11488  |  142156  
-10  |  11370  |  153548  
+1   |  11382  |  54316 <- [Geoffry Song](https://github.com/goffrie)
+2   |  11365  |  57760 <- me
+3   |  11735  |  88372 <- Liang Chen
+4   |  11487  |  90916 <- [Shane Creighton-Young](https://github.com/srcreigh)
+5   |  11371  |  104532
+6   |  11351  |  106432
+7   |  11391  |  127964
+8   |  11379  |  141644
+9   |  11488  |  142156
+10  |  11370  |  153548
 
 A few closing comments on the contest :
 
-* This contest was primarily about free time and coding speed. There are tons of little optimization that I didn't have time to do. Although some students might find SSA and register allocation to be black magic, there's nothing particularly fancy about any of the technique I used (in this context, I define fancy as "found in academic literature" in contrast to "found on Wikipedia"). 
+* This contest was primarily about free time and coding speed. There are tons of little optimization that I didn't have time to do. Although some students might find SSA and register allocation to be black magic, there's nothing particularly fancy about any of the technique I used (in this context, I define fancy as "found in academic literature" in contrast to "found on Wikipedia").
 * Although a lot of work was required upfront to implement SSA (I didn't make it for the first assignment deadline!), subsequent optimization where a lot easier once I had it. It paid to skip the class solution entirely.
 * Using Racket was a significant advantage, with automatic memory management, pattern matching and easier to use built-in library than C++. I estimate that the equivalent C++ compiler would have been somewhere around 10,000 lines.
 * Geoffry (#1), myself (#2) and Shane (#4) all used Racket. I have no idea about Liang. It is not clear which way the correlation goes (probably both ways).
@@ -684,4 +684,4 @@ A few closing comments on the contest :
 * Unfortunately, not everyone takes this course at the same time. In particular, the [one person with whom I would have had a really tight race](http://www.lishid.com/) did not take the course had already taken the course a term earlier, due to having a different course sequence.
 * Very few people participated in the contest, which was somewhat disappointing.
 * This contest was enjoyable - in fact, it is the only assignment I've truly enjoyed for the whole term. I've been able to put 100% of my abilities into the contest, something which I have had difficulty doing in the last two years as my standards for "challenging" keeps increasing.
-* Lessons learned from Racket in the [next post](/blog/compiler-optimization-ii/)
+* Lessons learned from Racket in the [next post](/2014/08/08/compiler-optimization-ii.html)
