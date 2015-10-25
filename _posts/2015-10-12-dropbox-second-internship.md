@@ -126,9 +126,7 @@ During my second internship, there were also some C++ meetups organized by Alex 
 
 [^1]: Being a return intern has the perk of knowing all the teams and being able to have meetings with them. This is why it was worth going to Dropbox twice (in general, I think it's preferrable to try a few different companies to maximize exposure to different industries).
 
-[^2]:
-http://ericlippert.com/2015/05/18/when-everything-you-know-is-wrong-part-one/
-http://ericlippert.com/2015/05/21/when-everything-you-know-is-wrong-part-two/
+[^2]: http://ericlippert.com/2015/05/18/when-everything-you-know-is-wrong-part-one/ http://ericlippert.com/2015/05/21/when-everything-you-know-is-wrong-part-two/
 
 [^3]: Hand-wavy explanation as to why. Reference counting requires bookkeeping whenever references are changed, objects passed as arguments to methods, etc. Roughly speaking, the cost of the overhead is `O(# operations in the program)`. Even in a program where almost no object ever gets allocated (e.g. numerical programs), this still adds a lot of overhead.
 
