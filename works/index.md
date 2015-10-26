@@ -7,6 +7,18 @@ type: page
 
 ---------------------------------------
 
+<img width="300" src="/images/2012/09/WideLogo.scale-180.png">
+
+[**Fractal Photographer**](http://fractalphotographer.com) : A Mandelbrot renderer. If you've written one yourself before, you probably know that it can be done in 5 minutes with about 20 lines of code. Many people know this - and that's all they do. App stores (Windows, iOS, Android...) are full of simple fractal renderers which do not provide a fun user experience (a common telltale sign is when the app freezes during a render). The aim of this project was to create a highly fluid renderer, easy to use while providing adequate customization options.
+
+---------------------------------------
+
+<img width=300 src="/images/2014/01/LargeProfile.png">
+
+[**Fractal Photographer 3D**](/works/fractal-photographer-3d.html) : An application that uses the Leap Motion Controller to navigate 3D fractals.
+
+---------------------------------------
+
 <img width="150" src="/images/2012/09/Logo.png">
 
 [**Smart Resize**](/works/smart-resize.html) : Created as part of the [Nokia Future Capture](http://developer.nokia.com/futurecapture/) hackathon in Sweden, this app won first place and was presented to [journalists worldwide at Nokia World 2013, Abu Dhabi](http://www.youtube.com/watch?v=QEZZ44ncnWI).
@@ -14,18 +26,6 @@ type: page
 ---------------------------------------
 
 [**Influence Game and Multi Column Swiss Tournament**](/works/influence-game) : A personal research project on neural networks, self-organizing systems and evolutionary algorithms where I examine the performance of a method of evaluating individual 'teams'.
-
----------------------------------------
-
-<img width="300" src="/images/2012/09/WideLogo.scale-180.png">
-
-[**Fractal Photographer**](/works/fractal-photographer.html) : A Mandelbrot renderer. If you've written one yourself before, you probably know that it can be done in 5 minutes with about 20 lines of code. Many people know this - and that's all they do. App stores (Windows, iOS, Android...) are full of simple fractal renderers which do not provide a fun user experience (a common telltale sign is when the app freezes during a render). The aim of this project was to create a highly fluid renderer, easy to use while providing adequate customization options.
-
----------------------------------------
-
-<img width=300 src="/images/2014/01/LargeProfile.png">
-
-[**Fractal Photographer 3D**](/works/fractal-photographer-3d.html) : An application that uses the Leap Motion Controller to navigate 3D fractals.
 
 ---------------------------------------
 
