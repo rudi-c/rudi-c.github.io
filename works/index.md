@@ -43,10 +43,6 @@ type: page
 
 ---------------------------------------
 
-[**Gaussian Elimination over a Finite Field Fp**](https://skydrive.live.com/?cid=6fb0c7d730b1e510&id=6FB0C7D730B1E510%213543) : A school project that deals with an interesting variation of solving systems of linear equations.
-
----------------------------------------
-
 <img width=300 src="/images/2014/02/MappingContestRound2.png">
 
 [**RPG Level Design**](/works/rpg-level-design.html) : Like many other programmers, I first got into computer science because I wanted to make games. More specifically, my entry point was a software called RPG Maker XP (yes, back when Windows XP was the state of the art). Some of my work taught me skills that still serve me today (I'm not sure if I would have learned Photoshop otherwise), but I was particularly good at level design. In RMXP lingo, that was called "mapping", and I did some independent contract work. This is really old stuff, 2005-2009.
