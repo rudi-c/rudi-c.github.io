@@ -1,5 +1,5 @@
 ---
-title: MOCS's most important feature
+title: Massively online courses' most important feature
 layout: post
 type: post
 disqus: y
@@ -28,7 +28,7 @@ Furthermore, the course cannot jump right into the material. Like an essay canno
 
 As such, in 99% of cases, a course will begin slowly. This is an unavoidable consequence of designing a course in such a way that everyone can follow the material. Slow, however, means boring. Boring means loss of interest. Loss of interest means reduced retention.
 
-Can't the student skip over the slow and boring parts? Well, not quite. Low information density does not mean zero information density. There may be just a one or two concepts introduced in the refresher that is critical for later assignments, and even smart students will be confused if introduced to material without context. And without having taken the course, how can the student know which parts can be skipped? 
+Can't the student skip over the slow and boring parts? Well, not quite. Low information density does not mean zero information density. There may be just a one or two concepts introduced in the refresher that is critical for later assignments, and even smart students will be confused if introduced to material without context. And without having taken the course, how can the student know which parts can be skipped?
 
 The pace will eventually pick up - doesn't this make this a non-issue? Well, unfortunately, the human brain doesn't evaluate each lesson independently. If the brain gets bored in the early stages, it might view all subsequent material more negatively.
 
