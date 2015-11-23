@@ -98,3 +98,5 @@ Misc
 [PhD Comics](http://phdcomics.com/comics.php)
 
 A lot of Quora. I spend way too much time on that site.
+
+Speaking of books, I was also a reviewer for [Mastering Leap Motion](http://www.amazon.com/Mastering-Leap-Motion-Brandon-Sanders/dp/1783551399).
