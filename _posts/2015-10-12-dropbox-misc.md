@@ -22,20 +22,20 @@ The game room has a DDR machine, which ended up being my cardio exercise machine
 Meeting people during breakfast
 -------------------------------
 
-As there are so many interesting people at Dropbox, interns are strongly recommended to meet as many people as possible during their time at the office. I never felt like a Dropboxer was “just coming to work”, they were all happy to chat. One of the best times to meet people is during breakfast. In the process of sitting down with random people during breakfast, I learned a few things about myself.
+As there are so many interesting people at Dropbox, interns are strongly encouraged to meet as many people as possible during their time at the office. I never felt like a Dropboxer was “just coming to work”, they were all happy to chat. One of the best times to meet people is during breakfast. In the process of sitting down with random people during breakfast, I learned a few things about myself.
 
 As an introvert, socializing requires energy, as opposed to generating energy [^0]. I find that moving to a new environment tends to reset my energy level. During my first internship, the energy reserves managed to last a month before I started taking breakfast to my desk directly. During my second internship, the energy reserves managed to last two months.
 
 My second internship at Dropbox was during the summer and it was my first time interning with a large number of other interns. The first company I interned at was small and there were only 5 interns. My first internship at Dropbox was during the Fall and there were only a few European interns left. This summer, however, there were close to 80 Dropbox interns.
 
-At the beginning of the summer, I made up the arbitrary goal of learning everyone’s name. I got pretty far: more than a month later, I can still list 30 or so interns from pure recall and I can to more than 60 from recognition (by looking at a list of pictures). In a way, this was a good goal to have as I forced myself to talk to everybody. The downside is that I spread my time and socializing energy a little too thin to really get to know people well. In retrospect it could have been more productive to focus on a few people and get to know them really well.
+At the beginning of the summer, I made up the arbitrary goal of learning everyone’s name. I got pretty far: more than a month later, I can still list 30 or so interns from pure recall and I can do more than 60 from recognition (by looking at a list of pictures). In a way, this was a good goal to have as I forced myself to talk to everybody. The downside is that I spread my time and socializing energy a little too thin to really get to know people well. In retrospect it could have been more productive to focus on a few people and get to know them really well.
 
 Paper reading group
 -------------------
 
-During my second internship, in an initiative started by [Anish Athalye](http://www.anishathalye.com/), Dropbox interns (and other interested interns from the Bay Area) met every week to read and discuss a paper. I would say that was one of the highlights of my summer internship. Many interns have interest and expertise into specific fields, and these meetings was a great way for everyone to share the most interesting problems and tidbits from each of those fields.
+During my second internship, in an initiative started by [Anish Athalye](http://www.anishathalye.com/), Dropbox interns (and other interested interns from the Bay Area) met every week to read and discuss a paper. I would say that was one of the highlights of my summer internship. Many interns have interest and expertise in specific fields, and these meetings was a great way for everyone to share the most interesting questions and tidbits from each of those fields.
 
-Each meeting was centered around a paper chosen at the previous meeting, and one person was responsible for presenting it. The structure was fairly loose - the presenter was free to discuss the topic as they saw fit (with various amount of reading v.s. explaining by themselves on the whiteboard).
+Each meeting was centered around a paper chosen at the previous meeting, and one person was responsible for presenting it. The structure was fairly loose - the presenter was free to discuss the topic as they saw fit (with varying amounts of reading v.s. explaining by themselves on the whiteboard).
 
 The papers covered:
 
@@ -51,7 +51,7 @@ The papers covered:
 
 [Neural Turing Machines](http://arxiv.org/abs/1410.5401)
 
-[Uniprocessor Garbage Collection Techniques](http://www3.nd.edu/~dthain/courses/cse40243/spring2006/gc-survey.pdf) - I presented this one, though I mostly decided what I wanted to talk about first and chose the paper after-the-fact. Garbage collection literature is a treasure trove of interesting algorithms, optimization techniques, all of which is very applicable. Lots to talk about.
+[Uniprocessor Garbage Collection Techniques](http://www3.nd.edu/~dthain/courses/cse40243/spring2006/gc-survey.pdf) - I presented this one, though I mostly decided what I wanted to talk about first and chose the paper after-the-fact. Garbage collection literature is a treasure trove of interesting algorithms and optimization techniques, all of which is very applicable. Lots to talk about.
 
 [Tutorial Summary: Paxos Explained from Scratch](http://www.ux.uis.no/~meling/papers/2013-paxostutorial-opodis.pdf)
 
@@ -75,7 +75,7 @@ Some of the more reputable publications like Business Insider have their facts m
 
 Where does Dropbox fall on the continuum? That's a hard question to answer at any company [^2], even for the leadership, let alone for the media. So reading these articles is an exercise for the reader to keep their [confirmation bias](http://www.sciencedaily.com/terms/confirmation_bias.htm) under check, but most reader won’t realize they are being exercised.
 
-In Silicon Valley, the evaluation metric seems to be potential. The company needs to have the potential to be the next Google — otherwise, it will clearly inevitably die. However, potential is supposed to be a means to an end, not an ends to itself. At some point, a company’s potential needs to be realized into a robust market position. I would say that Dropbox is at that stage. For the media, this seems like a bad thing, since their incentives is to have things to write. Writing about Dropbox opening new offices across the world and making the product available in more languages (warranted by the large user base) does not make for exciting headlines, even though it one of the strongest signs that Dropbox has a future. As such, when Dropbox no longer gives the media headline material, the media writes about how Dropbox no longer gives them headline material.
+In Silicon Valley, the evaluation metric seems to be potential. The company needs to have the potential to be the next Google — otherwise, it will clearly inevitably die. However, potential is supposed to be a means to an end, not an ends to itself. At some point, a company’s potential needs to be realized into a robust market position. I would say that Dropbox is at that stage. For the media, this seems like a bad thing, since their incentives is to have things to write. Writing about Dropbox opening new offices across the world and making the product available in more languages (warranted by the large user base) does not make for exciting headlines, even though it is one of the strongest signs that Dropbox has a future. As such, when Dropbox no longer gives the media headline material, the media writes about how Dropbox no longer gives them headline material.
 
 [^0]: People’s idea of what it means to be an introvert and extrovert tends to vary. Extroverts are typically thought to be sociable and introverts are typically thought to be shy. While there is some correlation, I find that it is weak at best. I know a lot of talkative introverts with great social skills; it’s not so much about their ability to socialize as it is about their desire to socialize. This is why I find the energy definition of introvert/extrovert the most useful.
 

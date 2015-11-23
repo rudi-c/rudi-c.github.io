@@ -13,9 +13,9 @@ During my second internship, I worked on [Pyston](https://github.com/dropbox/pys
 JITs
 ----
 
-The first thing I learned while learning the Pyston codebase is what a JIT compiler is or rather, what it can be. I think that when most people first hear about JITs, it is almost always in the context of the JVM or .NET. While learning Java or C#, we learn that the code is first compiled to an intermediate portable bytecode, and a final translation step to machine code occurs when the program is run. This is used to explain Java/C#'s startup time. This layer of abstraction increases portability and allows for some machine-specific optimizations. Otherwise, the bytecode looks very machine-like already (even though it is technically interpreted) as Java and C# are static languages.
+The first thing I learned from the Pyston codebase is what a JIT compiler is or rather, what it can be. I think that when most people first hear about JITs, it is almost always in the context of the JVM or .NET. While learning Java or C#, we learn that code is first compiled to an intermediate portable bytecode, and a final translation step to machine code occurs when the program is run. This is used to explain Java/C#'s startup time. This layer of abstraction increases portability and allows for some machine-specific optimizations. Otherwise, the bytecode looks very machine-like already (even though it is technically interpreted) as Java and C# are static languages.
 
-JITs for dynamic languages don’t have much a pre-compilation step. They often default to execution by an interpreter and compile parts of the code as needed (often one function at a time). A good illustration of the power of a dynamic language JIT is the inline cache optimization.
+JITs for dynamic languages don’t have much of a pre-compilation step. They often default to execution by an interpreter and compile parts of the code as needed (often one function at a time). A good illustration of the power of a dynamic language JIT is the inline cache optimization.
 
 Suppose we implement a distance function for vectors:
 
@@ -41,7 +41,7 @@ PyObject* length(PyObject* v)
 }
 ```
 
-Note that this is slow due to the necessity of having hash lookups. The idea behind inline caching is to record the type of the arguments to a function. If the function is called often with an argument of the same type, we could recompile the function to take a “fast path” which assumes that type. For example:
+Note that this is slow due to the necessity of doing hash lookups. The idea behind inline caching is to record the type of the arguments to a function. If the function is called often with an argument of the same type, we could recompile the function to take a “fast path” which assumes that type. For example:
 
 ```cpp
 PyObject* lengthFaster(PyObject *v)
@@ -59,11 +59,11 @@ PyObject* lengthFaster(PyObject *v)
 Feature work
 ------------
 
-Some of my work on Pyston has been compatibility/feature work. We want Pyston to have the same behavior as CPython, the default Python implementation, whenever possible. For example, when you use the slice operator on an object (e.g. `obj[1:]`), CPython will call `__getslice__` (technically deprecated but still supported) or `__getitem__` depending a number of different conditions. I also helped build some preliminary support for NumPy (compile it + run a very simple program), a popular Python library.
+Some of my work on Pyston has been compatibility/feature work. We want Pyston to have the same behavior as CPython, the default Python implementation, whenever possible. For example, when you use the slice operator on an object (e.g. `obj[1:]`), CPython will call `__getslice__` (technically deprecated but still supported) or `__getitem__` depending on a number of different conditions. I also helped build some preliminary support for NumPy, a popular Python library (compile it + run a very simple program).
 
-When it comes to compatibility work like this, there are a lot of things to do. You want to support a library. It crashes. You debug it for a while and fix the crash. It crashes some number of function calls later. This process can repeat ad infinitum. A good strategy is to be as hacky as possible during this phase. A crash occurs in a internal C function? Comment the whole function out. A line of Python uses a feature we don’t support? Comment out that line too. This is a strange process that took some time to get used to. _Normally_, in software engineering, you aim to write correct code.
+When it comes to compatibility work like this, there are a lot of things to do. You want to support a library. It crashes. You debug it for a while and fix the crash. It crashes again some number of function calls later. This process can repeat ad infinitum. A good strategy is to be as hacky as possible during this phase. A crash occurs in a internal C function? Comment the whole function out. A line of Python uses a feature we don’t support? Comment out that line too. This is a strange process that took some time to get used to. _Normally_, in software engineering, you aim to write correct code.
 
-Nevertheless, the advantage of doing this is that you end up with a list of TODOs which gives a sense as to the scope of the problem. Another advantage is that it isolated a number of little tasks that I subsequently put up as Github issues for other contributors to fix. That may sound very lazy, but Pyston is a complex project and at this stage, it is very valuable to have easy tasks for interested contributors to dive their feet in the codebase with. It makes the project accessible. It’s really hard to get into Pyston and start working on say, implementing a new garbage collector. There’s too much context needed. However, it’s very reasonable to add the `__doc__` attribute to `capifunc` object since it’s a self-contained task but allows the contributor to start touching the codebase.
+Nevertheless, the advantage of doing this is that you end up with a list of TODOs which gives a sense of the scope of the problem. Another advantage is that it isolated a number of little tasks that I subsequently put up as Github issues for other contributors to fix. That may sound very lazy, but Pyston is a complex project and at this stage, it is very valuable to have easy tasks for interested contributors to dive their feet in the codebase with. It makes the project accessible. It’s really hard to get into Pyston and start working on say, implementing a new garbage collector. There’s too much context needed. However, it’s very reasonable to add the `__doc__` attribute to `capifunc` object since it’s a self-contained task but allows the contributor to start touching the codebase.
 
 Finalizers
 ----------
@@ -109,7 +109,7 @@ On top of this, implementing finalizers for Python has even more edge cases like
 Moving garbage collection
 -------------------------
 
-Most modern languages having a moving garbage collector. Those garbage collectors, in addition to freeing objects, move (copy) objects from one address to another. This opens up room for a lot of performance optimizations [^3]. I spent a couple days reading papers and writing an implementation proposal, which was nice - I finally get to read papers at work! Then, with the time I had remaining in the internship, I started some preliminary work into implementing it [^4].
+Most modern languages have a moving garbage collector. Those garbage collectors, in addition to freeing objects, move (copy) objects from one address to another. This opens up room for a lot of performance optimizations [^3]. I spent a couple days reading papers and writing an implementation proposal, which was nice - I finally get to read papers at work! Then, with the time I had remaining in the internship, I started some preliminary work into implementing it [^4].
 
 This was a lot of fun because I went into garbage collection in a lot of depth. Garbage collection techniques are easy to explain conceptually but practical considerations involve a lot more than textbook presentations let on. For example, the name ‘garbage collection’ has the connotation ‘algorithm that frees garbage’. However, a garbage collector is never designed independently. The implementation of the heap is strongly tied to the implementation of the garbage collector (e.g. semispaces in copying and generational GCs). The rest of the runtime might need to do bookkeeping to support the garbage collector (e.g. reference counts, write barriers). Choosing a garbage collector requires evaluating the combined performance impact on allocation costs, deallocation costs and runtime costs.
 
@@ -118,13 +118,13 @@ I also learned that textbook garbage collection algorithms almost never work in 
 C/C++
 -----
 
-I also learned a lot about low-level coding with Pyston, which operates at a lower level than anything I’ve done before. For example, we use C-style function pointers. These are rarely used nowadays because there are better engineering techniques available (e.g. lambda functions, virtual dispatch). However, in Pyston, we may need to call generated code, which you can only do with function pointers.
+I also learned a lot about low-level coding with Pyston, which operates at a lower level than anything I’ve done before. For example, we use C-style function pointers. These are rarely used nowadays because there are better engineering techniques available (e.g. lambda functions, virtual dispatches). However, in Pyston, we may need to call generated code, which you can only do with function pointers.
 
-Pyston is designed for performance and it is surprisingly how much performance gains code inlining can achieve. This helped me gain a whole new level of understanding into the saying “indirection [abstraction] solves every problem except that of too many layers of indirection”, as every layer of abstraction introduces a performance hit.
+Pyston is designed for performance and it is surprising how much performance gains code inlining can achieve. This helped me gain a whole new level of understanding into the saying “indirection [abstraction] solves every problem except that of too many layers of indirection”, as every layer of abstraction introduces a performance hit.
 
 During my second internship, there were also some C++ meetups organized by Alex Allain which were also very nice. Notably, Chandler Carruth came to give a talk about Clang, and how they improved over GCC, and the nice static analysis tools it features.
 
-[^1]: Being a return intern has the perk of knowing all the teams and being able to have meetings with them. This is why it was worth going to Dropbox twice (in general, I think it's preferrable to try a few different companies to maximize exposure to different industries).
+[^1]: Being a return intern has the perk of knowing all the teams and being able to have meetings with them. This is why it was worth going to Dropbox twice (otherwise, in general, I think it's preferrable to try a few different companies to maximize exposure to different industries).
 
 [^2]: http://ericlippert.com/2015/05/18/when-everything-you-know-is-wrong-part-one/ http://ericlippert.com/2015/05/21/when-everything-you-know-is-wrong-part-two/
 
