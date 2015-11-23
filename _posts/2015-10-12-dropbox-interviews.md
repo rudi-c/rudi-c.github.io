@@ -6,7 +6,7 @@ type: post
 disqus: y
 ---
 
-This is one of four blog posts on my experiences interning at Dropbox in Fall 2014 and Summer 2015. Read more about [my first](/2015/10/12-dropbox-first-internship) and [second internships](/2015/10/12/dropbox-second-internship.html) and [the social, cultural and business aspects](/2015/10/12/dropbox-misc.html).
+This is one of four blog posts on my experiences interning at Dropbox in Fall 2014 and Summer 2015. Read more about [my first](/2015/10/12/dropbox-first-internship) and [second internships](/2015/10/12/dropbox-second-internship.html) and [the social, cultural and business aspects](/2015/10/12/dropbox-misc.html).
 
 _Important note: while the words “Dropbox” and “interview” are both present in the title, this isn’t a guide on “how to pass Dropbox interviews” so much as a discussion on the design of tech interview questions._
 

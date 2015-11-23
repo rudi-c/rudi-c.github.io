@@ -6,7 +6,7 @@ type: post
 disqus: y
 ---
 
-This is one of four blog posts on my experiences interning at Dropbox in Fall 2014 and Summer 2015. Read more about [my first internship](/2015/10/12-dropbox-first-internship), [second internship](/2015/10/12/dropbox-second-internship.html) and [maximizing signal in interviews](/2015/10/12/dropbox-interviews.html).
+This is one of four blog posts on my experiences interning at Dropbox in Fall 2014 and Summer 2015. Read more about [my first internship](/2015/10/12/dropbox-first-internship), [second internship](/2015/10/12/dropbox-second-internship.html) and [maximizing signal in interviews](/2015/10/12/dropbox-interviews.html).
 
 An alternative title to this blog post would be “miscellaneous”.
 

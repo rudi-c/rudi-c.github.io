@@ -6,7 +6,7 @@ type: post
 disqus: y
 ---
 
-This is one of four blog posts on my experiences interning at Dropbox in Fall 2014 and Summer 2015. Read more about [my first internship](/2015/10/12-dropbox-first-internship), [maximizing signal in interviews](/2015/10/12/dropbox-interviews.html) and [the social, cultural and business aspects](/2015/10/12/dropbox-misc.html).
+This is one of four blog posts on my experiences interning at Dropbox in Fall 2014 and Summer 2015. Read more about [my first internship](/2015/10/12/dropbox-first-internship), [maximizing signal in interviews](/2015/10/12/dropbox-interviews.html) and [the social, cultural and business aspects](/2015/10/12/dropbox-misc.html).
 
 During my second internship, I worked on [Pyston](https://github.com/dropbox/pyston), an open-source Python JIT compiler. Compilers are programs that generate machine code from human-written source code. Just-in-time compilers do some of that work at runtime - it will generate code to execute as the program is being executed. This is a very very different kind of project from my previous internship. I am moving from building a consumer-facing front-end product to building low-level fundamental infrastructure code [^1].
 
