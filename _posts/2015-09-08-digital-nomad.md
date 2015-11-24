@@ -26,7 +26,7 @@ Having decided that, the next question would be where I would stay. I could live
 
 Or I could do my term off from a randomly chosen country.
 
-Initially, I was resistant to this idea. Living in another country felt like going on a 4-month long vacation, which is seemed at odds with my drive to be productive. I’m taking a break to have some freedom, not because I’m burned out.
+Initially, I was resistant to this idea. Living in another country felt like going on a 4-month long vacation, which seemed at odds with my drive to be productive. I’m taking a break to have some freedom, not because I’m burned out.
 
 Then I found an article on _Entrepreneur_ titled [How I Built a Startup While Traveling to 20 Countries](http://www.entrepreneur.com/article/241761) where, for one particular guy, travelling allowed him to be much more productive with his time. That was the start to realizing that travelling might not necessarily be at odds with working. It is the case that there are a lot of inefficiencies in my life, many of which are introduced by complacency which routine certainly does nothing to alleviate [^3]. That article also introduced me to the term “digital nomad”.
 
@@ -43,7 +43,7 @@ I am going to South Korea because [one article on the New York Times](http://www
 
 I could discuss what’s nice about Taipei, Chiang Mai and Ho Chi Minh. But honestly, I picked them because they showed up often on [/r/digitalnomad](reddit.com/r/digitalnomad) and they are “tried and true”. Since my term off is already very unconventional, I don’t feel bad about being a sheep here. Furthermore, choosing is hard. I also considered going to Eastern European countries [^4] like Romania, Hungary, Czech Republic and Estonia which also have low costs of living. There are interns at Dropbox from those countries and they tell me the internet there is amazing. I also considered places like the Philippines and Indonesia. However, at some point, it’s necessary to realize that you just don’t have enough information to know what’s “best” for you and any choice is as good as any other.
 
-I did think more careful about the order of those 4 cities, which is based mainly on weather [^5].
+I did think more carefully about the order of those 4 cities, which is based mainly on weather [^5].
 
 To find a place to stay, AirBnB is the most convenient and safest option, at a reasonable price. By staying with a host, it’s easier to learn the local culture. I’ve booked a private room for 30$/night in Seoul and I expect to be able to get 20$/night in other places. I also heard that if I make an effort and look for “for rent” signs, I could get pretty good apartments for as low as 300$/month. My rent costs will definitely be under 2000$, possibly much lower.
 
@@ -58,7 +58,7 @@ I explained earlier that my goal of taking a term off is to code and self-learn.
 
 I am not taking a vacation.
 
-I will go out an explore the country. I will spend time getting to know the local culture. I will meet new people. However, if I spend a beautiful day indoors hunting down a memory corruption, that’s perfectly fine. I will not be missing out on anything. If I go to a park and just read a book the whole time [^6], I am also not missing out on anything. Because I will be a visitor, not a tourist. Because I will not be on vacation.
+I will go out and explore the country. I will spend time getting to know the local culture. I will meet new people. However, if I spend a beautiful day indoors hunting down a memory corruption, that’s perfectly fine. I will not be missing out on anything. If I go to a park and just read a book the whole time [^6], I am also not missing out on anything. Because I will be a visitor, not a tourist. Because I will not be on vacation.
 
 I’ve lost count of how many people I explained digital nomadism to, but only two people had heard of the term before. I think for most people, travelling outside of business means taking a vacation. Which is a fair association to make (it applies in 99% of cases), but there is no reason why it has to be the case. For example, nobody misses out on their undergraduate experience if they don’t try taking a graduate class. Taking a graduate class to see what it’s like can add value to the undergraduate experience, but there are other legitimate ways to invest time. If every undergraduate took a graduate class, it would feel a lot more like missing out. But it would still not mandate necessity.
 
