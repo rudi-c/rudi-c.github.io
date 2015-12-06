@@ -19,6 +19,4 @@ links:
 
 markdown:         redcarpet
 redcarpet:
-  extensions:
-    - smart
-    - footnotes
+  extensions: ["smart", "footnotes", "tables"]

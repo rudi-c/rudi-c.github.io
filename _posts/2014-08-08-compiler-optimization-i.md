@@ -661,17 +661,18 @@ Final stats (`wc -l *.rkt *.ss`)
 Final scoreboard (top 10)
 -------------------------
 
-<!-- Make sure these lines end with two or more spaces (markdown line break) -->
-1   |  11382  |  54316 <- [Geoffry Song](https://github.com/goffrie)
-2   |  11365  |  57760 <- me
-3   |  11735  |  88372 <- Liang Chen
-4   |  11487  |  90916 <- [Shane Creighton-Young](https://github.com/srcreigh)
-5   |  11371  |  104532
-6   |  11351  |  106432
-7   |  11391  |  127964
-8   |  11379  |  141644
-9   |  11488  |  142156
-10  |  11370  |  153548
+Position | ID  | Size  | Person
+:-------:| --- | ----- |:---
+1  | 11382 | 54316  | <- [Geoffry Song](https://github.com/goffrie)
+2  | 11365 | 57760  | <- me
+3  | 11735 | 88372  | <- Liang Chen
+4  | 11487 | 90916  | <- [Shane Creighton-Young](https://github.com/srcreigh)
+5  | 11371 | 104532 |
+6  | 11351 | 106432 |
+7  | 11391 | 127964 |
+8  | 11379 | 141644 |
+9  | 11488 | 142156 |
+10 | 11370 | 153548 |
 
 A few closing comments on the contest :
 
