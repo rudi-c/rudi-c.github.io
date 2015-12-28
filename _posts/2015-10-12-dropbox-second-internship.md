@@ -50,11 +50,13 @@ PyObject* lengthFaster(PyObject *v)
     if (typeof(v) != type(vector))
       return length(v)
 
-      vx = ((vector*)v).x
-      vy = ((vector*)v).y
+    vx = ((vector*)v).x
+    vy = ((vector*)v).y
     return new PyFloatObject(sqrt(vx * vx + vy * vy))
 }
 ```
+
+_For simplicity, this example ignores the issue of making sure vx and vy support multiplication and addition._
 
 Feature work
 ------------

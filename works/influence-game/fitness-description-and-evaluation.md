@@ -245,7 +245,8 @@ procedure SwissTournament(initial-set, number-of-rounds)
 <p>The method we use to avoid having ANNs converge too quickly into a local minimum is to separate them in multiple columns. We initially create N sets (<b>columns</b>) of K random artificial neural networks. Teams in one column compete against teams in other columns, but there is no competition among teams of the same column. The procedure for ranking teams is similar to a Swiss tournament. We begin by choosing 2 columns among the N available, say A and B, to be paired against one another - column pairing. Then, we do <b>column-wise pairing</b>; we attempt to pair the best team of column A with the best team of column B if they have not been matched together in a previous round. After each round, the teams are sorted within their own column by their performance and we match them up again. Since both columns have K teams, there will be no byes.</p>
 <p>The performance of a team is thus determined by its total number of wins across all column pair-ups. To ensure that the results are invariant under the ordering of column pair-ups, we tally the number of wins only at the end. When two columns are paired up, the teams do not start with a ranking for the purpose of the pair-up. In pseudo-code :</p>
 
-<pre><code>procedure MatchANN(set-of-ANNs1, set-of-ANNs2, current-index)
+```
+procedure MatchANN(set-of-ANNs1, set-of-ANNs2, current-index)
     if current-index = set-of-ANNs1.size
         // Base case
         end
@@ -269,7 +270,8 @@ procedure MultiSwissTournament(initial-columns, number-of-rounds)
                 current-set2 = Rank(current-set2)
             Set aside score for column i
             Set aside score for column j
-</code></pre>
+```
+
 <p><em>example, with initial teams labelled from A1 to A4 for column A, B1 to B4 for column B</p>
 <center><table border="1" style="text-align: center;">
 <tr>

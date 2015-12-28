@@ -61,4 +61,4 @@ Interviewing is an art, and it is one that I will inevitably need to learn.
 
 [^4]: As for the companies where the connection was missing, I felt like they didn’t care enough about hiring/getting the best people.
 
-[^5]: The interviews are broken, and there won't be perfect fix anymore than there will be 'perfect criteria for university admission', 'perfect criteria for determining eligibility for government programs', etc. [This article by one of the most experienced interviews does a good job at explaining why.](http://www.gayle.com/blog/2015/6/10/developer-interviews-are-broken-and-you-cant-fix-it)
+[^5]: The interviews are broken, and there won't be perfect fix anymore than there will be 'perfect criteria for university admission', 'perfect criteria for determining eligibility for government programs', etc. [This article by one of the most experienced interviewers does a good job at explaining why.](http://www.gayle.com/blog/2015/6/10/developer-interviews-are-broken-and-you-cant-fix-it)

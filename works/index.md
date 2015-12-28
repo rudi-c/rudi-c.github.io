@@ -29,7 +29,9 @@ type: page
 
 ---------------------------------------
 
-[**Mandelbox370**](https://github.com/rudi-c/mandelbox370) : In this project (written as part of UWaterloo's PMATH 370 course), I prove some properties of the Mandelbox and provide a real-time WebGL renderer.
+<img width=400 src="http://digitalfreepen.com/mandelbox370/pics/explorer1.png">
+
+[**Mandelbox370**](http://digitalfreepen.com/mandelbox370/) : In this project (written as part of UWaterloo's PMATH 370 course), I prove some properties of the Mandelbox and provide a real-time WebGL renderer.
 
 ---------------------------------------
 
