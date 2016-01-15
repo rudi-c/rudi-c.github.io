@@ -1,5 +1,5 @@
 ---
-title: Digital Nomadism - General Thoughts
+title: Digital Nomadism - General thoughts
 date: 2016-01-13 00:00:03
 layout: post
 type: post

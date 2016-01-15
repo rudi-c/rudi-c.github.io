@@ -1,5 +1,5 @@
 ---
-title: Digital Nomadism - The People of AirBnB
+title: Digital Nomadism - The people of AirBnB
 date: 2016-01-13 00:00:01
 layout: post
 type: post

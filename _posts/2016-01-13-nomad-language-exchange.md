@@ -1,5 +1,5 @@
 ---
-title: Digital Nomadism - Language Exchange Meetups
+title: Digital Nomadism - Language exchange meetups
 date: 2016-01-13 00:00:02
 layout: post
 type: post
