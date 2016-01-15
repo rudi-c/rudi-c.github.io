@@ -22,18 +22,29 @@ Reading List
 ============
 <center>*some small subset of it*</center>
 
-Nice books that I've read
---------------------
+Favorites
+---------
+
+The Origins of Political Order - Francis Fukuyama
 
 How To Win Friends And Influence People - Dale Carnegie
 
+1984 - George Orwell
+
+Harry Potter and the Methods of Rationality - Eliezer Yudkowsky
+
+Nice books that I've read
+--------------------
+
 Zero To One - Peter Thiel
+
+Code Complete - Steve McConnell
 
 Thinking, Fast and Slow - Daniel Kahneman
 
 Connected - Nicholas A. Christakis, James H. Fowler
 
-1984, Animal Farm - George Orwell
+Animal Farm - George Orwell
 
 Brave New World - Aldous Huxley
 
@@ -52,11 +63,21 @@ The Tipping Point - Malcolm Gladwell
 Books that I want to read
 -------------------------
 
-The Art of War
+Political Order and Political Decay
+
+The Art of War (if there's a nice cleaned up version somewhere)
+
+Flash Boys
+
+How Asia Works
+
+Thing Explainer: Complicated Stuff in Simple Words
 
 The Design of Everyday Things
 
-Power of Mind
+The Three-Body Problem
+
+Powers of Mind
 
 Chimpanzee Politics: Power and Sex among Apes
 
@@ -66,14 +87,14 @@ Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future
 
 The Name of the Wind
 
-The Origins of Political Order
-
 News/Magazines
 --------------
 
 [Hacker News](https://news.ycombinator.com/) for a daily selection of interesting links relevant in the tech industry, and for being the only website where the comments on an article are occasionally more insightful than the article itself.
 
 [The Verge](http://theverge.com/) for an aggregation of tech news, as well as occasional random interesting articles about science, media, etc. Like Hacker News, but more like a regular news site.
+
+[Quartz](http://qz.com/) they have good non-tech articles.
 
 [Google News](https://news.google.com/) for most non-tech news stories.
 
