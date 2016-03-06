@@ -17,6 +17,8 @@ links:
   - name:         Resume
     url:          /files/documents/CV-RudiChen-Web-August2015.pdf
 
-markdown:         redcarpet
-redcarpet:
-  extensions: ["smart", "footnotes", "tables"]
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
