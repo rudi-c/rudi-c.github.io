@@ -58,5 +58,6 @@ Traveling alone and at a slow pace kicks in a certain social survival instinct t
 
 _Related: meetup.com is also a great way to find locals to meet with similar interests. I went to startup meetup, an effective altruism meetup a philosophy meetup and a javascript JIT optimization meetup._
 
+-----------------------------------------
 
 [^1]: Safes are things that rich people buy, and rich people can afford to spend arbitrarily on luxury items. So this leads to safes being produced with an exterior of calf skin, Swarovski crystals, etc. Makes total sense that such a market would exist.

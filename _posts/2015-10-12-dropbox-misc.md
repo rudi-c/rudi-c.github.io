@@ -77,6 +77,8 @@ Where does Dropbox fall on the continuum? That's a hard question to answer at an
 
 In Silicon Valley, the evaluation metric seems to be potential. The company needs to have the potential to be the next Google — otherwise, it will clearly inevitably die. However, potential is supposed to be a means to an end, not an ends to itself. At some point, a company’s potential needs to be realized into a robust market position. I would say that Dropbox is at that stage. For the media, this seems like a bad thing, since their incentives is to have things to write. Writing about Dropbox opening new offices across the world and making the product available in more languages (warranted by the large user base) does not make for exciting headlines, even though it is one of the strongest signs that Dropbox has a future. As such, when Dropbox no longer gives the media headline material, the media writes about how Dropbox no longer gives them headline material.
 
+-----------------------------------------------
+
 [^0]: People’s idea of what it means to be an introvert and extrovert tends to vary. Extroverts are typically thought to be sociable and introverts are typically thought to be shy. While there is some correlation, I find that it is weak at best. I know a lot of talkative introverts with great social skills; it’s not so much about their ability to socialize as it is about their desire to socialize. This is why I find the energy definition of introvert/extrovert the most useful.
 
 [^1]: The worst I have heard is spending the whole summer on building a slider, which never ended up getting used.

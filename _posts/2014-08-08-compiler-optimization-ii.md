@@ -17,7 +17,7 @@ As I intend for this post to be more of a discussion on programming languages th
 Context
 -------
 
-Prior to this, I had only written small (100-400 lines) Racket programs as well as a few F# programs of similar size (100-800 lines). This compiler was 10x larger, ~3300 lines not including tests, so I suppose this qualifies as a "medium" size program. 
+Prior to this, I had only written small (100-400 lines) Racket programs as well as a few F# programs of similar size (100-800 lines). This compiler was 10x larger, ~3300 lines not including tests, so I suppose this qualifies as a "medium" size program.
 
 
 Pattern Matching
@@ -25,11 +25,11 @@ Pattern Matching
 
 Pattern matching is a distinctive feature of functional languages.
 
-In particular, pattern matching is an extremely powerful way of dealing with case analysis. Rather than analyzing a data structure with a myriad of branches, one can simply write down the form of the data structure and bind all its internals to symbols. 
+In particular, pattern matching is an extremely powerful way of dealing with case analysis. Rather than analyzing a data structure with a myriad of branches, one can simply write down the form of the data structure and bind all its internals to symbols.
 
 It is much easier to read and less error-prone. The code below handles the grammar rules for addition and subtraction exactly, where the input is a nested list.
 
-```rkt
+```racket
 (struct expr-binop (type op expr1 expr2))
 
 ; parse-tree -> expr
@@ -68,8 +68,8 @@ In the C++ version, many things need to be written explicitly (e.g. indexing int
 
 So pattern matching works quite well for constructing a data structure from the input in this case. I also use pattern matching later in the program, when I want to iterate or traverse my data structures.
 
-```rkt
-; Note structs in Racket are closer to C-style structs 
+```racket
+; Note structs in Racket are closer to C-style structs
 ; than C++ style structs which are the same as classes.
 (struct ssa-binop (op target var1 var2))
 
@@ -146,11 +146,11 @@ Dynamic Typing
 
 Static vs dynamic typing is a highly combustible topic that only requires a tiny spark to burst into a flame war. *Most of the time*, I can live with either. For example, I appreciate both C# and Python roughly equally.
 
-For Racket, my main point of comparison is with F# (I don't know Haskell and have too little experience with Scala), and I strongly prefer F# on this aspect. 
+For Racket, my main point of comparison is with F# (I don't know Haskell and have too little experience with Scala), and I strongly prefer F# on this aspect.
 
 While writing my compiler, I had a particularly complex recursive function that dealt with reassigning variable to registers at the end of branches. Without helper functions, the overall structure looked like this:
 
-{% highlight rkt linenos %}
+{% highlight racket linenos %}
 (define (set-right var [seen (make-hash)])
   (define current-reg ...)
   (cond
@@ -186,7 +186,7 @@ I strongly prefer to catch error at compile-time than runtime. Even if I have en
 
 I don't really mind the inconvenience of having to specify types. For function declarations, I would already have the types (the contract) in a comment. If the language has [Type Inference](http://en.wikipedia.org/wiki/Type_inference), I don't even need to specify types elsewhere in the program for the most part.
 
-```rkt
+```racket
 ; This is an example of a contract.
 ; int int -> int
 (define (sqr-add x y)
@@ -196,10 +196,10 @@ I don't really mind the inconvenience of having to specify types. For function d
   (+ x-sqr y-sqr))
 ```
 
-```fsharp
+```csharp
 // In F#, the contract is part of the function declaration.
-// Note that this is a toy example. For this particular function, we wouldn't 
-// specify any types to allow this function to work on any type 
+// Note that this is a toy example. For this particular function, we wouldn't
+// specify any types to allow this function to work on any type
 // supporting * and +, like the Racket version is capable of.
 let sqr-add (x : int) (y : int) =
     // No types declared.
@@ -208,11 +208,11 @@ let sqr-add (x : int) (y : int) =
     (x + y)
 ```
 
-It's also nice to be able to mix different types in a collection, which is easy to do easy dynamic typing. In my compiler, I have lists of either lists or structs, as well as hashtables whose keys and values can both be either integers or structs. 
+It's also nice to be able to mix different types in a collection, which is easy to do easy dynamic typing. In my compiler, I have lists of either lists or structs, as well as hashtables whose keys and values can both be either integers or structs.
 
 However, I find that situations requiring mixed types only involve a few types. For these purposes, [Algebraic Data Types (Haskell)](http://www.haskell.org/haskellwiki/Algebraic_data_type), [Discriminated Unions (F#)](http://msdn.microsoft.com/en-us/library/dd233226.aspx) and their equivalents handle this quite well. They are both lightweight in syntax and lightweight in execution.
 
-```fsharp
+```csharp
 // A commonly-used union type to prevent null pointer exceptions.
 type Option<'a> =
     | Some of 'a
@@ -250,13 +250,13 @@ We could have <del>global variables</del> no, of course not. Very funny.
 
 We could pass along the state at every function call and return everything we need to aggregate as a tuple.
 
-```rkt
+```racket
 ; In this context, `values` is used like a tuple
 (define (big-fun state1 state2 state3 state4 state5 lst)
   (cond
     [(empty? lst) (values x y z)]
     [else
-     (match-define (values x y z) (big-fun state1 state2 state3 
+     (match-define (values x y z) (big-fun state1 state2 state3
                                            state4 state5 (rest lst)))
      (... modify state ...)
      (values (f x) (g y) (h z))]))
@@ -291,7 +291,7 @@ class SsaBuilder
    void RecursiveFunction(...)
    {
        ...
-   } 
+   }
 
    void MutuallyRecursiveFunction(...)
    {
@@ -313,11 +313,11 @@ I've tried two functional approaches in my compiler.
 In my code to generate SSA instructions, my co-recursive functions look like:
 
 ```racket
-(struct recursion-state (write-set read-set proc-analysis 
+(struct recursion-state (write-set read-set proc-analysis
                                    global-counter local-counter) #:mutable)
 
 (define (gen-ssa-expr state expr)
-  (match-define (recursion-state write-set read-set proc-analysis 
+  (match-define (recursion-state write-set read-set proc-analysis
                                  global-counter local-counter) state)
   (define references (hash-ref proc-analysis analysis-references))
   (match expr
@@ -327,7 +327,7 @@ In my code to generate SSA instructions, my co-recursive functions look like:
     ))
 
 (define (gen-ssa-stmt state stmt)
-  (match-define (recursion-state write-set read-set proc-analysis 
+  (match-define (recursion-state write-set read-set proc-analysis
                                  global-counter local-counter) state)
   (define references (hash-ref proc-analysis analysis-references))
   (define nopropagate (hash-ref proc-analysis analysis-nopropagate))
@@ -353,7 +353,7 @@ In my code to generate SSA instructions, my co-recursive functions look like:
                                  proc-analysis
                                  global-counter
                                  local-counter))
-  
+
   (... calls to gen-ssa-stmt ... ))
 
 ; Generate the ssa code for all procedures
@@ -361,19 +361,19 @@ In my code to generate SSA instructions, my co-recursive functions look like:
 (define (gen-ssa funtable analysis procedures)
   ; Counter for every symbol that may need one.
   (define global-counter (counter (make-hash) (make-hash)))
-  
+
   ; Initialize special symbols.
   (counter-init-sym global-counter if-false-sym)
   (counter-init-sym global-counter if-end-sym)
   (counter-init-sym global-counter start-while-sym)
   (counter-init-sym global-counter end-while-sym)
-  
+
   ; Generate ssa for all procedures.
   (for/list ([proc procedures])
     (gen-ssa-proc global-counter funtable analysis proc)))
 ```
 
-I pass around a single struct containing all the state I need and unpack it at every function. The state is initialized in the "root" function calls, gen-ssa and gen-ssa-proc (these functions are in their own file and only gen-ssa is exported, so the other ones are really just helper functions). 
+I pass around a single struct containing all the state I need and unpack it at every function. The state is initialized in the "root" function calls, gen-ssa and gen-ssa-proc (these functions are in their own file and only gen-ssa is exported, so the other ones are really just helper functions).
 
 The unpacking part is questionable. It is a form of code duplication and increases maintenance requirements, but is necessary to stay sane (otherwise every field access requires the heavyweight `(recursion-state-fieldname state)` syntax (more later on verbosity).
 
@@ -387,7 +387,7 @@ This is similar to passing around a mutable struct, except that unpacking is har
 
 I took a different approach for constant propagation and copy propagation.
 
-```rkt
+```racket
 ; Some of the state is part of the function parameters.
 (define (copy-constant-propagate-proc analysis procedure)
   ; Some of the state is created at the very top of the function.
@@ -436,7 +436,7 @@ If I was dealing with objects and classes, I would add a new field. Unless you h
 
 This is easy right?
 
-```rkt
+```racket
 (struct (node value left-child right-child))
 => (struct (node newfield value left-child right-child))
 ...
@@ -453,7 +453,7 @@ We could go back to the object-oriented way, but we lose pattern matching. While
 
 Why not create another structure?
 
-```rkt
+```racket
 (define typed-structure (original-structure type))
 ```
 
@@ -466,14 +466,14 @@ One method I've seen suggested was to include a hashtable field for every struct
 
 This is also similar to Javascript, where [every object is essentially a dictionary](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
 
-This also has issues. 
+This also has issues.
 
-What if we want to copy the struct? We will need to copy the internal hashtable. What if we want to access the field in a more convenient manner? 
+What if we want to copy the struct? We will need to copy the internal hashtable. What if we want to access the field in a more convenient manner?
 
-```rkt
+```racket
 ; This is pretty verbose.
 (hash-ref (structname-misc mystruct) myfieldname)`
-``` 
+```
 
 That would require defining a slew of new functions. We could achieve it with a macro, but this feels like work that I should not have to do just to be able to extend structs without twisting my arm around.
 
@@ -488,7 +488,7 @@ If we think about our program (here, compiler) as a pipeline, structs will be ne
 
 As such, we could have a hashtable of values, indexed by the things we want those values to label. In the compiler, this occurred naturally for symbol tables, where the argument and return types of a procedure were stored not in the procedure, but in the symbol table. I also used this approach during register allocation to annotate the instruction in which each variable last appears.
 
-```rkt
+```racket
 ; Symbol table indexed with value equality (good if keys are strings/symbols)
 (define symbol-table (make-hash))
 ; Symbol table indexed with reference equality (good if keys are objects)
@@ -509,7 +509,7 @@ Verbosity
 
 In Racket (and all the Lisp variants in general), everything is an S-expression.
 
-```rkt
+```racket
 (element1 element2 ... elementn)
 ```
 
@@ -521,7 +521,7 @@ However, at the same time, this severely reduces the range of permissible syntax
 
 With structs, I need to type the name of the struct in addition to the field I want to access, *every time* I want to access *any* field. Hashtables are quite bad too.
 
-```rkt
+```racket
 ; Access a field - contrast with myobj.field
 (obj-field myobj)
 
@@ -539,7 +539,7 @@ By the nature of S-expressions, even macros won't allow the typical `.` and `[]`
 
 Returning tuples are also a mess to deal with. In Racket :
 
-```rkt
+```racket
 (define (foo)
   (values 1 2))
 (define-values (x y) (foo))
@@ -555,7 +555,7 @@ x, y = foo()
 
 In F# :
 
-```fsharp
+```csharp
 let foo =
     (1, 2)
 let x, y = foo()
@@ -565,14 +565,14 @@ On a toy example, this might not look too bad, but it becomes quickly annoying t
 
 For mathematical expressions, prefix notation isn't natural. It's one thing to ask programmers accustomed to loops to use recursion. It's another to ask people to switch from a universal notation learned in 1st grade.
 
-```rkt
+```racket
 ; a * b + (c + d) * f
 (+ (* a b) (* (+ c d) f))
 ```
 
 To avoid extremely long nested expressions, it is good practice to split them up and name some of the intermediate expressions. That also bloats the code.
 
-```rkt
+```racket
 ; Either use define or let
 
 ; Define is verbose - compare (define ...) with let ... = from the ML family
@@ -620,4 +620,4 @@ Conclusion
 
 If I were to do the compiler contest again in Racket, would I? Absolutely. Automatic memory management alone outweights most of these issues. Sometimes Java is allowed for the contest, but my Racket code is still much concise and straight-to-the-point than what I would write in Java.
 
-If I really had any choice of language though, I would pick between Python or something in the ML-family (OCaml, F#). Scala seems fine too, maybe Ruby if I'm not too rusty to still use it.
+If I really had any choice of language though, I would pick between Python or something in the ML-family (csharp, F#). Scala seems fine too, maybe Ruby if I'm not too rusty to still use it.

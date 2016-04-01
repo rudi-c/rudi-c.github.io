@@ -13,7 +13,7 @@ type: page
 
 ---------------------------------------
 
-<img width=300 src="/images/2014/01/LargeProfile.png">
+<img width="300" src="/images/2014/01/LargeProfile.png">
 
 [**Fractal Photographer 3D**](/works/fractal-photographer-3d.html) : An application that uses the Leap Motion Controller to navigate 3D fractals.
 
@@ -29,13 +29,13 @@ type: page
 
 ---------------------------------------
 
-<img width=400 src="http://digitalfreepen.com/mandelbox370/pics/explorer1.png">
+<img width="400" src="http://digitalfreepen.com/mandelbox370/pics/explorer1.png">
 
 [**Mandelbox370**](http://digitalfreepen.com/mandelbox370/) : In this project (written as part of UWaterloo's PMATH 370 course), I prove some properties of the Mandelbox and provide a real-time WebGL renderer.
 
 ---------------------------------------
 
-<img width=300 src="/images/2014/HarmonicsTD.png">
+<img width="300" src="/images/2014/HarmonicsTD.png">
 
 [**Harmonics TD**](/works/harmonics-td.html) : A music-based tower defense game I made in high school* as part of an indie game development contest, in which I won first prize. (* Since I went to CEGEP, this refers to beginning grade 10 for U.S./rest of Canada I think? This is my oldest significant programming project.)
 
@@ -45,6 +45,6 @@ type: page
 
 ---------------------------------------
 
-<img width=300 src="/images/2014/02/MappingContestRound2.png">
+<img width="300" src="/images/2014/02/MappingContestRound2.png">
 
 [**RPG Level Design**](/works/rpg-level-design.html) : Like many other programmers, I first got into computer science because I wanted to make games. More specifically, my entry point was a software called RPG Maker XP (yes, back when Windows XP was the state of the art). Some of my work taught me skills that still serve me today (I'm not sure if I would have learned Photoshop otherwise), but I was particularly good at level design. In RMXP lingo, that was called "mapping", and I did some independent contract work. This is really old stuff, 2005-2009.

@@ -71,7 +71,7 @@ statement → IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE stateme
 
 Whereas the AST is a much more lightweight representation, ultimately represented by a few structs holding only relevant data.
 
-```rkt
+```racket
 (struct proc (id params dcls stmts return))
 (struct stmt ())
 (struct stmt-set stmt (lvalue expr))
@@ -151,7 +151,7 @@ Such that each variable is assigned exactly once (incrementing a counter wheneve
 
 Generating these SSA statements for assignment and arithmetic expressions is fairly straightforward and only took me a few hours. The intermediate results are stored in a few structs.
 
-```rkt
+```racket
 (struct ssa-binop (op target var1 var2))
 (struct ssa-unary (op target var))
 (struct ssa-print (var))
@@ -361,7 +361,7 @@ which does not contain any node where both children are constants. However, simp
 
 The approach I took is to flatten the expression tree for addition and multiplication, which allows combining constants together. In prefix notation, this would lead to reductions as such :
 
-```rkt
+```racket
 (+ (+ a 1) (+ b 2))
 => (+ a 1 b 2)
 => (+ a b 1 2)
@@ -370,7 +370,7 @@ The approach I took is to flatten the expression tree for addition and multiplic
 
 For subtraction, I create a special wrapper "minus", that allows me to combine addition and subtraction.
 
-```rkt
+```racket
 (- (+ c 4) (- 3 (- c d)))
 => (+ (+ c 4) (minus (- 3 (- c d))))
 => (+ (+ c 4) (+ (minus 3) (minus (- c d))))
@@ -386,7 +386,7 @@ Not every term will necessarily be an integer. Some could be pointers which inva
 
 There are other arithmetic properties that allow further reductions. For example,
 
-```rkt
+```racket
 (+ x 0) => x
 (* x 1) => x
 (* x 0) => 0
@@ -396,7 +396,7 @@ However, note that multiplication by zero is a little tricky. If x is an express
 
 Then there is division by zero, which we have no choice but to leave there and let the program crash at runtime.
 
-```rkt
+```racket
 (/ x 0) => (/ x 0)
 ```
 

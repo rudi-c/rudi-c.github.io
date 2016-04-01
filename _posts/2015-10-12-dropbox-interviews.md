@@ -53,6 +53,8 @@ Every once in a while, I’ll see an article show up on Hacker News or a questio
 
 Interviewing is an art, and it is one that I will inevitably need to learn.
 
+-----------------------
+
 [^0]: Every time I hear a new graduate talk about their experience entering the work field, they almost always say “it feels weird that you already start interviewing candidates when just 6 months ago, you were the one being interviewed”.
 
 [^1]: I was careful not to say “always” available. Google is a source of information, and function interfaces/language features are purely information. Google doesn’t solve problems for you. I could spend forever talking about this but that it’s very common to hear the excuse “I could Google it” when it’s besides the point. Yes, you would use a binary search library in production when applicable rather than writing one yourself. No, it's not always applicable - I don't know how many times I've seen problems that required subtle variations on binary search, and implementing a solution requires a good understanding of the fundamentals.

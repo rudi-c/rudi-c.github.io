@@ -66,6 +66,7 @@ While I picked my destinations relatively randomly, all the countries that were 
 
 That being said, while I am not on vacation, I am still travelling. I think the language barrier will also be good training for my communication skills. I have been surrounded by like-minded people lately which is great, but it does mean I have been getting away with poor communication too easily. If all goes well, I should still come out of this with a better understanding of different cultures, a broadened perspective about the world and interesting stories to share.
 
+--------------------------------------------------------
 
 [^0]: http://www.smallbizlabs.com/2015/02/tracking-the-digital-nomad-trend.html
 

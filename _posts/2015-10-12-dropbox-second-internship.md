@@ -19,7 +19,7 @@ JITs for dynamic languages don’t have much of a pre-compilation step. They oft
 
 Suppose we implement a distance function for vectors:
 
-```python
+``` python
 def length(v):
     vx = v.x
     vy = v.y
@@ -125,6 +125,8 @@ I also learned a lot about low-level coding with Pyston, which operates at a low
 Pyston is designed for performance and it is surprising how much performance gains code inlining can achieve. This helped me gain a whole new level of understanding into the saying “indirection [abstraction] solves every problem except that of too many layers of indirection”, as every layer of abstraction introduces a performance hit.
 
 During my second internship, there were also some C++ meetups organized by Alex Allain which were also very nice. Notably, Chandler Carruth came to give a talk about Clang, and how they improved over GCC, and the nice static analysis tools it features.
+
+----------------------------------------
 
 [^1]: Being a return intern has the perk of knowing all the teams and being able to have meetings with them. This is why it was worth going to Dropbox twice (otherwise, in general, I think it's preferrable to try a few different companies to maximize exposure to different industries).
 

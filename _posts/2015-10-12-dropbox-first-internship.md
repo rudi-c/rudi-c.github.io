@@ -38,6 +38,8 @@ A shared layer in C++ also has performance benefits, and C++11 with smart pointe
 
 Finally, most companies would not have chosen this approach because the tools did not exist and had to be developed. This is the great thing about working at a top tech company. Risks are taken and new approaches to software engineering are discovered.
 
+-------------------------------------------
+
 [^0]: I’m curious as to how well that approach works. Among other complexities, making a transition from tracing garbage collection to reference counting can be very hairy, from my experience working on compilers. There’s always ways to make it work, but at the cost of developer effort.
 
 [^1]: For high-performance apps like Carousel, latency induced by GC pauses is significant. The shared layer should not be in a language with a tracing GC. Having two separate garbage collectors kicking off at random times is going to lead to very challenging scenarios.
