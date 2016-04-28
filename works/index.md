@@ -3,48 +3,176 @@ layout: page
 title: Works
 type: page
 ---
-*Here are some of my work which I describe on this website, in no particular order. For brevity, the list is incomplete, as it would never end if I list every toy project like fluid simulators I create each year.*
+
+<center>*some of my personal projects*</center>
 
 ---------------------------------------
 
-<img width="300" src="/images/2012/09/WideLogo.scale-180.png">
+<table class="project-table">
+  <tr>
+    <td></td>
+    <td><h2>Fractal Photographer</h2></td>
+  </tr>
+  <tr>
+    <td class="image-col">
+        <a href="http://fractalphotographer.com">
+            <img width="200" src="/images/works/fractal.png" />
+        </a>
+    </td>
+    <td>
+        The best fractal renderer on the Windows 10 store. This app is a highly fluid renderer, pleasant
+        to navigate and provides beautiful color customization options.
+        <p>
+        <a href="http://fractalphotographer.com/">[ Fractal Photographer website ]</a>
+        </p>
+    </td>
+  </tr>
 
-[**Fractal Photographer**](http://fractalphotographer.com) : A Mandelbrot renderer. If you've written one yourself before, you probably know that it can be done in 5 minutes with about 20 lines of code. Many people know this - and that's all they do. App stores (Windows, iOS, Android...) are full of simple fractal renderers which do not provide a fun user experience (a common telltale sign is when the app freezes during a render). The aim of this project was to create a highly fluid renderer, easy to use while providing adequate customization options.
+  <tr>
+    <td></td>
+    <td><h2>Fractal Photographer 3D</h2></td>
+  </tr>
+  <tr>
+    <td class="image-col">
+        <a href="/works/fractal-photographer-3d.html">
+            <img width="200" src="/images/works/fractal3d.png" />
+        </a>
+    </td>
+    <td>
+        An application that uses the Leap Motion Controller to navigate 3D fractals.
+        <p>
+        <a href="/works/fractal-photographer-3d.html">[ Project page ]</a>
+        </p>
+    </td>
+  </tr>
 
----------------------------------------
+  <tr>
+    <td></td>
+    <td><h2>Procedural Terrain</h2></td>
+  </tr>
+  <tr>
+    <td class="image-col">
+        <a href="https://github.com/rudi-c/procedural-terrain-488">
+            <img width="200" src="/images/works/terrain.png" />
+        </a>
+    </td>
+    <td>
+        Generate great looking complex terrain on the GPU. Project for graphics class.
+        <p>
+        <a href="https://github.com/rudi-c/procedural-terrain-488">[ GitHub page ]</a>
+        </p>
+    </td>
+  </tr>
 
-<img width="300" src="/images/2014/01/LargeProfile.png">
+  <tr>
+    <td></td>
+    <td><h2>Smart Resize</h2></td>
+  </tr>
+  <tr>
+    <td class="image-col">
+        <a href="/works/smart-resize.html">
+            <img width="200" src="/images/works/smartresize.png" />
+        </a>
+    </td>
+    <td>
+        Created as part of the <a href="http://developer.nokia.com/futurecapture/">Nokia Future Capture</a> hackathon in Sweden, this app won first place and was presented to <a href="http://www.youtube.com/watch?v=QEZZ44ncnWI">journalists worldwide at Nokia World 2013, Abu Dhabi</a>.
+        <p>
+        <a href="/works/smart-resize.html">[ Project page ]</a>
+        </p>
+    </td>
+  </tr>
 
-[**Fractal Photographer 3D**](/works/fractal-photographer-3d.html) : An application that uses the Leap Motion Controller to navigate 3D fractals.
+  <tr>
+    <td></td>
+    <td><h2>Perlin Noise Range</h2></td>
+  </tr>
+  <tr>
+    <td class="image-col">
+        <a href="https://github.com/rudi-c/perlin-range">
+            <img width="200" src="/images/works/perlin.png" />
+        </a>
+    </td>
+    <td>
+        Script to find the largest value in Perlin Noise and in the gradient of Perlin Noise using automatic differentiation.
+        <p>
+        <a href="https://github.com/rudi-c/perlin-range">[ GitHub page ]</a>
+        </p>
+    </td>
+  </tr>
 
----------------------------------------
+  <tr>
+    <td></td>
+    <td><h2>Influence Game and Multi Column Swiss Tournament</h2></td>
+  </tr>
+  <tr>
+    <td class="image-col">
+        <a href="/works/influence-game">
+            <img width="200" src="/images/works/ann.png" />
+        </a>
+    </td>
+    <td>
+        A personal research project from high school on neural networks, self-organizing systems and evolutionary algorithms where I examine the performance of a method of evaluating individual 'teams'.
+        <p>
+        <a href="/works/influence-game">[ Project page ]</a>
+        </p>
+    </td>
+  </tr>
 
-<img width="150" src="/images/2012/09/Logo.png">
+  <tr>
+    <td></td>
+    <td><h2>Mandelbox370</h2></td>
+  </tr>
+  <tr>
+    <td class="image-col">
+        <a href="http://digitalfreepen.com/mandelbox370">
+            <img width="200" src="/images/works/mandelbox.png" />
+        </a>
+    </td>
+    <td>
+        In this project (written as part of UWaterloo's PMATH 370 course), I prove some properties of the Mandelbox and provide a real-time WebGL renderer.
+        <p>
+        <a href="http://digitalfreepen.com/mandelbox370">[ Project page ]</a>
+        </p>
+    </td>
+  </tr>
 
-[**Smart Resize**](/works/smart-resize.html) : Created as part of the [Nokia Future Capture](http://developer.nokia.com/futurecapture/) hackathon in Sweden, this app won first place and was presented to [journalists worldwide at Nokia World 2013, Abu Dhabi](http://www.youtube.com/watch?v=QEZZ44ncnWI).
+  <tr>
+    <td></td>
+    <td><h2>Harmonics TD</h2></td>
+  </tr>
+  <tr>
+    <td class="image-col">
+        <a href="/works/harmonics-td.html">
+            <img width="200" src="/images/works/harmonicstd.png" />
+        </a>
+    </td>
+    <td>
+        A music-based tower defense game I made in high school as part of an indie game development contest, in which I won first prize. This is my oldest significant programming project.
+        <p>
+        <a href="/works/harmonics-td.html">[ Project page ]</a>
+        </p>
+    </td>
+  </tr>
 
----------------------------------------
-
-[**Influence Game and Multi Column Swiss Tournament**](/works/influence-game) : A personal research project on neural networks, self-organizing systems and evolutionary algorithms where I examine the performance of a method of evaluating individual 'teams'.
-
----------------------------------------
-
-<img width="400" src="http://digitalfreepen.com/mandelbox370/pics/explorer1.png">
-
-[**Mandelbox370**](http://digitalfreepen.com/mandelbox370/) : In this project (written as part of UWaterloo's PMATH 370 course), I prove some properties of the Mandelbox and provide a real-time WebGL renderer.
-
----------------------------------------
-
-<img width="300" src="/images/2014/HarmonicsTD.png">
-
-[**Harmonics TD**](/works/harmonics-td.html) : A music-based tower defense game I made in high school* as part of an indie game development contest, in which I won first prize. (* Since I went to CEGEP, this refers to beginning grade 10 for U.S./rest of Canada I think? This is my oldest significant programming project.)
+  <tr>
+    <td></td>
+    <td><h2>RPG Level Design</h2></td>
+  </tr>
+  <tr>
+    <td class="image-col">
+        <a href="/works/rpg-level-design.html">
+            <img width="200" src="/images/works/mapping.png" />
+        </a>
+    </td>
+    <td>
+        Like many other programmers, I first got into computer science because I wanted to make games. More specifically, my entry point was a software called RPG Maker XP. I was particularly good at designing maps - it's harder than it looks! In RMXP lingo, that was called "mapping", and I did some independent contract work. This is really old stuff, 2005-2009.
+        <p>
+        <a href="/works/rpg-level-design.html">[ Image gallery ]</a>
+        </p>
+    </td>
+  </tr>
+</table>
 
 ---------------------------------------
 
 **Making apps for Windows 8 [Part I](http://www.codeproject.com/Articles/485088/Making-apps-for-Windows-8-Part-I-A-Simple-Calculat) and [Part II](http://www.codeproject.com/Articles/485101/Making-apps-for-Windows-8-Part-II-Little-Notes-sam)** : Tutorial I have written for people interested in getting started with Windows 8 apps.
-
----------------------------------------
-
-<img width="300" src="/images/2014/02/MappingContestRound2.png">
-
-[**RPG Level Design**](/works/rpg-level-design.html) : Like many other programmers, I first got into computer science because I wanted to make games. More specifically, my entry point was a software called RPG Maker XP (yes, back when Windows XP was the state of the art). Some of my work taught me skills that still serve me today (I'm not sure if I would have learned Photoshop otherwise), but I was particularly good at level design. In RMXP lingo, that was called "mapping", and I did some independent contract work. This is really old stuff, 2005-2009.

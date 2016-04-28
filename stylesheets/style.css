@@ -24,6 +24,23 @@ img {
   #go-back-home:hover {
     background-image: none; }
 
+.project-table {
+  font-size: 100%;
+}
+
+.project-table td {
+  vertical-align: top;
+}
+
+.project-table h2 {
+  padding-top: 30px;
+}
+
+.project-table .image-col {
+  width: 220px;
+  padding-top: 6px;
+}
+
 .capitalize {
   text-transform: capitalize; }
 
