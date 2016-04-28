@@ -4,9 +4,13 @@ title: About
 type: page
 ---
 <a style="float: left; margin: 5px 15px 0px 0px;" href="/images/profile_pic.jpg"><img src="/images/profile_pic.jpg" width="160" /></a>
-<p>My name is Rudi, a student in Computer Science at University of Waterloo and this is my personal blog where I will post my projects, comments about tech, math, random tidbits that might be useful, random tidbits that might not be useful but hopefully interesting.</p>
+My name is Rudi, a student in Computer Science at University of Waterloo and this is my personal blog where I will post my projects, comments about tech, math, random tidbits that might be useful, random tidbits that might not be useful but hopefully interesting.
 
-A random fact about myself? I practice pen spinning (look it up if you've never hear that term!) and [have once appeared on national television](http://www.youtube.com/watch?v=K5SxsDS0fHk). I'm not one of the best out there, but I know quite a few tricks.
+My 'programmer archetype' is one that has one foot in academia, one foot in industry, and my projects are often at the intersection of both. I see coding as a craft to be perfected: this includes design, understandability, brevity, and performance. I've written [apps](http://fractalphotographer.com/) and aim for polish. I value having strong fundamentals: math, algorithms, systems, tools.
+
+In terms of computer science topics, my interests move around a lot. Lately, they have been 3D graphics and compilers. In the past, the kind of stuff I've enjoyed include neural networks, image processing, data visualization. I also enjoy getting a wide exposure to different types of programming languages, including ones like F#, Rust.
+
+Random fact: I practice pen spinning (look it up if you've never hear of that term!) and [have once appeared on national television](http://www.youtube.com/watch?v=K5SxsDS0fHk). I'm not one of the best out there, but I know quite a few tricks.
 
 Email at **rudichen@gmail.com**.
 
@@ -22,8 +26,8 @@ Reading List
 ============
 <center>*some small subset of it*</center>
 
-Favorites
----------
+Favorites books
+---------------
 
 The Origins of Political Order - Francis Fukuyama
 
@@ -121,3 +125,18 @@ Misc
 A lot of Quora. I spend way too much time on that site.
 
 Speaking of books, I was also a reviewer for [Mastering Leap Motion](http://www.amazon.com/Mastering-Leap-Motion-Brandon-Sanders/dp/1783551399).
+
+Links
+-----
+
+Just starting this. If I'm going to bookmark nice things from the Internet, why not share it with everyone?
+
+**The Rise of Explorable Explanations**: On using interactive visualizations to explain things. <a>http://www.maartenlambrechts.be/the-rise-of-explorable-explanations/</a>
+
+**Execution in the Kingdom of Nouns**: I went through a phase of 'OOP is king!' once, before I discovered there were more approaches than computing than just using objects, which isn't always the most suited tool. <a>http://steve-yegge.blogspot.ca/2006/03/execution-in-kingdom-of-nouns.html</a>
+
+**Privilege and inequality in Silicon Valley**. "One example of a poor mindset is to minimize conflict because fucking up is costly and opportunities are hard to come by, so it’s been a challenge putting my ideas out there and defending them." <a>https://medium.com/tech-diversity-files/privilege-and-inequality-in-silicon-valley-92d455b66860</a>
+
+**Demographic 2050 Destiny**. Great visualization of interesting trends the world will take. <a>http://graphics.wsj.com/2050-demographic-destiny/</a>
+
+**John Carmack on functional languages**. <a>https://www.youtube.com/watch?v=1PhArSujR_A</a>
