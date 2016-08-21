@@ -64,6 +64,8 @@ Freakonomics - Stephen J. Dubner, Steven Levitt
 
 The Tipping Point - Malcolm Gladwell
 
+The Charisma Myth - Olivia Fox Cabane
+
 Books that I want to read
 -------------------------
 
@@ -73,6 +75,8 @@ The Art of War (if there's a nice cleaned up version somewhere)
 
 Flash Boys
 
+Liar's Poker
+
 How Asia Works
 
 Thing Explainer: Complicated Stuff in Simple Words
@@ -81,11 +85,19 @@ The Design of Everyday Things
 
 The Three-Body Problem
 
+Worm
+
 Powers of Mind
 
 Chimpanzee Politics: Power and Sex among Apes
 
 The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution
+
+Panic, Prosperity and Progress: Five Centuries of History and the Markets
+
+David and Goliath: Underdogs, Misfits, and the Art of Battling Giants
+
+The New Confessions of an Economic Hitman
 
 Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future
 
@@ -140,3 +152,9 @@ Just starting this. If I'm going to bookmark nice things from the Internet, why 
 **Demographic 2050 Destiny**. Great visualization of interesting trends the world will take. <a>http://graphics.wsj.com/2050-demographic-destiny/</a>
 
 **John Carmack on functional languages**. <a>https://www.youtube.com/watch?v=1PhArSujR_A</a>
+
+**Curse of the Gifted**. Talent vs Experience<a>http://www.vanadac.com/~dajhorn/novelties/ESR%20-%20Curse%20Of%20The%20Gifted.html</a>
+
+**Intellectual are Freaks**. A useful reminder in knowing what you don't know. <a>http://thesmartset.com/intellectuals-are-freaks/</a>
+
+**How and Why to Granularize**. One of the most important life skills is to learn how to learn, and a large part of that is knowing how to learn a difficult skill by breaking it down in subskills and mastering each in turn. It's something you learn by playing sports, but it can also be extended as far as social effectiveness. <a>http://lesswrong.com/lw/5p6/how_and_why_to_granularize/</a>
