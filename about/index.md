@@ -127,6 +127,8 @@ Blogs/Articles/Essays
 
 [The Architecture of Open Source Applications](http://aosabook.org/en/index.html)
 
+[TripleByte Blog](http://blog.triplebyte.com/) has interesting research on categorizing the strengths of different kinds of engineers and placing them where they fit best.
+
 Misc
 ----
 
@@ -158,3 +160,9 @@ Just starting this. If I'm going to bookmark nice things from the Internet, why 
 **Intellectual are Freaks**. A useful reminder in knowing what you don't know. <a>http://thesmartset.com/intellectuals-are-freaks/</a>
 
 **How and Why to Granularize**. One of the most important life skills is to learn how to learn, and a large part of that is knowing how to learn a difficult skill by breaking it down in subskills and mastering each in turn. It's something you learn by playing sports, but it can also be extended as far as social effectiveness. <a>http://lesswrong.com/lw/5p6/how_and_why_to_granularize/</a>
+
+**The Art of the Command Line**. Cool command-line tricks. <a>https://github.com/jlevy/the-art-of-command-line</a>
+
+**Parable of the Polygons**. A GREAT illustration of how social segregation tends to naturally happen as a result of each person optimizing even slightly towards their social environment preferences. <a>http://ncase.me/polygons/</a>
+
+**Why Learning to Code is So Damn Hard**. A relatable, well-written piece on the path that many software developers go through in their career. <a>https://www.vikingcodeschool.com/posts/why-learning-to-code-is-so-damn-hard</a>
