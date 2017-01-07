@@ -8,7 +8,7 @@ disqus: y
 
 Quora is a great medium for writing. Often people have great ideas. But perhaps it may not be fully-fleshed out enough for a blog post. Or perhaps the author is hesitant to write about it, due to hesitation about whether anyone would care.
 
-This blog post is just a compilation of some answers I've written over the past 2 years that I'm happy about.
+This blog post is just a compilation of some answers I've written over the past 2 years that I'm happy with.
 
 <center>
 <span class="quora-content-embed" data-name="Why-is-Ahmed-being-offered-internships-by-MIT-NASA-Twitter-etc/answer/Rudi-Chen">Read <a class="quora-content-link" data-width="559" load-full-answer="True" data-key="27fd3421ac1f064a84cc002504e42d6a" data-id="15600998" data-embed="newecap" href="https://www.quora.com/Why-is-Ahmed-being-offered-internships-by-MIT-NASA-Twitter-etc/answer/Rudi-Chen" data-type="answer" data-height="250"><a href="https://www.quora.com/Rudi-Chen">Rudi Chen</a>&#039;s <a href="/Why-is-Ahmed-being-offered-internships-by-MIT-NASA-Twitter-etc#ans15600998">answer</a> to <a href="/Why-is-Ahmed-being-offered-internships-by-MIT-NASA-Twitter-etc" ref="canonical">Why is Ahmed being offered internships by MIT, NASA, Twitter etc?</a></a> on <a href="https://www.__nousername__.main.quora.com">Quora</a><script type="text/javascript" src="https://www.quora.com/widgets/content"></script></span>
