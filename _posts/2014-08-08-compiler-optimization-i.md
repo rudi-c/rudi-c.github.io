@@ -662,11 +662,11 @@ Final scoreboard (top 10)
 -------------------------
 
 Position | ID  | Size  | Person
-:-------:| --- | ----- |:---
-1  | 11382 | 54316  | <- [Geoffry Song](https://github.com/goffrie)
-2  | 11365 | 57760  | <- me
-3  | 11735 | 88372  | <- Liang Chen
-4  | 11487 | 90916  | <- [Shane Creighton-Young](https://github.com/srcreigh)
+:-------:| --- | ----- | ---
+1  | 11382 | 54316  | [Geoffry Song](https://github.com/goffrie)
+2  | 11365 | 57760  | me
+3  | 11735 | 88372  | Liang Chen
+4  | 11487 | 90916  | [Shane Creighton-Young](https://github.com/srcreigh)
 5  | 11371 | 104532 |
 6  | 11351 | 106432 |
 7  | 11391 | 127964 |

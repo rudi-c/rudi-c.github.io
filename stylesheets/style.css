@@ -24,12 +24,23 @@ img {
   #go-back-home:hover {
     background-image: none; }
 
+table {
+  border-collapse: collapse;
+}
+
+table td {
+  border: 1px solid #dddddd;
+  padding: 5px 8px;
+}
+
 .project-table {
   font-size: 100%;
 }
 
 .project-table td {
   vertical-align: top;
+  border: none;
+  padding: 0px;
 }
 
 .project-table h2 {
@@ -255,13 +266,13 @@ ul.posts .datetime {
   text-align: right; }
 
 section.post {
-  margin: 0 -60px;
+  margin: 0 0px;
   text-align: left;
   border-top: 0;
   padding: 0; }
-  section.post > * {
+/*  section.post > * {
     padding: 0 60px; }
-  section.post ul ul, section.post ul ol, section.post ol ul, section.post ol ol {
+*/  section.post ul ul, section.post ul ol, section.post ol ul, section.post ol ol {
     margin-left: 20px;
     padding: 0; }
   section.post h1 {
