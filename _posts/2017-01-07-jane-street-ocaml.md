@@ -195,6 +195,8 @@ There's no official engineering values, but [these ramblings of one engineer](ht
 
 Or generally, read their blog. It has tons of good stuff, I promise.
 
+----------------------------------
+
 _Thanks to Bai Li, Corwin de Boor, Jason Xiong, Leila Clark, Manu Goyal, Saahil Mehta, Shida Li for comments & corrections._
 
 ----------------------------------
