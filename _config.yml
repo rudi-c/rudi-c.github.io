@@ -9,13 +9,15 @@ google_analytics: UA-36059196-1
 
 links:
   - name:         About
-    url:          /about
+    url:          /about.html
   - name:         Writing
     url:          /
   - name:         Works
     url:          /works
-  - name:         Resume
-    url:          /files/documents/CV-RudiChen-Full-August2016.pdf
+  - name:         Readings
+    url:          /readings.html
+  - name:         Resources
+    url:          /resources.html
 
 highlighter: rouge
 markdown: kramdown

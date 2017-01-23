@@ -176,3 +176,7 @@ type: page
 ---------------------------------------
 
 **Making apps for Windows 8 [Part I](http://www.codeproject.com/Articles/485088/Making-apps-for-Windows-8-Part-I-A-Simple-Calculat) and [Part II](http://www.codeproject.com/Articles/485101/Making-apps-for-Windows-8-Part-II-Little-Notes-sam)** : Tutorial I have written for people interested in getting started with Windows 8 apps.
+
+---------------------------------------
+
+My [resume upon graduation](/files/documents/CV-RudiChen-Full-August2016.pdf) for reference. Note that this is not going to be updated for the foreseable future and I am not seeking job opportunities at the moment.
