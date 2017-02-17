@@ -4,7 +4,7 @@ title: Works
 type: page
 ---
 
-<center>*some of my personal projects*</center>
+<center>*some of my personal projects, some quite old*</center>
 
 ---------------------------------------
 
@@ -177,6 +177,16 @@ type: page
 
 **Making apps for Windows 8 [Part I](http://www.codeproject.com/Articles/485088/Making-apps-for-Windows-8-Part-I-A-Simple-Calculat) and [Part II](http://www.codeproject.com/Articles/485101/Making-apps-for-Windows-8-Part-II-Little-Notes-sam)** : Tutorial I have written for people interested in getting started with Windows 8 apps.
 
+[A interview tips video I made for fun](https://www.youtube.com/watch?v=7mR9PJDjRjo)
+
 ---------------------------------------
 
 My [resume upon graduation](/files/documents/CV-RudiChen-Full-August2016.pdf) for reference. Note that this is not going to be updated for the foreseable future and I am not seeking job opportunities at the moment.
+
+---------------------------------------
+
+A transformer model I made for the hierarchical modelling assignment of Graphics class.
+
+<center>
+  <img src="/images/jetfire.gif" />
+</center>

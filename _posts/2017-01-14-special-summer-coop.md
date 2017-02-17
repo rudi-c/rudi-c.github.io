@@ -28,6 +28,8 @@ If you're gonna work at a Canadian company, a startup, or large company, try to 
 Try to move co-op terms around to have more summer internships
 --------------------------------------------------------------
 
+This does not apply if you are in engineering. If you're in math, you can request a [sequence change](https://uwaterloo.ca/co-operative-education/faculty-mathematics-request-academicwork-term-sequence-change). They usually won't let you change your sequence for your first co-op or two, but after that they are quite flexible. You just need a reasonable reason for your request, like "the offer I got from this company is only valid for the summer".
+
 Below are some common co-op sequences or rearrangements that add an extra summer internship in your later years.
 
   F |  W |   S  |  F |  W |   S  |  F |  W |   S  |  F |  W |   S  |  F |  W
@@ -41,10 +43,6 @@ The first row is the most common/standard sequence, sequence 1 which keeps alter
 If you ever decide to take a term off, go on exchange, etc, as many students do, try to do it in a way that pushes your work terms into summer terms.
 
 The disadvantage of having more summer internships is that you'll be in Waterloo more when it's cold, but weather has [less impact on your happiness than you think](http://journals.sagepub.com/doi/abs/10.1111/1467-9280.00066) and summer in Waterloo isn't all that exciting. Summer in New York is quite something though.
-
-If you're in math, you can request a [sequence change](https://uwaterloo.ca/co-operative-education/faculty-mathematics-request-academicwork-term-sequence-change). They usually won't let you change your sequence for your first co-op or two, but after that they are quite flexible. You just need a reasonable reason for your request, like "the offer I got from this company is only valid for the summer".
-
-If you're in engineering, consider CS for the same educational opportunities and the added flexibility of choosing the most interesting courses and making your own sequence.
 
 Apply for U.S. internships early
 --------------------------------

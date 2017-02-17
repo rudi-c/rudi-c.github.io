@@ -4,11 +4,9 @@ title: Readings
 type: page
 ---
 
-Reading List
-============
-<center>*some small subset of it*</center>
+<center>*the kind of stuff I'm into*</center>
 
-Favorites books
+Favorite books
 ---------------
 
 The Origins of Political Order - Francis Fukuyama
@@ -38,6 +36,8 @@ Code Complete - Steve McConnell
 
 Lean In - Sheryl Sandberg
 
+Liar's Poker - Michael Lewis
+
 Steve Jobs - Walter Isaacson
 
 Creativity, Inc - Ed Catmull
@@ -65,8 +65,6 @@ The Design of Everyday Things - Don Norman
 Next on my reading list
 -----------------------
 
-Liar's Poker
-
 How Asia Works
 
 Political Order and Political Decay
@@ -74,6 +72,8 @@ Political Order and Political Decay
 David and Goliath
 
 Worm
+
+Strangers in Their Own Land
 
 Books that I want to read
 -------------------------
@@ -89,8 +89,6 @@ The Three-Body Problem
 The Dignitity of the Working Men
 
 Hillbilly Elegy: A Memoir of a Family and Culture in Crisis
-
-Strangers in Their Own Land
 
 Unintended Consequences: How to Improve our Government, our Businesses, and our Lives
 
@@ -113,8 +111,6 @@ The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital 
 Panic, Prosperity and Progress: Five Centuries of History and the Markets
 
 David and Goliath: Underdogs, Misfits, and the Art of Battling Giants
-
-The New Confessions of an Economic Hitman
 
 Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future
 
@@ -154,6 +150,14 @@ Just starting this. If I'm going to bookmark nice things from the Internet, why 
 **Every Frame a Painting**. A great Youtube channel on cinematography. <a>https://www.youtube.com/channel/UCjFqcJQXGZ6T6sxyFB-5i6A</a>
 
 **Nerdwriter1**. Another great Youtube channel on cinematography. <a>https://www.youtube.com/user/Nerdwriter1/videos</a>
+
+**Classic Programmer Paintings**. It's just funny. <a>http://classicprogrammerpaintings.com/</a>
+
+**Unraveling the Tech Hiring Market**. Offer deadlines make the whole hiring market inefficient. <a>https://blogs.janestreet.com/unraveling/</a>
+
+**You Don't Know JS**. A Javascript book with the rare emphasis on making sure you understand how things work, not just how to use them. <a>https://github.com/getify/You-Dont-Know-JS</a>
+
+**The Law of Leaky Abstractions**. Why you need to have strong fundamentals. <a>https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/</a>
 
 News/Magazines
 --------------

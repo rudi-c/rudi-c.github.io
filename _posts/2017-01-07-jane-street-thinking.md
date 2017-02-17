@@ -91,4 +91,4 @@ Companies are still companies, and I do believe their culture can only be as goo
 
 [^2]: To be more precise, each country could only count at most once in each passport. That is, if I have 2 entry stamps to the US and 2 exit stamps from the US, those 4 stamps only count for one. However, if 4 interns all have stamps to Mexico, then Mexico is counted 4 times, not one.
 
-[^3]: This is almost true: they offer an execution service, but that department is  isolated from the rest of the company.
+[^3]: This is almost true: they offer an order execution service called JSES, but that department is isolated from the rest of the company.

@@ -10,7 +10,7 @@ How do you decide which companies to invest time in applying to, or which offer 
 
 Sometimes there's a unique factor that can make the decision easy. For example, if you really want to work on the Rust compiler, nobody but Mozilla will offer you that.
 
-More often, you might have a variety of companies you can apply to: some small, some big, all of which have some cool products, and different flavors of technical challenges. During internship, you might not know your own interests well enough to guide your decision.
+More often, you might have a variety of companies you can apply to: some small, some big, all of which have some cool products, and different flavors of technical challenges. During internships, you are still discovering what your interests are, so they might not be sufficient to guide your decision.
 
 In the absence of major interests like "I want to work in healthcare" or "I want to do 3D graphics", I recommend going for medium-size companies. Generally, those are companies with an engineering team between 30-500 people (the total company size would be 100-2500 employees[^0]). The exact size doesn't matter so much as how big the company feels; the culture of the company may make the company feel smaller or bigger.
 
@@ -49,6 +49,8 @@ They tend to be large enough to have a brand name _within tech_
 -------------------------------------------------------------
 
 A company like Quora won't compare with Google when it comes to impressing the average dude down the street, but you shouldn't care about that. You only need the company to be well-known among engineers and recruiters who may offer you a job.
+
+Your job: Find people you respect and pick their brains for opinions. Make sure to get a variety of viewpoints since individual people have biases.
 
 They tend to be small enough to have a consistent engineering reputation
 ------------------------------------------------------------------------
