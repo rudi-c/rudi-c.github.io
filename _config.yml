@@ -16,8 +16,8 @@ links:
     url:          /works
   - name:         Readings
     url:          /readings.html
-  - name:         Resources
-    url:          /resources.html
+#  - name:         Resources
+#    url:          /resources.html
 
 highlighter: rouge
 markdown: kramdown
