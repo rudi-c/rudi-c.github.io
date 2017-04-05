@@ -55,7 +55,7 @@ for (int i = 0; i < 100; i++)
 <p>Peak memory increases, but no leak.</p>
 <p>Since I don't use <code>NavigationData.OriginalImage</code> anywhere else in code that gets reached at this point, then it must have something to do with page navigation.</p>
 <p>Placing a breakpoint in the constructor of the page, I notice the constructor gets called every time the page is navigated to. If the old page were to remain alive, then <code>ImageVertical.Source</code> would still hold a pointer to the original images.</p>
-<p>And that's indeed where the program lies. Using :</p>
+<p>And that's indeed where the problem lies. Using :</p>
 
 ```csharp
 NavigationService.Navigate(new Uri(page, UriKind.Relative));
