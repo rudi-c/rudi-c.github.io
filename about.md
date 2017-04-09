@@ -29,4 +29,4 @@ Email at **rudichen@gmail.com**
 
 <a href="http://www.quora.com/Rudi-Chen" target="_blank">[ My Quora Profile ]</a>
 
-<a href="https://www.youtube.com/user/Advecticity" target="_blank">[ My Youtube Channel ]</a>
+<a href="https://www.youtube.com/user/Advecticity" target="_blank">[ My YouTube Channel ]</a>
