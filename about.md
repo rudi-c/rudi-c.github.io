@@ -17,6 +17,7 @@ In the spirit of being an engineer (read: this is easier), I will write the rest
 - One of my goal is to consistently use "steel man arguments"
 - "Interested people are interesting"
 - "Humans are not rational creatures, they are rationalizing creatures"
+- "A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away"
 - I practice pen spinning (look it up if you've never hear of that term!) and have once appeared on [national television](http://www.youtube.com/watch?v=K5SxsDS0fHk). I'm not one of the best out there, but I know quite a few tricks
 
 Contact
