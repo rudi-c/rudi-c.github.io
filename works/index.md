@@ -181,7 +181,7 @@ type: page
 
 ---------------------------------------
 
-My [resume upon graduation](/files/documents/CV-RudiChen-Full-August2016.pdf) for reference. Note that this is not going to be updated for the foreseable future and I am not seeking job opportunities at the moment.
+My [resume upon graduation](/files/documents/CV-RudiChen-April2017.pdf) for reference. Note that this is not going to be updated for the foreseable future and I am not seeking job opportunities at the moment.
 
 ---------------------------------------
 

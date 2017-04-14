@@ -43,7 +43,7 @@ So here is the script, exactly in the format that I used while presenting it. Th
     - 😃 Our next step is to balance it with **warmth** for others. It's when you **balance** power and warmth, that you can be **charismatic**. It's when you **combine** power and warmth, that you will truly have **impact**.
     - Personally, for all my technical knowledge, it's by wanting to **help** that I got confidence, that I got my name out there, and that I got l**u**cky enough to be in front of you today.
 
-> - I would like to finish off with a quote.
+> - And I would like to finish off with a quote.
   - I've come across many quotes over the years. I chose this one not because some famous person said it and it sounded nice.
   - But, ⎮⎮ because this quote has, in my time here, come up over and over and over and has always been relevant.
     - It's by Dale Carnegie: "Interes**ted** people are interes**ting**." ⎮⎮ *eye contact* ⎮⎮
@@ -214,7 +214,7 @@ This is to conclude the section about power & warmth, while tying it to the rest
 That being said, I've received comments that the speech in general has structural issues. The main point can be felt, but is not verbalized clearly. The power & warmth section is the biggest offender as coming out of nowhere, and I was intending to revisit it again, possibly removing it entirely.
 
 
-> I would like to finish off with a quote. I've come across many quotes over the years. I chose this one not because some famous person said it and it sounded nice. But, because this quote has, in my time here, come up over and over and over and has always been relevant.
+> And I would like to finish off with a quote. I've come across many quotes over the years. I chose this one not because some famous person said it and it sounded nice. But, because this quote has, in my time here, come up over and over and over and has always been relevant.
 
 Quotes are nice. They're basically a selection of the nicest-sounding sentences people have come up with in human history. People 'quote' quotes for a reason.
 
@@ -285,7 +285,7 @@ So if you're reading this and considering applying for valedictorian, you probab
 
 But enjoyed the process, I certainly did.
 
-_Thanks to Christina Tan, David Choi, Hang Lu Su, Shirley Du, and many others for reviewing and their help!._
+_Thanks to Christina Tan, David Choi, Hang Lu Su, Shirley Du, and many others for reviewing and their help!_
 
 ----------------------------------------------------
 
