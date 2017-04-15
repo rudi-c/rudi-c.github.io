@@ -122,7 +122,7 @@ Enjoy!
 
 #28
 
-> I will keep working on my startup for a few months before I graduate. Since I’ve been mostly working on it while at school, I feel like I haven’t had the chance to give it my 100%. After 6 months, I’ll see if I want to keep going along that path or find a job.
+> I will keep working on my startup for a few months before I graduate. Since I’ve been mostly working on it while at school, I feel like I haven’t had the chance to give it my 100%. I know that if I don't give it my all now, I'll regret it later. Once I get comfortable with a full-time job, it'll be hard to get out of that comfort. After 6 months, I’ll see if I want to keep going along that path or find a job.
 
 #29
 
