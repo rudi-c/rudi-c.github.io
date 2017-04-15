@@ -1,4 +1,18 @@
 function prettyDate ( timeObj ) {
+  var monthNames = [
+    "Jan", "Feb", "Mar",
+    "Apr", "May", "Jun", "Jul",
+    "Aug", "Sep", "Oct",
+    "Nov", "Dec"
+  ];
+
+  var day = timeObj.getDate();
+  var monthIndex = timeObj.getMonth();
+  var year = timeObj.getFullYear();
+
+  return monthNames[monthIndex] + ' ' + day + ' ' + year;
+
+  /*
   function setToStartOfDay( timeObject ) {
     return new Date(timeObject.getUTCFullYear(), timeObject.getUTCMonth(), timeObject.getUTCDate(), 0, 0, 0, 0);
   }
@@ -20,13 +34,14 @@ function prettyDate ( timeObj ) {
     day_diff < 31 && pluralize(Math.round( day_diff / 7 ), "week") + " ago" ||
     day_diff < 366 && pluralize( Math.round( day_diff / 7 / 4 ), "month") + " ago" ||
     day_diff >= 366 && pluralize( Math.round( day_diff / 7 / 4 / 12 ), "year") + " ago";
+  */
 }
 
 $(function(){
 
   $("body").keyup(function(event) {
 
-		if($(".left > a").length == 1 && event.which == 37) 
+		if($(".left > a").length == 1 && event.which == 37)
 			location.replace($(".left >a").attr("href"));
 		else if($(".right > a").length == 1 && event.which == 39)
 			location.replace($(".right >a").attr("href"));
