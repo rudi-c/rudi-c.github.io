@@ -1,5 +1,5 @@
 ---
-title: People and their career choices
+title: 31 new grads, 31 career choices
 date: 2017-04-16 00:00:01
 layout: post
 type: post
