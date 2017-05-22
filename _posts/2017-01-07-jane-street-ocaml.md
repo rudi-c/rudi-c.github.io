@@ -1,5 +1,5 @@
 ---
-title: Learned at Jane Street - Practical functional programming & software engineering
+title: Learned at Jane Street - Practical functional programming and software engineering
 date: 2017-01-07 00:00:02
 layout: post
 type: post
