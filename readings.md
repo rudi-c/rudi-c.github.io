@@ -15,8 +15,6 @@ How To Win Friends And Influence People - Dale Carnegie
 
 1984 - George Orwell
 
-Harry Potter and the Methods of Rationality - Eliezer Yudkowsky
-
 Things I've read
 --------------------
 
@@ -62,6 +60,10 @@ The PhD Grind - Philip Guo
 
 The Design of Everyday Things - Don Norman
 
+Strangers in Their Own Land
+
+Harry Potter and the Methods of Rationality - Eliezer Yudkowsky
+
 Next on my reading list
 -----------------------
 
@@ -72,8 +74,6 @@ Political Order and Political Decay
 David and Goliath
 
 Worm
-
-Strangers in Their Own Land
 
 Books that I want to read
 -------------------------
@@ -115,6 +115,8 @@ David and Goliath: Underdogs, Misfits, and the Art of Battling Giants
 Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future
 
 The Name of the Wind
+
+The Everything Store: Jeff Bezos and the Age of Amazon
 
 Links
 -----
