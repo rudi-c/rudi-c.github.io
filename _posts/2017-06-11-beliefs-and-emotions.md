@@ -44,7 +44,7 @@ The comic continues with the following:
 
 Now, it is possible to train ourselves to stay calm in the face of intellectual threats in the same way we can train ourselves to stay calm in the face of physical threats. As a simple example, people who grew up with large dogs will probably be less afraid of large dogs thanks to large amounts of exposure and experience dealing with them. Similarly, it's possible to stay more calm in the face of intellectual threats if you learn that some things (like admitting you are wrong) are less scary and less likely to cause harm than they sound. And some people are naturally born more calm than others. An extreme example such as Alex Honnold [doesn't feel fear like we do](http://nautil.us/issue/39/sport/the-strange-brain-of-the-worlds-greatest-solo-climber) - his amygdala shows far less response to threatening images!
 
-<center><img src="/images/2017/honnold.jpg" width="450"/><br/><em>Alex Hhonnold free-soloing El Capitain</em></center>
+<center><img src="/images/2017/honnold.jpg" width="450"/><br/><em>Alex Honnold free-soloing El Capitain</em></center>
 
 Yet, training will only get us so far. There will always be new situations that we haven't encountered that will put us on guard. And often time, we think we become more rational, but we haven't eliminated our emotions. We just shaped how we express it. Some expressions are perceived in society as less emotional than others. A raging outburst is seen as more emotional than a passive-aggressive comment which is seen as more emotional than keeping a blank face. But the emotion might still be boiling underneath [^1].
 
