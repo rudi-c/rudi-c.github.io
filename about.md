@@ -1,7 +1,7 @@
 ---
 title: About
 ---
-<a style="float: left; margin: 5px 15px 0px 0px;" href="/images/profile_pic.jpg"><img src="/images/profile_pic.jpg" width="150" /></a>
+<img src="/images/profile_pic.jpg" style="float: left; margin: 5px 15px 0px 0px;" width="150" />
 My name is Rudi, currently finishing up a degree in Computer Science at University of Waterloo and starting as a full-time software engineer at <a href="https://www.figma.com/">Figma</a> in August. I have previously worked at Airbnb, Jane Street, Dropbox and Side Effects Software. In this blog, I try to put words together in sentences such that they may be interesting and occasionally useful. I tend to be a sucker for information and novelty myself, so I try to write in a way that will be worth your time.
 
 In the spirit of being an engineer (read: this is easier), I will write the rest of this About section as a random bullet points. If you find any of these interesting, you should ask me about it over coffee.
