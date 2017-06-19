@@ -69,7 +69,7 @@ So what did I do in 3 months, that wasn’t traveling-related?
 - Read more books (e.g. Freakonomics, “Creativity, Inc”.)
 
 
-The first question I get asked is, “are you able to get stuff done?”. Getting stuff done in coffee shops while traveling is certainly doable. Millions of people work in coffee shops every day, whether in their own countries or not. I do find that it helps me stay on task. Compared to staying at home, my mind wanders off less, so I can get a productivity boost. In fact, working for a couple hours in different places is a form of [time boxing](http://www.stevepavlina.com/blog/2004/10/timeboxing/), a popular time management technique.
+The first question I get asked is, “are you able to get stuff done?”. Getting stuff done in coffee shops while traveling is certainly doable. Millions of people work in coffee shops every day, whether in their own countries or not. I do find that it helps me stay on task. Compared to staying at home, my mind wanders off less, so I can get a productivity boost. In fact, working for a couple hours in different places is a form of [time boxing](//www.stevepavlina.com/blog/2004/10/timeboxing/), a popular time management technique.
 
 However, this productivity boost only happens under certain circumstances. I found that it helped when working on Fractal Photographer and doing both light readings and dense readings. Those are tasks that are relatively linear. I know what to do next and they are moderate in amount of concentration and brainpower required.
 

@@ -3,7 +3,7 @@ title: Compiler optimization contest (Part II) - Racket functional programming
 disqus: y
 ---
 
-In the [previous post](/blog/compiler-optimization-i/), I talked about my participation in a compiler optimization contest, where the goal was to compile a program into the smallest possible executable. Three languages were allowed for the contest : C, C++ and Racket, a dialect of Lisp/Scheme. No one would reasonably choose to use C for a high-level program like a compiler, especially for a contest, so it was really a choice between C++ and Racket, two vastly different languages.
+In the [previous post](/2014/08/08/compiler-optimization-i.html), I talked about my participation in a compiler optimization contest, where the goal was to compile a program into the smallest possible executable. Three languages were allowed for the contest : C, C++ and Racket, a dialect of Lisp/Scheme. No one would reasonably choose to use C for a high-level program like a compiler, especially for a contest, so it was really a choice between C++ and Racket, two vastly different languages.
 
 Whereas the previous post focused on the compiler, this post will focus on the usage of the Racket language to write the compiler.
 
@@ -584,7 +584,7 @@ To avoid extremely long nested expressions, it is good practice to split them up
 
 At this point, it will probably appear like I am nitpicking insignificant syntax details and indeed, it would not be an important consideration when choosing a language. Still, I think the requirement that everything be S-expressions might be too restrictive of a constraint.
 
-> Alternative syntax like [Sweet-expressions](readable.sourceforge.net/) help with readability, to a limited extent.
+> Alternative syntax like [Sweet-expressions](http://readable.sourceforge.net/) help with readability, to a limited extent.
 
 
 Macros & Customization

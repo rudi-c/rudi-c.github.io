@@ -128,7 +128,7 @@ Exploration is also a common theme, but again, not for this audience. Relative t
 
 Ultimately, I chose luck as a theme because it represents my current progress on answering the question "what career advice can you give me?". I get asked this all the time in various forms now that I'm a grey-bearded senior student, but I always struggle with it because there's almost no advice that is not dependent on *a lot* of context. When people give advice, they rarely state the assumptions behind them. People succeed in wildly different ways: academia, industry, startups, and things completely unrelated to programming.
 
-I talked about this a while back with a [friend who also gets asked for advice often](https://www.crunchbase.com/person/liam-horne#/entity) and we ended up concluding that the **only general thing we can suggest is to be aware of your surroundings, and to be aggressive in taking opportunities**.
+I talked about this a while back with a [friend who also gets asked for advice often](//www.crunchbase.com/person/liam-horne#/entity) and we ended up concluding that the **only general thing we can suggest is to be aware of your surroundings, and to be aggressive in taking opportunities**.
 
 
 > My fellow graduates. You have all found your own path. A path that brought you to this day.

@@ -45,7 +45,7 @@ As I started watching the documentary, I immediately noticed that the video was 
 
 Would it not be great if I could get the information in the video more quickly — by speeding it up, for example?
 
-I blogged about this [over a year ago](http://digitalfreepen.com/blog/most-important-feature/). Watching an online course at 1.5x the speed saves me not only time, but the higher density of information also forces me to focus and prevents me from getting bored.
+I blogged about this [over a year ago](/2015/08/05/train-of-thought-cologne.html). Watching an online course at 1.5x the speed saves me not only time, but the higher density of information also forces me to focus and prevents me from getting bored.
 
 I had not realized that Youtube now gives easy access to setting the video to play at a faster speed. Great! Now I can spend 66% less time procrastinating watching cat videos! Seriously though, if I can get into the habit of always speeding up my videos, this will be a game changer. Despite being full of junk, Youtube remains one of the best sources of great recreational educational material.
 

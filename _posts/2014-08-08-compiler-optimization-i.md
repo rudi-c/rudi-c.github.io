@@ -59,7 +59,7 @@ The choice was easy: lately, I have been finding programming in classical C-styl
 
 Compilers are the kind of programs where using FP makes a lot of sense. They inherently require a great deal of recursion and tree traversal, for which languages like Racket are optimized.
 
-The compiler ultimately ended up being the largest functional program I have ever written - I reflect on lessons learned from this experience in [Part II](/blog/compiler-optimization-ii/).
+The compiler ultimately ended up being the largest functional program I have ever written - I reflect on lessons learned from this experience in [Part II](/2014/08/08/compiler-optimization-ii.html).
 
 A previous assignment consisted of implementing symbol tables and type checking, so I already had the infrastructure needed to work with the [parse tree](http://en.wikipedia.org/wiki/Parse_tree). In particular, I had already written code to construct an [abstract syntax tree (AST)](http://en.wikipedia.org/wiki/Abstract_syntax_tree) from the parse tree (also known as concrete syntax tree). The difference is that parse tree is a direct representation of the grammar rules and contains a lot of cruft such as parentheses and brackets, e.g.
 
@@ -235,7 +235,7 @@ if (x == 0) {
 
 Then both `a` and `b` need to be stored in memory on the stack (or at the very least, have a corresponding stack address) as we can't take the address of a register. However, do they always need to be on the stack? Is it possible to know whether a pointer points to a stack variable or a heap location?
 
-There is an interesting paper that [extends SSA numbering](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.17.1802) that deal with analysis of pointers in the context of SSA. The method presented is quite understandable, but it was not clear that the time investment to implement it would pay off for the contest.
+There is an interesting paper that [extends SSA numbering](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.17.1802) (C. Lapkowski, 1996) that deal with analysis of pointers in the context of SSA. The method presented is quite understandable, but it was not clear that the time investment to implement it would pay off for the contest.
 
 For the sake of getting something working, I chose a simpler approach, which is an initial pass over the AST to make a list of all local variables whose address gets taken (&'ed) and store them on the stack. They are loaded from the stack whenever they are read, and stored to stack whenever they are written.
 

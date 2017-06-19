@@ -41,11 +41,11 @@ The papers covered:
 
 [Types and Programming Languages chapters 1, 5, 9](http://port70.net/~nsz/articles/book/pierce_types_and_programming_languages_2002.pdf)
 
-[The Multikernel: A new OS architecture for scalable multicore systems](http://www.barrelfish.org/barrelfish_sosp09.pdf)
+[The Multikernel: A new OS architecture for scalable multicore systems](//www.sigops.org/sosp/sosp09/papers/baumann-sosp09.pdf)
 
 [Liquid Types](http://goto.ucsd.edu/~rjhala/liquid/liquid_types.pdf)
 
-[The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors](http://web.mit.edu/amdragon/www/pubs/commutativity-sosp13.pdf)
+[The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors](//people.csail.mit.edu/nickolai/papers/clements-sc.pdf)
 
 [Neural Turing Machines](http://arxiv.org/abs/1410.5401)
 
