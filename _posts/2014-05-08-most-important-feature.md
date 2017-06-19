@@ -1,7 +1,5 @@
 ---
 title: Massively online courses' most important feature
-layout: post
-type: post
 disqus: y
 ---
 Massively online courses are a great way to gain more knowledge. They don't require you to be in a particular physical location or pay expensive fees, and you get pick from a healthy selection offered year-round. In the last year, I've used both Udacity and Coursera.

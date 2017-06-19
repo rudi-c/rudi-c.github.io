@@ -1,7 +1,5 @@
 ---
-layout: page
 title: Works
-type: page
 ---
 
 <center>*some of my personal projects, some quite old*</center>

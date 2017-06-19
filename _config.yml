@@ -1,11 +1,12 @@
+# ----------- CONFIGURABLE START -----------
 title:            Digital Freepen
 description:      Of everything you can write about in a digital world
 url:              http://digitalfreepen.com
 signoff:          Rudi Chen
 disqus_shortname: digitalfreepen
-facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
 google_analytics: UA-36059196-1
-
+facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
+share:            false # Turn on twitter and facebook share buttons
 
 links:
   - name:         About
@@ -24,5 +25,13 @@ markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
+  syntax_highlighter: rouge
 gems:
   - jekyll-feed
+
+# ------------ CONFIGURABLE END ------------
+
+# permalink:        /posts/:title
+defaults:
+  - values:
+      layout: "default"

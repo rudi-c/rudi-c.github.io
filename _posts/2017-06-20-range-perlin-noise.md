@@ -1,8 +1,6 @@
 ---
 title: The range of Perlin noise
 date: 2017-06-10 12:00:01
-layout: post
-type: post
 disqus: y
 published: false
 ---

@@ -1,8 +1,6 @@
 ---
 title: Deriving the continuous wavelet transform from Canny edge detection
-layout: post
-type: post
-disqus: y 
+disqus: y
 ---
 At one point during my research on [detecting musical notes/onsets]({% post_url 2012-12-10-how-hard-is-music-analysis %}), I came up with the idea of using my previous experience with the <a href="http://en.wikipedia.org/wiki/Canny_edge_detector" target="_blank">Canny edge detector</a>, or some variation of it. Previously, I had worked with the detector focusing mainly on the implementation. I didn't quite bother to consider why it was a good algorithm, only having some vague knowledge that it has been proven to be "optimal" under some criteria. Then, as I adapted the algorithm (mainly used for computer vision) to onset detection, I realized to my surprise that there are close ties between edge detection and the <a href="http://users.rowan.edu/~polikar/WAVELETS/WTtutorial.html" target="_blank">continuous wavelet transform</a>.
 

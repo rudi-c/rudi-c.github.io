@@ -1,8 +1,6 @@
 ---
 title: Learned at Dropbox - 1st internship, Carousel iOS team
 date: 2015-10-12 00:00:01
-layout: post
-type: post
 disqus: y
 ---
 

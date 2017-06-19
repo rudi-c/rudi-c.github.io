@@ -1,8 +1,6 @@
 ---
 title: Digital Nomadism - The people of Airbnb
 date: 2016-01-13 00:00:01
-layout: post
-type: post
 disqus: y
 ---
 

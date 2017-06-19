@@ -1,8 +1,6 @@
 ---
 title: Sugar for the technical mind (Part II)
-layout: post
-type: post
-disqus: y 
+disqus: y
 ---
 Second edition of ["Sugar for the technical mind"]({% post_url 2013-03-28-sugar-for-the-technical-mind-part-i %}) (a.k.a., papers I've read recently).
 

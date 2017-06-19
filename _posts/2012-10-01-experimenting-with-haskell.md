@@ -1,7 +1,5 @@
 ---
 title: Experimenting with Haskell
-layout: post
-type: post
 disqus: y
 ---
 <p>Our introductory computer science class at Waterloo uses a functional programming language called Scheme. However, when it comes to explaining concepts, our professor uses Haskell, though we are not required to actually learn how to program with it (something to do with cryptic compiler errors). Why so?</p>

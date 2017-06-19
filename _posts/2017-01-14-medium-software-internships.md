@@ -1,8 +1,6 @@
 ---
 title: Medium-size software companies are the best default choice for internships
 date: 2017-01-14 00:00:01
-layout: post
-type: post
 disqus: y
 ---
 

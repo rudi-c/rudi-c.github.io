@@ -1,8 +1,6 @@
 ---
 title: Proofreading with text-to-speech (diff included)
 date: 2015-11-23 00:00:04
-layout: post
-type: post
 disqus: y
 ---
 

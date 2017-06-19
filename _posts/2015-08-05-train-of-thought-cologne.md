@@ -1,7 +1,5 @@
 ---
 title: The train of thought's first stop is men's cologne
-layout: post
-type: post
 disqus: y
 ---
 

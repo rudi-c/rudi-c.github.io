@@ -1,7 +1,5 @@
 ---
-layout: page
 title: Resources
-type: page
 ---
 
 These are publicly available resources that have helped get me to where I am.

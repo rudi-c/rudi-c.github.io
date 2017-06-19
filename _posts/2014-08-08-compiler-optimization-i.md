@@ -1,7 +1,5 @@
 ---
 title: Compiler optimization contest (Part I) - In the Zone
-layout: post
-type: post
 disqus: y
 ---
 

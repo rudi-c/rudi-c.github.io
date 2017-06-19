@@ -1,8 +1,6 @@
 ---
 title: Learned at Dropbox - 2nd internship, Pyston team
 date: 2015-10-12 00:00:02
-layout: post
-type: post
 disqus: y
 ---
 

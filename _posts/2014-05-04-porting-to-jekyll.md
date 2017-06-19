@@ -1,7 +1,5 @@
 ---
 title: Porting to Jekyll
-layout: post
-type: post
 disqus: y
 ---
 I just ported this website, which used to be hosted on webhostingpad and run on Wordpress, to be hosted on [Github itself](https://github.com/rudi-c/rudi-c.github.io) and generated with [Jekyll](http://jekyllrb.com/).
@@ -24,7 +22,7 @@ ruby -rubygems -e 'require "jekyll-import"; JekyllImport::Importers::WordpressDo
 
 **Writing**
 
-I had many permalinks coded in my posts and pages, which needed to be changed. I ran a little bash script to convert all image links and manually dealt with inter-page links. This shows another advantage of Jekyll's static page generation approach. 
+I had many permalinks coded in my posts and pages, which needed to be changed. I ran a little bash script to convert all image links and manually dealt with inter-page links. This shows another advantage of Jekyll's static page generation approach.
 
 As all files are stored locally on my computer, I can use my favorite text editor (Sublime Text in Vintage Mode) and all of Unix's utilities (grep, sed, etc). This is much better than using Wordpress' clunky editor. While more friendly to the average user, it is not very well suited for developers. Here, I am writing my posts while using version control just as I would for any programming projects.
 

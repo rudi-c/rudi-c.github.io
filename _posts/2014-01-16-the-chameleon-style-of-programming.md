@@ -1,15 +1,13 @@
 ---
 title: The Chameleon Style of Programming
-layout: post
-type: post
-disqus: y 
+disqus: y
 ---
 <p>One issue programmers have to deal with often is style. No, not dressing style. Coding style. The manner in which each person prefers formatting code, which can vary wildly between people. Is it better to use tabs vs spaces for indentation? Opening curly braces at the end of a line or at the beginning of a new one? 80 characters limit per line, 100, 120, or none at all? Capitalization? Whitespaces? </p>
 <p>For the average folk, these may seem like mundane difference but in the programming universe, these can easily spark the flames of a religious war.<br />
 Etc etc.</p>
 <p>To illustrate how much the same code can differ by the hands of different people :</p>
 ```java
-int sum_arrays(int [] a, 
+int sum_arrays(int [] a,
                int [] b) {
   int sum = 0; /* Obvious comment here */
   for ( int i=0; i<a.size(); ++i ) {
@@ -24,7 +22,7 @@ int SumArray( int[] a, int [] b )
 {
     // Obvious comment here
     int sum = 0;
-    for (int i = 0; i < a.size(); i++) 
+    for (int i = 0; i < a.size(); i++)
     {
         sum = sum + a[i] * _someMemberWeight1
                   + b[i] * _someMemberWeight2;

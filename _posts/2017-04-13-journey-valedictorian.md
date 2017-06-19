@@ -1,8 +1,6 @@
 ---
 title: My journey to writing a valedictorian speech
 date: 2017-04-13 00:00:01
-layout: post
-type: post
 disqus: y
 ---
 

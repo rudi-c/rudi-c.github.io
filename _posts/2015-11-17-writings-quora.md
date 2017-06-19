@@ -1,8 +1,6 @@
 ---
 title: Writings from Quora (2015)
 date: 2015-11-17 00:00:02
-layout: post
-type: post
 disqus: y
 ---
 

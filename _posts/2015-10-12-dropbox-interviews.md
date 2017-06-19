@@ -1,8 +1,6 @@
 ---
 title: Learned at Dropbox - maximizing signal in interviews
 date: 2015-10-12 00:00:03
-layout: post
-type: post
 disqus: y
 ---
 

@@ -1,7 +1,5 @@
 ---
 title: Compiler optimization contest (Part II) - Racket functional programming
-layout: post
-type: post
 disqus: y
 ---
 

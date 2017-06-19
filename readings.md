@@ -1,7 +1,5 @@
 ---
-layout: page
 title: Readings
-type: page
 ---
 
 <center>*the kind of stuff I'm into*</center>

@@ -1,8 +1,6 @@
 ---
 title: Learned at Jane Street - Thinking fast and slow
 date: 2017-01-07 00:00:01
-layout: post
-type: post
 disqus: y
 ---
 

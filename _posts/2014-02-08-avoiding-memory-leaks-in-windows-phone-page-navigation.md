@@ -1,8 +1,6 @@
 ---
 title: Avoiding memory "leaks" in Windows Phone page navigation
-layout: post
-type: post
-disqus: y 
+disqus: y
 ---
 <p>The nice thing about programming with managed languages such as C# or Java is that we don't need to worry about memory leaks. After all, we have a nice butler called the garbage collector to take care of things for us. Or at least, we <em>usually</em> don't. It's still possible to get memory "leaks".</p>
 <p>I'm writing "leak" in quotation marks as they are not exactly the same as your classical C-style leaks, where a block of memory has been allocated but there is no pointer pointing to that address anymore. Rather, unless your code is calling a native component (this might happen if you're using a 3rd party-library which uses native code for speed, such as <a href="http://developer.nokia.com/lumia/nokia-apis/imaging">Nokia's Imaging SDK</a>) the opposite is often quite true : you <em>have</em> a pointer to a block of memory that you don't actually needed and because this pointer exists, the garbage collector can't get rid of it.</p>

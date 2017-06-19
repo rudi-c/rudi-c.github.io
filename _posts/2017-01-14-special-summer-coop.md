@@ -1,8 +1,6 @@
 ---
 title: Why you should pay special attention to your summer co-op terms
 date: 2017-01-14 00:00:02
-layout: post
-type: post
 disqus: y
 ---
 

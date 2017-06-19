@@ -1,8 +1,6 @@
 ---
 title: Learned at Dropbox - the social, cultural and business aspects
 date: 2015-10-12 00:00:04
-layout: post
-type: post
 disqus: y
 ---
 

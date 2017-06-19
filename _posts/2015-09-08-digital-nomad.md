@@ -1,7 +1,5 @@
 ---
 title: Digital Nomadism - My plans for Fall 2015
-layout: post
-type: post
 disqus: y
 ---
 

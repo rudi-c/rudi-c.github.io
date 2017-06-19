@@ -1,8 +1,6 @@
 ---
 title: Common errors in Windows Phone camera apps
-layout: post
-type: post
-disqus: y 
+disqus: y
 ---
 <p><br/><br />
 Recently, while working on my smart resize apps, I ran into a bug of crashes and freezes related to using the camera API. I think I managed to fix them, so I'd like to share some techniques I used.</p>
@@ -90,7 +88,7 @@ private void Camera_Initialized(object sender, CameraOperationCompletedEventArgs
     });
 }
 
-// This should get called when leaving the page or switching 
+// This should get called when leaving the page or switching
 // between front/back camera.
 private void DisposeCamera()
 {
