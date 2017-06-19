@@ -2,7 +2,7 @@
 title: Readings
 ---
 
-<center>*the kind of stuff I'm into*</center>
+*the kind of stuff I'm into*
 
 Favorite books
 ---------------

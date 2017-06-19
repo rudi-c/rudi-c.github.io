@@ -2,9 +2,7 @@
 title: Works
 ---
 
-<center>*some of my personal projects, some quite old*</center>
-
----------------------------------------
+*some of my personal projects, some quite old*
 
 <table class="project-table">
   <tr>
