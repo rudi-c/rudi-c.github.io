@@ -31,7 +31,7 @@ It's also nice to look back at my post history and look at how the topics reflec
 Altruistic benefits
 -------------------
 
-I want to be helpful in some way. Sometimes by [writing advice](/2017/01/13/medium-software-internships.html) or [presenting technical ideas](/2017/01/06/jane-street-ocaml.html). Even in my recent blog posts where I [talk about myself](/2016/01/12/nomad-airbnb.html), I still try to make it thought-provoking (I know, that sounds really self-important).
+I want to be helpful in some way. Sometimes by [writing advice](/2017/01/14/medium-software-internships.html) or [presenting technical ideas](/2017/01/07/jane-street-ocaml.html). Even in my recent blog posts where I [talk about myself](/2016/01/13/nomad-airbnb.html), I still try to make it thought-provoking (I know, that sounds really self-important).
 
 Furthermore, I'm an information junkie. I like to read and learn a lot of things and subsequently share it with others. In that vein, I'm significantly more motivated to write about something that I think is under-covered or under-explained in daily discussions or other parts of the Internet, because I perceive that there is more marginal benefit for others.
 
@@ -46,7 +46,7 @@ I'm of the opinion that it's not an useful distinction. In fact, having personal
 Memory benefits
 ---------------
 
-I talk about wanting to be helpful and all, but I'm really just getting started there. Most of my recent blog posts have been more of personal nature (e.g. [internship experience](/2015/10/11/dropbox-first-internship.html)) which I haven't thought to be of sufficient general interest to broadcast outside my Facebook wall.
+I talk about wanting to be helpful and all, but I'm really just getting started there. Most of my recent blog posts have been more of personal nature (e.g. [internship experience](/2015/10/12/dropbox-first-internship.html)) which I haven't thought to be of sufficient general interest to broadcast outside my Facebook wall.
 
 But it's nice to have those around because a summary of an experience for others is also a useful summary for my future self. I have a private journal but it's not always updated, and the writing is a lot lower in quality, so I'm rarely inclined to reread it.
 
