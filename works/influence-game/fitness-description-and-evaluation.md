@@ -42,11 +42,11 @@ procedure SwissTournament(initial-set, number-of-rounds)
 <p>Given <em>n</em> teams, a Swiss Tournament typically requires <em>k = ceil(log2(n))</em> rounds in order to determine an absolute winner. This is because teams with no losses are paired up against each other, thus the number of teams with no losses decreases by half every round. <em>k</em> is not sufficient to make a pairwise distinction between all teams; there will be multiple teams with the same number of wins. In our application, this is acceptable as we only need to be able to determine which teams are in the first quartile.</p>
 <p>Furthermore, our implementation of Swiss tournament assumes the following for simplification purposes :</p>
 <ol>
-<li>No ties (a team either wins or loses)
-<li>No drops (every team plays until the end of the tournament)
-<li>No byes (even number of teams ensure every team is paired up)
+<li>No ties (a team either wins or loses)</li>
+<li>No drops (every team plays until the end of the tournament)</li>
+<li>No byes (even number of teams ensure every team is paired up)</li>
 </ol>
-<p><em>example, with initial teams labelled from 1 to 8:</p>
+<p><em>example, with initial teams labelled from 1 to 8:</em></p>
 
 <center><table border="1" style="text-align: center;">
 <tr>
@@ -210,18 +210,17 @@ procedure SwissTournament(initial-set, number-of-rounds)
 </tr>
 </table></center>
 
-<p></em></p>
 <p><strong><font style="font-size:14px">Evolutionary Algorithm</font></strong></p>
 <p>After a tournament is over and every teams have been ranked, the next step is to create a new generation of teams. To do, we create a DNA sequence identifying the properties of each team, by mapping all the weights of its neural network into a one-dimensional array. Each weight will represent a single <b>gene</b>.</p>
 <p>We then apply the following evolutionary methods :</p>
 <ul>
-<li>The top 25% best performing ANNs (<strong>elites</strong>) are carried over to the next generation
-<li>Every elite is paired with another elite and produces two offspring by uniform crossover
+<li>The top 25% best performing ANNs (<strong>elites</strong>) are carried over to the next generation</li>
+<li>Every elite is paired with another elite and produces two offspring by uniform crossover</li>
 <li>Twice the number of elites are created through mutation. The mutation consists in :
 <ul>
-<li>Selecting a random elite and creating an identical offspring
-<li>Every gene in the offspring has a 10% chance of being rerolled between [-1 and 1]
-<li>Every gene in the offspring has a 30% chance of being multiplied by up to 30%, with a larger chance of a small change
+<li>Selecting a random elite and creating an identical offspring</li>
+<li>Every gene in the offspring has a 10% chance of being rerolled between [-1 and 1]</li>
+<li>Every gene in the offspring has a 30% chance of being multiplied by up to 30%, with a larger chance of a small change</li>
 </ul>
 </li>
 </ul>
@@ -270,7 +269,7 @@ procedure MultiSwissTournament(initial-columns, number-of-rounds)
             Set aside score for column j
 ```
 
-<p><em>example, with initial teams labelled from A1 to A4 for column A, B1 to B4 for column B</p>
+<p><em>example, with initial teams labelled from A1 to A4 for column A, B1 to B4 for column B</em></p>
 <center><table border="1" style="text-align: center;">
 <tr>
 <td colspan="4">Round 1</td>
@@ -423,7 +422,6 @@ procedure MultiSwissTournament(initial-columns, number-of-rounds)
 </tr>
 </table></center>
 
-<p></em></p>
 <p>First, notice that in the case of MCST, the number of rounds in a column pair-up can be arbitrary. Over all pair-ups, a given team will end up playing more matches than it would in a SCST to begin with. Secondly, there is no guarantee that the MCST will efficiently differentiate the best teams (see Team B in previous example) although in general, that is acceptable as we keep an entire quartile to carry over to the next generation.</p>
 <p>Given this method, the best teams will be versatile enough to beat a number of different strategies from other columns. They will evolve and adapt to defeat other strategies, as opposed to its own.</p>
 <p>Again, at every generation, we record the top 25% of teams in every column. After <em>n</em> generations, we have up to <em>n * number of teams per generation * .25</em> per column, which we merge into one large column for the final tournament that determines the ranking of teams in relation to their associated generation.</p>
