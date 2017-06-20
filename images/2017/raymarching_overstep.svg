@@ -1,0 +1,168 @@
+<svg width="921" height="548" viewBox="0 0 921 548" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Group</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(465 -281)">
+<g id="Group">
+<g id="Group">
+<g id="Line">
+<use xlink:href="#path0_stroke" transform="matrix(0.690669 0.723171 -0.723171 0.690669 -394 699)"/>
+</g>
+<g id="Line 2">
+<use xlink:href="#path1_stroke" transform="matrix(0.976401 -0.215965 0.215965 0.976401 -309 787.907)"/>
+</g>
+<g id="Line 3">
+<use xlink:href="#path2_stroke" transform="matrix(0.940887 0.338719 -0.338719 0.940887 -219 768)"/>
+</g>
+<g id="Line 4">
+<use xlink:href="#path3_stroke" transform="matrix(0.919145 -0.393919 0.393919 0.919145 -69.197 821.54)"/>
+</g>
+<g id="Line 5">
+<use xlink:href="#path4_stroke" transform="matrix(0.974097 0.22613 -0.22613 0.974097 -3 816)"/>
+</g>
+<g id="Line 6">
+<use xlink:href="#path5_stroke" transform="matrix(0.760834 -0.648947 0.648947 0.760834 53 829)"/>
+</g>
+<g id="Line 7">
+<use xlink:href="#path6_stroke" transform="matrix(0.816416 0.577465 -0.577465 0.816416 121 771)"/>
+</g>
+<g id="Line 8">
+<use xlink:href="#path7_stroke" transform="matrix(0.962013 -0.273004 0.273004 0.962013 162 800)"/>
+</g>
+<g id="Line 9">
+<use xlink:href="#path8_stroke" transform="matrix(0.957024 0.290007 -0.290007 0.957024 236 779)"/>
+</g>
+<g id="Line 10">
+<use xlink:href="#path9_stroke" transform="matrix(0.921426 -0.388553 0.388553 0.921426 302 800)"/>
+</g>
+<g id="Line 11">
+<use xlink:href="#path10_stroke" transform="matrix(0.715187 -0.698933 0.698933 0.715187 385 765)"/>
+</g>
+</g>
+<g id="Arrow">
+<use xlink:href="#path11_stroke" transform="matrix(0.948683 0.316228 -0.316228 0.948683 -464 458)"/>
+</g>
+<g id="Group">
+<g id="Ellipse" filter="url(#filter0_d)">
+<mask id="mask0_outline_out">
+<rect id="mask0_outline_inv" fill="white" x="-2" y="-2" width="538" height="538" transform="translate(-454 283)"/>
+<use xlink:href="#path12_fill" fill="black" transform="translate(-454 283)"/>
+</mask>
+<g mask="url(#mask0_outline_out)">
+<use xlink:href="#path13_stroke_2x" transform="translate(-454 283)"/>
+</g>
+</g>
+<g id="Star">
+<use xlink:href="#path14_fill" transform="translate(-194.521 542.479)"/>
+</g>
+</g>
+<g id="Group">
+<g id="Ellipse" filter="url(#filter1_d)">
+<mask id="mask1_outline_out">
+<rect id="mask1_outline_inv" fill="white" x="-2" y="-2" width="360" height="360" transform="translate(-111 457)"/>
+<use xlink:href="#path15_fill" fill="black" transform="translate(-111 457)"/>
+</mask>
+<g mask="url(#mask1_outline_out)">
+<use xlink:href="#path16_stroke_2x" transform="translate(-111 457)"/>
+</g>
+</g>
+<g id="Star">
+<use xlink:href="#path17_fill" transform="translate(59.2609 627.261)"/>
+</g>
+</g>
+<g id="Group">
+<g id="Ellipse" filter="url(#filter2_d)">
+<mask id="mask2_outline_out">
+<rect id="mask2_outline_inv" fill="white" x="-2" y="-2" width="233" height="233" transform="translate(122 576)"/>
+<use xlink:href="#path18_fill" fill="black" transform="translate(122 576)"/>
+</mask>
+<g mask="url(#mask2_outline_out)">
+<use xlink:href="#path19_stroke_2x" transform="translate(122 576)"/>
+</g>
+</g>
+<g id="Star">
+<use xlink:href="#path17_fill" transform="translate(229.22 684.371)"/>
+</g>
+</g>
+<g id="Group">
+<g id="Ellipse" filter="url(#filter3_d)">
+<mask id="mask3_outline_out">
+<rect id="mask3_outline_inv" fill="white" x="-2" y="-2" width="181" height="181" transform="translate(255 636)"/>
+<use xlink:href="#path20_fill" fill="black" transform="translate(255 636)"/>
+</mask>
+<g mask="url(#mask3_outline_out)">
+<use xlink:href="#path21_stroke_2x" transform="translate(255 636)"/>
+</g>
+</g>
+<g id="Star">
+<use xlink:href="#path17_fill" transform="translate(337.467 720.652)"/>
+</g>
+</g>
+<g id="Group">
+<g id="Star">
+<use xlink:href="#path22_fill" transform="translate(414.913 742.913)" fill="#FF0000"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" filterUnits="userSpaceOnUse" x="-460" y="281" width="546" height="546" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="0" dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<filter id="filter1_d" filterUnits="userSpaceOnUse" x="-117" y="455" width="368" height="368" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="0" dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<filter id="filter2_d" filterUnits="userSpaceOnUse" x="116" y="574" width="241" height="241" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="0" dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<filter id="filter3_d" filterUnits="userSpaceOnUse" x="249" y="634" width="189" height="189" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="0" dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<path id="path0_stroke" d="M 0 0L 123.069 0L 123.069 -5L 0 -5L 0 0Z"/>
+<path id="path1_stroke" d="M 0 0L 92.1752 0L 92.1752 -5L 0 -5L 0 0Z"/>
+<path id="path2_stroke" d="M 0 0L 159.424 0L 159.424 -5L 0 -5L 0 0Z"/>
+<path id="path3_stroke" d="M -0.789715 2.37199L 62.2374 23.3558L 63.8168 18.6118L 0.789715 -2.37199L -0.789715 2.37199Z"/>
+<path id="path4_stroke" d="M 0 0L 57.4891 0L 57.4891 -5L 0 -5L 0 0Z"/>
+<path id="path5_stroke" d="M 0 0L 89.3756 0L 89.3756 -5L 0 -5L 0 0Z"/>
+<path id="path6_stroke" d="M 0 0L 50.2195 0L 50.2195 -5L 0 -5L 0 0Z"/>
+<path id="path7_stroke" d="M 0 0L 76.922 0L 76.922 -5L 0 -5L 0 0Z"/>
+<path id="path8_stroke" d="M 0 0L 68.9638 0L 68.9638 -5L 0 -5L 0 0Z"/>
+<path id="path9_stroke" d="M 0 0L 90.0777 0L 90.0777 -5L 0 -5L 0 0Z"/>
+<path id="path10_stroke" d="M 0 0L 61.5224 0L 61.5224 -5L 0 -5L 0 0Z"/>
+<path id="path11_stroke" d="M 968.718 1.06066C 969.303 0.474874 969.303 -0.474874 968.718 -1.06066L 959.172 -10.6066C 958.586 -11.1924 957.636 -11.1924 957.05 -10.6066C 956.465 -10.0208 956.465 -9.07107 957.05 -8.48528L 965.536 0L 957.05 8.48528C 956.465 9.07107 956.465 10.0208 957.05 10.6066C 957.636 11.1924 958.586 11.1924 959.172 10.6066L 968.718 1.06066ZM 0 1.5L 967.657 1.5L 967.657 -1.5L 0 -1.5L 0 1.5Z"/>
+<path id="path12_fill" d="M 534 267C 534 414.46 414.46 534 267 534C 119.54 534 0 414.46 0 267C 0 119.54 119.54 0 267 0C 414.46 0 534 119.54 534 267Z"/>
+<path id="path13_stroke_2x" d="M 532 267C 532 413.355 413.355 532 267 532L 267 536C 415.565 536 536 415.565 536 267L 532 267ZM 267 532C 120.645 532 2 413.355 2 267L -2 267C -2 415.565 118.435 536 267 536L 267 532ZM 2 267C 2 120.645 120.645 2 267 2L 267 -2C 118.435 -2 -2 118.435 -2 267L 2 267ZM 267 2C 413.355 2 532 120.645 532 267L 536 267C 536 118.435 415.565 -2 267 -2L 267 2Z"/>
+<path id="path14_fill" d="M 7.36943 0L 9.02397 5.09215L 14.3782 5.09215L 10.0465 8.23927L 11.7011 13.3314L 7.36943 10.1843L 3.03779 13.3314L 4.69233 8.23927L 0.360685 5.09215L 5.71489 5.09215L 7.36943 0Z"/>
+<path id="path15_fill" d="M 356 178C 356 276.307 276.307 356 178 356C 79.6933 356 0 276.307 0 178C 0 79.6933 79.6933 0 178 0C 276.307 0 356 79.6933 356 178Z"/>
+<path id="path16_stroke_2x" d="M 354 178C 354 275.202 275.202 354 178 354L 178 358C 277.411 358 358 277.411 358 178L 354 178ZM 178 354C 80.7979 354 2 275.202 2 178L -2 178C -2 277.411 78.5887 358 178 358L 178 354ZM 2 178C 2 80.7979 80.7979 2 178 2L 178 -2C 78.5887 -2 -2 78.5887 -2 178L 2 178ZM 178 2C 275.202 2 354 80.7979 354 178L 358 178C 358 78.5887 277.411 -2 178 -2L 178 2Z"/>
+<path id="path17_fill" d="M 6.5 0L 7.95934 4.49139L 12.6819 4.49139L 8.86126 7.26722L 10.3206 11.7586L 6.5 8.98278L 2.6794 11.7586L 4.13874 7.26722L 0.318133 4.49139L 5.04066 4.49139L 6.5 0Z"/>
+<path id="path18_fill" d="M 229 114.5C 229 177.737 177.737 229 114.5 229C 51.2634 229 0 177.737 0 114.5C 0 51.2634 51.2634 0 114.5 0C 177.737 0 229 51.2634 229 114.5Z"/>
+<path id="path19_stroke_2x" d="M 227 114.5C 227 176.632 176.632 227 114.5 227L 114.5 231C 178.841 231 231 178.841 231 114.5L 227 114.5ZM 114.5 227C 52.368 227 2 176.632 2 114.5L -2 114.5C -2 178.841 50.1588 231 114.5 231L 114.5 227ZM 2 114.5C 2 52.368 52.368 2 114.5 2L 114.5 -2C 50.1588 -2 -2 50.1588 -2 114.5L 2 114.5ZM 114.5 2C 176.632 2 227 52.368 227 114.5L 231 114.5C 231 50.1588 178.841 -2 114.5 -2L 114.5 2Z"/>
+<path id="path20_fill" d="M 177 88.5C 177 137.377 137.377 177 88.5 177C 39.6228 177 0 137.377 0 88.5C 0 39.6228 39.6228 0 88.5 0C 137.377 0 177 39.6228 177 88.5Z"/>
+<path id="path21_stroke_2x" d="M 175 88.5C 175 136.273 136.273 175 88.5 175L 88.5 179C 138.482 179 179 138.482 179 88.5L 175 88.5ZM 88.5 175C 40.7274 175 2 136.273 2 88.5L -2 88.5C -2 138.482 38.5182 179 88.5 179L 88.5 175ZM 2 88.5C 2 40.7274 40.7274 2 88.5 2L 88.5 -2C 38.5182 -2 -2 38.5182 -2 88.5L 2 88.5ZM 88.5 2C 136.273 2 175 40.7274 175 88.5L 179 88.5C 179 38.5182 138.482 -2 88.5 -2L 88.5 2Z"/>
+<path id="path22_fill" d="M 12.5 0L 14.8873 8.3651L 23.3253 6.25L 17.2746 12.5L 23.3253 18.75L 14.8873 16.6349L 12.5 25L 10.1127 16.6349L 1.67468 18.75L 7.72542 12.5L 1.67468 6.25L 10.1127 8.3651L 12.5 0Z"/>
+</defs>
+</svg>
