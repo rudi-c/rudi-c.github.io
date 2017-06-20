@@ -30,7 +30,7 @@ Why care about the range? Well, consider the simple task of plotting 2D Perlin n
 
 Interestingly enough, this information is hard to find! None of the tutorials I found mention anything about the range. Not even the original paper does. As a result, there are a lot of misconceptions. The [Unity implementation](//docs.unity3d.com/ScriptReference/Mathf.PerlinNoise.html) contradicts itself saying that the `Mathf.PerlinNoise` returns a "float Value between 0.0 and 1.0" yet warns that "it is possible for the return value to slightly exceed 1.0f".
 
-Now, I'm not the first person to ask this question. It's been asked on Stack Overflow before and there's a thread on [GameDev.net from 2004](//www.gamedev.net/topic/285533-2d-perlin-noise-gradient-noise-range--/) where the posters fumble around and eventually arrive at an answer (while making a bunch of flat-out wrong claims, such as saying that Perlin-noise is Gaussian-distributed).
+Now, I'm not the first person to ask this question. It's been asked on Stack Overflow before and there's a thread on [GameDev.net from 2004](//www.gamedev.net/topic/285533-2d-perlin-noise-gradient-noise-range--/) where the posters fumble around and eventually arrive at an answer (while making a bunch of wrong claims, such as saying that Perlin-noise is Gaussian-distributed and can have arbitrarily large values with low probability).
 
 That's why I'm hoping this blog post will provide a definite answer to this question. It might seem like a lot of work just to find a number but hey, I think that number is important.
 
