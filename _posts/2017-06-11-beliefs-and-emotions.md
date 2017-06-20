@@ -1,6 +1,6 @@
 ---
 title: Beliefs and emotions
-date: 2017-06-11 00:00:01
+date: 2017-06-11
 disqus: y
 ---
 

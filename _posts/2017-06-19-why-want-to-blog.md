@@ -1,6 +1,6 @@
 ---
 title: Why I (want to) blog
-date: 2017-06-19 12:00:02
+date: 2017-06-19
 disqus: y
 ---
 

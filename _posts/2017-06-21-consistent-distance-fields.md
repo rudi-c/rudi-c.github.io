@@ -1,6 +1,6 @@
 ---
 title: Consistent distance fields for ray marching
-date: 2017-06-21 12:00:02
+date: 2017-06-21
 ---
 
 $$
