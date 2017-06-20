@@ -145,15 +145,15 @@ In practice, we adjust the strength of the noise component by using linear inter
 Useful properties of gradients and gradient maximums
 ----------------------------------------------------
 
-Linearity: \\( \nabla(\alpha F(\vec{v}) + \beta G(\vec{v})) = \alpha \nabla F(\vec{v}) + \beta G(\vec{v}) \\)
+Linearity: \\( \nabla(\alpha F(\vec{v}) + \beta G(\vec{v})) = \alpha \nabla F(\vec{v}) + \beta \nabla G(\vec{v}) \\)
 
 Product rule: \\( \nabla(F(\vec{v}) G(\vec{v})) = F(\vec{v}) \nabla G(\vec{v}) +  G(\vec{v}) \nabla F(\vec{v}) \\)
 
 Chain rule: \\( \nabla(g(F(\vec{v}))) = g'(F(\vec{v})) \nabla F(\vec{v}) \\)
 
-Minimum: \\( \nabla (\min(F(\vec{v}), G(\vec{v}))) \le \max(\nabla F(\vec{v}), \nabla G(\vec{v})) \\).
+Minimum: \\( \nabla (\min(F(\vec{v}), G(\vec{v}))) \le \max(\nabla F(\vec{v}), \nabla G(\vec{v})) \\)
 
-Maximum: \\( \nabla (\max(F(\vec{v}), G(\vec{v}))) \le \max(\nabla F(\vec{v}), \nabla G(\vec{v})) \\).
+Maximum: \\( \nabla (\max(F(\vec{v}), G(\vec{v}))) \le \max(\nabla F(\vec{v}), \nabla G(\vec{v})) \\)
 
 Absolute value: \\( \nabla (abs(F(\vec{v}))) = \nabla F(\vec{v}) \\).
 
