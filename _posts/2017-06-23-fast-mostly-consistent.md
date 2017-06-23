@@ -1,6 +1,7 @@
 ---
 title: Fast and mostly consistent distance field ray marching
 date: 2017-06-23
+disqus: y
 ---
 
 Speed limits

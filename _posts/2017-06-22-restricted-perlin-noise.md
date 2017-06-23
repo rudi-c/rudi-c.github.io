@@ -1,6 +1,7 @@
 ---
 title: Restricted Perlin noise for better rendering
 date: 2017-06-22
+disqus: y
 ---
 
 In a [previous post](/2017/06/20/range-perlin-noise.html), I talked about Perlin noise and how it's important to know the range of values it can take. Today, I want to delve in a little deeper and look at not just the range of values of Perlin noise, but its entire distribution.
