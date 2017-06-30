@@ -2,6 +2,7 @@
 title: Learned at Jane Street - Thinking fast and slow
 date: 2017-01-07 00:00:01
 disqus: y
+favorite: y
 ---
 
 This is the first of two blog posts on my Summer 2016 internship experience at Jane Street, focusing on the company. For the technical aspect of working with OCaml, [read the second](/2017/01/07/jane-street-ocaml.html). I do not represent the company: take everything I say with a grain of salt. Other interns have their own unique experience which may differ from mine, my reconstructive memory could be telling lies, I may be rationalizing a lot, etc, etc.

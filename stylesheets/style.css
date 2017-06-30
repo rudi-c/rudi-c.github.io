@@ -17,6 +17,12 @@ ol, ul {
   padding-left: 20px;
 }
 
+.favorite {
+  float: left;
+  margin-left: -16px;
+  margin-top: 2px;
+}
+
 .posts-divider {
   width: 100%;
   text-align: center;

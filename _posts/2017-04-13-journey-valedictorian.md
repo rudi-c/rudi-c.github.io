@@ -2,6 +2,7 @@
 title: My journey to writing a valedictorian speech
 date: 2017-04-13
 disqus: y
+favorite: y
 ---
 
 This year, I applied to be the valedictorian[^1] of University of Waterloo's Mathematics Class of 2017 (afternoon session). The process of considering applying, _actually_ applying, doing research for the speech, writing the speech and preparing the delivery was super fun and I got tons of takeaways from it. I didn't get selected for it unfortunately, but my test audiences liked it enough that I figured I should recycle it into a blog post.

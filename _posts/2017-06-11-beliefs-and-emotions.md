@@ -2,6 +2,7 @@
 title: Beliefs and emotions
 date: 2017-06-11
 disqus: y
+favorite: y
 ---
 
 I recently read a comic from The Oatmeal (Matthew Inman) that has really stirred me, in a good way. So first, go ahead and click the image below to go to the comic. I promise, it's super good!
