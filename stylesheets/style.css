@@ -15,6 +15,22 @@ ol, ul {
   padding-left: 20px;
 }
 
+.posts-divider {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+.posts-divider span {
+  background:#fff;
+  padding:0 10px;
+  color: #888;
+  font-size: 85%;
+  vertical-align: top;
+}
+
 .datetime {
   display: inline-block;
   vertical-align: baseline;
