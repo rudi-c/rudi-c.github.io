@@ -2,6 +2,8 @@
 title: The Chameleon Style of Programming
 disqus: y
 ---
+<center><img src="/images/2014/01/CCChameleon.jpg" width="250" /></center>
+
 <p>One issue programmers have to deal with often is style. No, not dressing style. Coding style. The manner in which each person prefers formatting code, which can vary wildly between people. Is it better to use tabs vs spaces for indentation? Opening curly braces at the end of a line or at the beginning of a new one? 80 characters limit per line, 100, 120, or none at all? Capitalization? Whitespaces? </p>
 <p>For the average folk, these may seem like mundane difference but in the programming universe, these can easily spark the flames of a religious war.<br />
 Etc etc.</p>
