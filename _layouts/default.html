@@ -29,8 +29,6 @@
         {% endfor %}
       </nav>
 
-      {% if is_post %}{% include pagination.html %}{% endif %}
-
       <main class="tl f6 relative overflow-hidden">
         {% if page.title %}
           <div class="mb4">
@@ -55,6 +53,8 @@
           {% include disqus.html %}
         {% endif %}
       </main>
+
+      {% if is_post %}{% include pagination.html %}{% endif %}
     </div>
     {% include footer.html %}
   </body>
