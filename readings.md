@@ -159,6 +159,18 @@ Just starting this. If I'm going to bookmark nice things from the Internet, why 
 
 **The Law of Leaky Abstractions**. Why you need to have strong fundamentals. <a>https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/</a>
 
+**The Slack Notification System Flowchart**. Why things are not as easy as they look. <a>https://twitter.com/mathowie/status/837735473745289218/photo/1</a>
+
+**Jessica Livingston Speech about YC Culture**. A look into how YC built a good culture. <a>https://www.youtube.com/watch?v=NEp9aaQuYp4</a>
+
+**Wendover Productions**. A cool Youtube channel that explains why a bunch of stuff about everyday life are the way they are, with lots of insights. <a>https://www.youtube.com/channel/UC9RM-iSvTu1uPJb8X5yp3EQ</a>
+
+**When Monospace Fonts Aren't: The Unicode Character Width Nightmare**. A humbling post about how the simple question of font rendering is seemingly impossible to solve right. <a>http://denisbider.blogspot.com/2015/09/when-monospace-fonts-arent-unicode.html</a>
+
+**Silent Technical Privilege**. A great post about very implicit assumptions that are really easy to take granted, about the importance of something as simple as having letting people you try things. <a>http://www.slate.com/articles/technology/technology/2014/01/programmer_privilege_as_an_asian_male_computer_science_major_everyone_gave.html</a>
+
+**A Tale of Two Canadas**. How, even in a supposedly equalitarian country like Canada, there are a lot of differences in equality of opportunities. <a>https://www.theglobeandmail.com/news/national/a-tale-of-two-canadas-where-you-grow-up-affects-your-adult-income/article35444594/</a>
+
 News/Magazines
 --------------
 
