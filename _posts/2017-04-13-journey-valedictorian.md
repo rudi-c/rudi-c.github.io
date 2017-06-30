@@ -262,7 +262,7 @@ And here I'm sending people off while repeating the theme of the speech one last
 
 ## What's not in the speech
 
-There's a couple of things I omitted in the speech, which were the main reasons that I didn't get selection.
+There's a couple of things I omitted in the speech, which were the main reasons that I didn't get selected.
 
 
 > "We thought your speech was really good and could tell that you had put a lot of thought and effort into preparing it. […] There were a few weaknesses, such as the fact that you didn't seem to acknowledge your class or that it was convocation or to thank the families/professors for their support."
