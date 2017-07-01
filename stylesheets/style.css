@@ -60,6 +60,12 @@ body main {
   padding: 30px 60px;
 }
 
+@media only screen and (max-device-width: 480px) {
+  body main {
+    padding: 20px 20px;
+  }
+}
+
 code {
   font-family: monospace;
   font-size: 1.15em;
