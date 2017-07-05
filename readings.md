@@ -58,7 +58,7 @@ The PhD Grind - Philip Guo
 
 The Design of Everyday Things - Don Norman
 
-Strangers in Their Own Land
+Strangers in Their Own Land - Arlie Russell Hochschild
 
 Harry Potter and the Methods of Rationality - Eliezer Yudkowsky
 

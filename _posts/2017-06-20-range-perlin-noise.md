@@ -2,6 +2,7 @@
 title: The range of Perlin noise
 date: 2017-06-20
 disqus: y
+favorite: y
 ---
 
 TL;DR: The range is \\( [-\sqrt{N/4}, \sqrt{N/4}] \\) where \\( N \\) is the number of dimensions, assuming continuous unit gradient vectors.
