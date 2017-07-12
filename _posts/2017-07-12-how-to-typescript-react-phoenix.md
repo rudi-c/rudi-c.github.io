@@ -4,6 +4,8 @@ date: 2017-07-12
 disqus: y
 ---
 
+*this tutorial is a work in progress and you may run into further issues as the project progresses*
+
 Introduction
 ------------
 
