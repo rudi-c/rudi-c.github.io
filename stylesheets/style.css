@@ -13,6 +13,11 @@ a, .as-link {
 }
 .link:hover { background: url(/images/line.png) repeat-x left bottom; }
 
+pre.code {
+  font-family: monospace;
+  font-size: 1.15em;
+}
+
 ol, ul {
   padding-left: 20px;
 }
