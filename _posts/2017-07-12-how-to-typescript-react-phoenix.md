@@ -1,10 +1,87 @@
 ---
-title: How to use React with Typescript in Phoenix
+title: How to use React with Typescript in Phoenix (Attempt 1)
 date: 2017-07-12
 disqus: y
 ---
 
-*this tutorial is a work in progress and you may run into further issues as the project progresses*
+*Update: Looks like I jumped the gun on writing this tutorial. I ran into further issues as soon as I wrote non-trivial code. I gave up on trying to make this work with Brunch, the default build tool, which at the moment just isn't designed for something like Typescript. I'll document the difficulties I ran into below. TL;DR **replace Brunch with Webpack and follow Typescript + Webpack setup instructions**.*
+
+Difficulties compiling Typescript with Brunch
+=============================================
+
+Brunch compilation order is not configurable
+--------------------------------------------
+
+Brunch is designed to be user-friendly. It avoids making you write too much configuration by automatically looking for Brunch plugins among all installed packages. To determine compilation order, it uses dependency order in `package.json`. This is fine when most plugins operate on different file types and alphabetical ordering just happens to work. However, we'd want to run Typescript before Babel, Uglify, etc, so we need to order it first in `package.json`.
+
+It's a bit of an abuse of `package.json` to use it for build settings but it'd be fine if it wasn't for...
+
+...the fact that NPM reorders everything alphabetically whenever you install a new package.
+
+**Solutions**
+- Don't use `npm --save`. Always add packages manually to `package.json`.
+- Make sure to reorder everything every time you add a new package.
+- Implement a configuration option in brunch to determine compilation order.
+
+The last solution is clearly the right way to do it in order to use Brunch as a general build tool, especially given that order of elements within JSON dictionaries is undefined. However, [an issue has been opened for a year](https://github.com/brunch/brunch/issues/1377). I don't feel comfortable creating a PR that implements plugin ordering as the maintainers seem dismissive of use cases that require it.
+
+The file extensions don't get changed after Typescript compilation
+------------------------------------------------------------------
+
+That is, `.ts` and `.tsx` file types don't get changed to `.js` and `.jsx` files. Note that these files are kept in-memory in Brunch as far as I can tell, so this requires configuration.
+
+**Solutions**
+- Change the extension of files after Typescript compilation ([I've opened a PR for this](https://github.com/brunch/typescript-brunch/pull/39))
+- Have Typescript output ES5 or something that doesn't need Babel or further compilation stages
+
+Note that the latter use case is not viable unless your entire codebase is in Typescript. If you also happen to have "plain" `.jsx` files, this could cause incompatibilities between the Typescript output and the Babel output. I ran into some problems trying that though I did not investigate in depth.
+
+Brunch does not support project-wide compilation
+------------------------------------------------
+
+As far as I can tell reading the Brunch source code, Brunch will iterate through each file and apply all relevant compilation plugins. This is in contrast to iterating through each compilation plugin, and applying it on all relevant files. See [the _change function](https://github.com/brunch/brunch/blob/master/lib/fs_utils/file_list.js) which calls `compile`.
+
+This works as long as 99% of the "compilation work" is just syntactic transformations (e.g. ES6 -> ES5). The other 1%, resolving `require`s/`import`s is handled as a special step inside brunch using their custom-built [deppack dependency resolver](https://github.com/brunch/deppack).
+
+However, this fails on typed languages or anything that has cross-file interactions other than `require` such as Typescript, Elm, etc.
+
+**Solutions**
+- Change brunch to run by compilation stages first, rather than files first
+- As suggested in [typescript-brunch](https://github.com/brunch/typescript-brunch), rely on the IDE for type errors and ignore all type errors during Brunch compilation
+
+The first solution is ideal. You can still engineer it correctly to avoid recompiling everything every time something changes. However, it's a huge change in the architecture of Brunch and would likely break all current plugins. It doesn't look like there's enough resources/energy behind Brunch to make this happen at the moment.
+
+The second solution is kind of a hack but will work for the most part. There may be some brittleness if the IDE decides to behave slightly differently (e.g. resolving imports in a different order, running a different Typescript version).
+
+Brunch cannot follow Typescript imports
+---------------------------------------
+
+As stated previously, Brunch uses [deppack](https://github.com/brunch/deppack) which uses [detective](https://www.npmjs.com/package/detective) and follows only `require` statements, not `import` statements.
+
+This shouldn't really be a problem. Conceptually, Brunch is already following dependencies after Typescript and Babel compilation. However, once I've fixed the file extension change, deppack breaks and won't look for `require`s in files that were originally non-Javascript.
+
+To save other people some work, I'll document my diagnostic here. In [deppack:explore.js](https://github.com/brunch/deppack/blob/master/lib/explore.js), a file won't be parsed for its dependencies if it fails the `isJs` test which, among other things, takes a `fileList` of all the files we might want to include in the final `app.js`. However, the `fileList` is a map whose keys are the original file paths (i.e. `.ts` files) whereas we've already changed the path to a `.js` file after compilation.
+
+**Solutions**
+- Duplicate your import statements in Typescript files in a Javascript file to make sure all the dependencies are included in the final `app.js`
+- [Hack it to make it work, maybe](https://github.com/brunch/brunch/pull/1650) (unclear if this works on recursive imports)
+- Fix this bug correctly. I've opened [an issue](https://github.com/brunch/brunch/issues/1722) for this.
+
+This is not as simple to fix as just "update fileList with the new file extension". As far as I can tell, fileList is passed by reference and mutating it could have unpredictable consequences, especially since compilation happens on a per-file basis. Furthermore, the `exploreDeps` function that uses `isJs` is a very complex function that uses thrice-nested lambdas to achieve a sort of currying. Furthermore, not only does it explore dependencies, but is also responsible for some form of event watching.
+
+Yet another obstacle to fixing this is that there's already a [huge PR](https://github.com/brunch/brunch/pull/1664) with bug fixes, refactors and breaking changes on its way in Brunch. Large enough that it's probably a bad idea to write a branch in parallel to it, it would be better to build on top of it. However, at the time of writing, it's completion stage is unclear (can't build on top of it) and it also seems stalled.
+
+This is the part that I gave up as the cost-benefit ratio of untangling all these concerns is too high.
+
+Phoenix
+-------
+
+I understand that Phoenix comes by default with a simple-to-use build system that can easily be swapped out. However, Brunch doesn't seem to be getting the attention/resources/energy to keep up with the JS ecosystem and having to swap the build system reduces the feeling that "things just work".
+
+Original writeup
+================
+
+*Below is the original tutorial I wrote.*
 
 Introduction
 ------------
