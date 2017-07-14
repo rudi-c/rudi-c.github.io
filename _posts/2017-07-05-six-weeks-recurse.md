@@ -15,7 +15,7 @@ To me, Recurse Center is both an educational program and a physical space where 
 
 People join in batches of 6 or 12 weeks at a time, and batches overlap, ensuring a continuous transmission of knowledge and culture.
 
-It's not a bootcamp. No one gives you lectures. Not everyone is looking for a job. It's also far more than a way of allocating a three-month block of free time. I've done [something like that before](http://digitalfreepen.com/2016/01/13/nomad-thoughts.html) as a "digital nomad". It worked alright, but the main thing I missed was being around other motivated people. Recurse Center provides both.
+It's not a bootcamp. No one gives you lectures. Not everyone is looking for a job. It's also far more than a way of allocating a three-month block of free time. I've done [something like that before](/2016/01/13/nomad-thoughts.html) as a "digital nomad". It worked alright, but the main thing I missed was being around other motivated people. Recurse Center provides both.
 
 In fact, that is exactly what motivated me to apply to RC. I read their [FAQ](https://www.recurse.com/faq) and [manual](https://www.recurse.com/manual) and thought it sounded great, very much in line with my values. I even recommend reading them even if you have no interest or time for RC, it's quite insightful. I figured that such a program would self-select for motivated people that would be great to be around.
 

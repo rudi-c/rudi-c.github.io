@@ -4,7 +4,7 @@ date: 2017-07-12
 disqus: y
 ---
 
-*Update: Looks like I jumped the gun on writing this tutorial. I ran into further issues as soon as I wrote non-trivial code. I gave up on trying to make this work with Brunch, the default build tool, which at the moment just isn't designed for something like Typescript. I'll document the difficulties I ran into below. TL;DR **replace Brunch with Webpack and follow Typescript + Webpack setup instructions**.*
+*Update: Looks like I jumped the gun on writing this tutorial. I ran into further issues as soon as I wrote non-trivial code. I gave up on trying to make this work with Brunch, the default build tool, which at the moment just isn't designed for something like Typescript. I'll document the difficulties I ran into below. TL;DR **replace Brunch with Webpack and follow Typescript + Webpack setup instructions**. Read [this other tutorial I wrote instead](/2017/07/14/how-to-typescript-react-phoenix.html)*
 
 Difficulties compiling Typescript with Brunch
 =============================================
@@ -323,7 +323,7 @@ Refresh, and we're done!
 
 <center><img src="/images/2017/phoenix_world.png" width="500"/></center>
 
-If you got lost along the way, or would prefer to use a template that already works, you can find a barebone project here: [https://github.com/rudi-c/typescript-react-phoenix](https://github.com/rudi-c/typescript-react-phoenix)
+If you got lost along the way, or would prefer to use a template that already works, you can find a barebone project here: [https://github.com/rudi-c/typescript-react-phoenix](https://github.com/rudi-c/typescript-react-phoenix/tree/brunch)
 
 Next steps
 ----------
