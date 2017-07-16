@@ -314,9 +314,10 @@ Next, Typescript needs to be configured, just like Webpack and Babel. Create a `
   "compilerOptions": {
     "target": "es2015",
     "module": "es2015",
+    "jsx": "preserve",
+    "moduleResolution": "node",
     "baseUrl": "web/static/js",
-    "outDir": "ts-build",
-    "jsx": "preserve"
+    "outDir": "ts-build"
   },
   "exclude": [
       "node_modules"
@@ -324,7 +325,9 @@ Next, Typescript needs to be configured, just like Webpack and Babel. Create a `
 }
 ```
 
-There's many compiler options you might be interested in changing, but the main thing we want to configure here is to have Typescript emit ES6 code and keep the HTML in JSX files. This allows the output of the Typescript compiler to be very close to the original source, with just the type annotations stripped away. It'll be more consistent with other JSX files we might add into the project (e.g. if you copy over an older file without type annotation) and Babel will take care of the rest
+There's many compiler options you might be interested in changing, but the main thing we want to configure here is to have Typescript emit ES6 code and keep the HTML in JSX files. This allows the output of the Typescript compiler to be very close to the original source, with just the type annotations stripped away. It'll be more consistent with other JSX files we might add into the project (e.g. if you copy over an older file without type annotation) and Babel will take care of the rest.
+
+Setting `moduleResolution` to `node` is necessary otherwise the Typescript compiler won't look inside `node_modules`.
 
 We'll also want to add a processing step in `webpack.config.js` to process `.ts` and `.ts` with Typescript, followed by Babel.
 
