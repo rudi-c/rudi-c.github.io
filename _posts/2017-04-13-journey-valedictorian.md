@@ -284,7 +284,7 @@ So if you're reading this and considering applying for valedictorian, you probab
 
 But enjoyed the process, I certainly did.
 
-_Thanks to Christina Tan, David Choi, Hang Lu Su, Shirley Du, and many others for reviewing and their help!_
+<small>*Thanks to Christina Tan, David Choi, Hang Lu Su, Shirley Du, and many others for reviewing and their help!*</small>
 
 ----------------------------------------------------
 

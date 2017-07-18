@@ -86,6 +86,8 @@ Jane Street is a liquidity provider: they help the market run more smoothly and 
 
 Companies are still companies, and I do believe their culture can only be as good as their incentives will allow them to be. The shape of the upper-bound on what a good culture looks like is still limited by the needs of the company. That being said, it's not possible to reach that upper-bound without a lot of effort, and I was quite impressed by the care Jane Street put into its culture. It's as good as any other, just different and they're less vocal about it.
 
+-----------------------------------
+
 [^1]: Whatever that may be worth: I'm just a lowly intern that repeats what other more enlightened Hacker News commenters say
 
 [^2]: To be more precise, each country could only count at most once in each passport. That is, if I have 2 entry stamps to the US and 2 exit stamps from the US, those 4 stamps only count for one. However, if 4 interns all have stamps to Mexico, then Mexico is counted 4 times, not one.

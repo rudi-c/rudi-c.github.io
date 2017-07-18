@@ -56,4 +56,4 @@ Finally, just to reiterate: the tech sector is still doing quite well overall an
 
 ----------
 
-Thanks Bartlomiej Józef Chrząszcz, Charles Lin, Evy Kassirer, Shane Creighton-Young, Shine Wang for comments & corrections.
+<small>*Thanks Bartlomiej Józef Chrząszcz, Charles Lin, Evy Kassirer, Shane Creighton-Young, Shine Wang for comments & corrections.*</small>

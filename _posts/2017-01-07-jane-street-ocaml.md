@@ -195,7 +195,7 @@ Or generally, read their blog. It has tons of good stuff, I promise.
 
 ----------------------------------
 
-_Thanks to Bai Li, Corwin de Boor, Jason Xiong, Leila Clark, Manu Goyal, Saahil Mehta, Shida Li for comments & corrections._
+<small>*Thanks to Bai Li, Corwin de Boor, Jason Xiong, Leila Clark, Manu Goyal, Saahil Mehta, Shida Li for comments & corrections.*</small>
 
 ----------------------------------
 

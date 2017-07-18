@@ -101,7 +101,7 @@ So the only person that can figure all this out is yourself. So as The Oatmeal s
 
 > To change.
 
-_Thanks to Anna Harrington, Hang Lu Su, Logan Buckley, Shirley Du for reading over and reviewing this blog post!_
+<small>*Thanks to Anna Harrington, Hang Lu Su, Logan Buckley, Shirley Du for reading over and reviewing this blog post!*</small>
 
 ----------------------------------------------------
 
