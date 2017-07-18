@@ -1,6 +1,7 @@
 ---
 title: How to learn anything - Pen spinning, DDR, rock climbing and public speaking
 date: 2017-07-18
+disqus: y
 favorite: y
 ---
 
