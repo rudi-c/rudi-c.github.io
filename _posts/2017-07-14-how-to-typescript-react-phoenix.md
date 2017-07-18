@@ -317,7 +317,8 @@ Next, Typescript needs to be configured, just like Webpack and Babel. Create a `
     "jsx": "preserve",
     "moduleResolution": "node",
     "baseUrl": "web/static/js",
-    "outDir": "ts-build"
+    "outDir": "ts-build",
+    "allowJs": true,
   },
   "exclude": [
       "node_modules"
@@ -327,7 +328,7 @@ Next, Typescript needs to be configured, just like Webpack and Babel. Create a `
 
 There's many compiler options you might be interested in changing, but the main thing we want to configure here is to have Typescript emit ES6 code and keep the HTML in JSX files. This allows the output of the Typescript compiler to be very close to the original source, with just the type annotations stripped away. It'll be more consistent with other JSX files we might add into the project (e.g. if you copy over an older file without type annotation) and Babel will take care of the rest.
 
-Setting `moduleResolution` to `node` is necessary otherwise the Typescript compiler won't look inside `node_modules`.
+Setting `moduleResolution` to `node` is necessary otherwise the Typescript compiler won't look inside `node_modules`. You also need `allowJs` to import use the default `socket.js` file that comes with Phoenix.
 
 We'll also want to add a processing step in `webpack.config.js` to process `.ts` and `.ts` with Typescript, followed by Babel.
 
@@ -380,6 +381,16 @@ Refresh, and we're done!
 <center><img src="/images/2017/phoenix_world.png" width="500"/></center>
 
 If you got lost along the way, or would prefer to use a template that already works, you can find a barebone project here: [https://github.com/rudi-c/typescript-react-phoenix](https://github.com/rudi-c/typescript-react-phoenix/).
+
+Misc
+----
+
+You might be interested in types for the Javascript that comes with Phoenix for things like Sockets.
+
+```
+npm install --save-dev @types/phoenix
+```
+
 
 Next steps
 ==========
