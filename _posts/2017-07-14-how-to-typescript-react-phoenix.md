@@ -7,7 +7,7 @@ disqus: y
 Introduction
 ============
 
-This is a tutorial on setting up an (Elixir) Phoenix project that can be used to write React apps that use Typescript, a combination of nice things (IMO). Previous tutorials have been written to use [Phoenix with React](https://medium.com/@diamondgfx/phoenix-v1-1-2-and-react-js-3dbd195a880a), [Typescript with React using Webpack](http://blog.tomduncalf.com/posts/setting-up-typescript-and-react/), or [just Webpack](http://matthewlehner.net/using-webpack-with-phoenix-and-elixir/) [in Phoenix](https://lpil.uk/blog/integrating-webpack-with-phoenix/), but not all 3 together. I ran into a few difficulties while setting it up myself so here's a guide on how to do it to make things faster for you!
+This is a tutorial on setting up an (Elixir) Phoenix project that can be used to write React apps that use Typescript, a combination of nice things (IMO). Typescript makes using React nicer, with type checking instead of Previous tutorials have been written to use [Phoenix with React](https://medium.com/@diamondgfx/phoenix-v1-1-2-and-react-js-3dbd195a880a), [Typescript with React using Webpack](http://blog.tomduncalf.com/posts/setting-up-typescript-and-react/), or [just Webpack](http://matthewlehner.net/using-webpack-with-phoenix-and-elixir/) [in Phoenix](https://lpil.uk/blog/integrating-webpack-with-phoenix/), but not all 3 together. I ran into a few difficulties while setting it up myself so here's a guide on how to do it to make things faster for you!
 
 I'll try to keep this tutorial up-to-date, but the web ecosystem changes quickly and things break every few months. A lot of the tutorials I read are recent, but they're already out of date (e.g. written for Webpack 1). Let me know in the comments below if there's something to update!
 
@@ -391,6 +391,7 @@ You might be interested in types for the Javascript that comes with Phoenix for 
 npm install --save-dev @types/phoenix
 ```
 
+Other libraries of interest include `redux` and `immutable.js`, among others.
 
 Next steps
 ==========

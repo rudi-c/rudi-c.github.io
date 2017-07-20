@@ -189,7 +189,7 @@ The Art of Learning
 
 Peak: Secrets from the New Science of Expertise
 
-<small>*Thanks to Allan Mukundi, Hang Lu Su, Indradhanush Gupta, Jamie Brandon, Julia Evans, Laura Lindzey, Logan Buckley, SengMing Tan, Shirley Du, Veit Heller, and Wesley Aptekar-Cassels for reading over and reviewing this blog post, helping cut the cruft and keeping it focused!*</small>
+<small>*Thanks to Allan Mukundi, [Hang Lu Su](http://homeowmorphism.com/), Indradhanush Gupta, Jamie Brandon, Julia Evans, Laura Lindzey, Logan Buckley, SengMing Tan, Shirley Du, Veit Heller, and Wesley Aptekar-Cassels for reading over and reviewing this blog post, helping cut the cruft and keeping it focused!*</small>
 
 -----------------------------
 
