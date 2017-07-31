@@ -321,7 +321,9 @@ Next, Typescript needs to be configured, just like Webpack and Babel. Create a `
     "allowJs": true,
   },
   "exclude": [
-      "node_modules"
+      "node_modules",
+      "priv",
+      "ts-build"
   ]
 }
 ```
