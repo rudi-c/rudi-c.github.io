@@ -2,6 +2,7 @@
 title: Guide to conducting mock interviews on campus
 date: 2017-08-01 12:00:02
 disqus: y
+draft: y
 ---
 
 In Winter 2016, [Shine](http://shinexwang.com/about/), [Alice](http://www.aliceranzhou.com/blog) and I started offering some mock interview sessions at University of Waterloo. Basically, we met up with students on campus and gave them one or more coding problems to solve on a whiteboard. The interviews are setup much like the typical onsite interview at tech companies, except of course that we were trying to teach, not evaluate.
