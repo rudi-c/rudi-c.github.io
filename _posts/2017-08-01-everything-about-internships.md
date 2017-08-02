@@ -8,7 +8,16 @@ disqus: y
 
 Oh hey, did you expect to see a long blog post?
 
-Over the last 3 months, I've been contributing to this repo started by Evy Kassirer, gradually writing down all the stuff I learned about internships. It would be a waste to have it all go away, and it's good to do it while still fresh. I won't be motivated to write about internships forever once I start working fulltime!
+Over the last 3 months, I've been contributing to this repo started by Evy Kassirer (who's amazing and has great perspectives!). I've been gradually writing down all the stuff I learned about internships. It would be a waste to have it all go away, and it's good to do it while still fresh. I won't be motivated to write about internships forever once I start working fulltime!
+
+It answers questions such as:
+
+- What the hell do people mean when they say "do side projects"?
+- Where do I find tech internships?
+- How do I write a good resume?
+- How do I prepare for interviews?
+- How do I do well in interviews?
+- How do I succeed at the workplace?
 
 I put everything I could come up with off the top of my head, which totals ~9000 words (IT'S OVER 9000!!!!! <small>actually it really is</small>).
 
