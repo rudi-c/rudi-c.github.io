@@ -1,15 +1,19 @@
 ---
 title: Why offer mock interviews
-date: 2017-08-01 12:00:01
+date: 2017-08-03 12:00:01
 disqus: y
-draft: y
 ---
+
+Conducting coding interviews might seem like a chore, and it can be once you're forced to do it at a job. But when you doing it voluntarily with the goal of helping and teaching someone, it can be very fulfilling and a way to get yourself on campus that has a lot of benefits for you too.
+
+In [another guide](/2017/08/01/guide-mock-interviews.html), I explain our logistics and things to consider to make the experience nice for the interviewees. In this blog post, I mainly want to try to convince you to **offer something like this at your school**.
+
+Background
+----------
 
 In Winter 2016, [Shine](http://shinexwang.com/about/), [Alice](http://www.aliceranzhou.com/blog) and I started offering some mock interview sessions at University of Waterloo. Basically, we met up with students on campus and gave them one or more coding problems to solve on a whiteboard. The interviews are setup much like the typical onsite interview at tech companies, except of course that we were trying to teach, not evaluate.
 
 After that, we got more people to help us conduct these interviews. In the following spring, we had 7 interviewers. In the fall, we had 13 interviewers. And this year, in the winter, we had 12 interviewers. All in all, we've interviewed over 200 students so far.
-
-In [another guide](/2017/08/01/guide-mock-interviews.html), I explain our logistics and things to consider to make the experience nice for the interviewees. In this blog post, I mainly want to try to convince you to **offer something like this at your school**.
 
 Altruism
 --------
@@ -45,9 +49,7 @@ Meet new people and broaden your horizons
 
 Anyone could end up signing up for your mock interviews, so you'll get to meet a lot of students that you would be unlikely to run across by accident[^1]. You get to meet students with all sorts of different backgrounds.
 
-There's often one or two interesting first-year students that did competitive programming and perform frighteningly well for their first interview ever.
-
-You also get to meet students who think very differently than you, and have their own strengths and weaknesses. There's students in non-software programs that are learning programming since there's more jobs. This includes the more hardware-oriented engineering programs. They tend to have weaker fundamentals and algo knowledge from having had fewer CS classes, but are often still very competent in some subfield (e.g. mobile). There's people who started programming late after switching programs. Others who struggle in particular areas (e.g. recursion if they never properly learned it) or communicating clearly.
+There's often one or two interesting first-year students that did competitive programming and perform frighteningly well for their first interview ever. You also get to meet students who think very differently than you, and have their own strengths and weaknesses. There's students in non-software programs that are learning programming since there's more jobs. This includes the more hardware-oriented engineering programs. They tend to have weaker fundamentals and algo knowledge from having had fewer CS classes, but are often still very competent in some subfield (e.g. mobile). There's people who started programming late after switching programs. Others who struggle in particular areas (e.g. recursion if they never properly learned it) or communicating clearly.
 
 It's quite eye opening.
 

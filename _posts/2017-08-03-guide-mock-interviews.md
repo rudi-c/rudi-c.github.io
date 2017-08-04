@@ -1,15 +1,16 @@
 ---
 title: Guide to conducting mock interviews on campus
-date: 2017-08-01 12:00:02
+date: 2017-08-03 12:00:02
 disqus: y
-draft: y
 ---
 
-In Winter 2016, [Shine](http://shinexwang.com/about/), [Alice](http://www.aliceranzhou.com/blog) and I started offering some mock interview sessions at University of Waterloo. Basically, we met up with students on campus and gave them one or more coding problems to solve on a whiteboard. The interviews are setup much like the typical onsite interview at tech companies, except of course that we were trying to teach, not evaluate.
+In the [previous blog post](/2017/08/01/why-offer-mock-interviews.html), I explained why you should consider offering mock interviews for other students to help them learn interview and algorithm skills. Now, assuming you're interested, I will guide you on how to do it effectively, all the way from logistics to creating a good experience for the interviewee. This blog post is a bit more of a manual/reference guide, but the TL;DR is:
 
-After that, we got more people to help us conduct these interviews. In the following spring, we had 7 interviewers. In the fall, we had 13 interviewers. And this year, in the winter, we had 12 interviewers. All in all, we've interviewed over 200 students so far.
-
-In the [previous blog post](/2017/08/01/why-offer-mock-interviews.html), I explained why you should consider offering these interviews yourself. Now, assuming you're interested, I will guide you on how to do it effectively, all the way from logistics to creating a good experience for the interviewee.
+- Start small, let yourself get used to offering mock interviews
+- Be encouraging and go with your intent not just to teach technical skills, but help them get less nervous about interviewing
+- Pick good interview questions that teach concepts, avoid single-insight get-it-or-you-don't type qusetions
+- Take the time to give good feedback
+- Ask for feedback about the mock interview and keep a journal of how things went
 
 Logistics
 =========
