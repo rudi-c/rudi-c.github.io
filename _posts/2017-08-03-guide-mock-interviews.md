@@ -4,7 +4,7 @@ date: 2017-08-03 12:00:02
 disqus: y
 ---
 
-In the [previous blog post](/2017/08/01/why-offer-mock-interviews.html), I explained why you should consider offering mock interviews for other students to help them learn interview and algorithm skills. Now, assuming you're interested, I will guide you on how to do it effectively, all the way from logistics to creating a good experience for the interviewee. This blog post is a bit more of a manual/reference guide, but the TL;DR is:
+In the [previous blog post](/2017/08/03/why-offer-mock-interviews.html), I explained why you should consider offering mock interviews for other students to help them learn interview and algorithm skills. Now, assuming you're interested, I will guide you on how to do it effectively, all the way from logistics to creating a good experience for the interviewee. This blog post is a bit more of a manual/reference guide, but the TL;DR is:
 
 - Start small, let yourself get used to offering mock interviews
 - Be encouraging and go with your intent not just to teach technical skills, but help them get less nervous about interviewing
