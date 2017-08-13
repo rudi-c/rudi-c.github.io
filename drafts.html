@@ -1,0 +1,15 @@
+---
+---
+
+<ul class="list pa0">
+  {% for post in site.posts %}
+    {% if post.draft %}
+      <li class="mv3">
+      <small class="pv1 datetime" data-time="{{ post.date }}">{{ post.date | date: "%b %-d %Y" }} </small>
+        <a href="{{ site.url }}{{ post.url }}" class="pv1 link hover-mid-gray">
+          {{ post.title }}
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
