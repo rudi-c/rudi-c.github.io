@@ -14,6 +14,11 @@
     {% include head.html %}
   </head>
   <body class="lh-copy dark-gray pa0 f6 sans-serif bg-super-white">
+      {% if page.toc %}
+        <nav class="table-of-contents bg-white bb bt ba-ns br2-ns b--light-gray">
+        </nav>
+      {% endif %}
+
     <header class="tc mt4">
       <a href="{{ site.url }}">
         <img src="/images/digitalfreepen.png" alt="scribble" width="418" height="133">
@@ -45,7 +50,7 @@
             {% endif %}
           </div>
         {% endif %}
-        <div class="markdown-body">
+        <div class="markdown-body" id="markdown-body">
           {{ content }}
         </div>
         {% if is_post %}{% include signoff.html %}{% endif %}
@@ -57,5 +62,7 @@
       {% if is_post %}{% include pagination.html %}{% endif %}
     </div>
     {% include footer.html %}
+
+    {% if page.toc %}<script src="/javascripts/table-of-contents.js"></script>{% endif %}
   </body>
 </html>

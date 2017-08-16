@@ -2,6 +2,7 @@
 title: Why offer mock interviews
 date: 2017-08-03 12:00:01
 disqus: y
+toc: true
 ---
 
 Conducting coding interviews might seem like a chore, and it can be once you're forced to do it at a job. But when you doing it voluntarily with the goal of helping and teaching someone, it can be very fulfilling and a way to get yourself on campus that has a lot of benefits for you too.

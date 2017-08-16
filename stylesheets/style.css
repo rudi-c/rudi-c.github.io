@@ -174,3 +174,78 @@ table td {
   width: 220px;
   padding-top: 6px;
 }
+
+/* Table of contents */
+.table-of-contents {
+  position: fixed;
+  width: 200px;
+  z-index: 999;
+
+  top: 50%;
+  transform: translate(0, -50%);
+
+  margin-left: -180px;
+  transition: 0.3s;
+}
+
+.table-of-contents:hover {
+  margin-left: 0px;
+  transition: 0.3s;
+}
+
+.table-of-contents ul {
+  list-style-type: none;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.table-of-contents li {
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.table-of-contents .table-of-contents-list {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.table-of-contents:hover .table-of-contents-list {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.table-of-contents .table-of-contents-abstract-list {
+  visibility: visible;
+}
+.table-of-contents:hover .table-of-contents-abstract-list {
+  visibility: hidden;
+}
+
+.table-of-contents-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.table-of-contents-list li:hover {
+  background-color: #F8F8F8;
+}
+
+.table-of-contents-abstract-list {
+  position: relative;
+}
+
+.table-of-contents-abstract-list .abstract-0 {
+  width: 186px;
+  color: rgba(0, 0, 0, 0);
+
+  box-shadow: inset 0 -2.5px 0 #96ccff;
+}
+
+.table-of-contents-abstract-list .abstract-1 {
+  width: 172px;
+  color: rgba(0, 0, 0, 0);
+
+  box-shadow: inset 0 -2px 0 #96ccff;
+}

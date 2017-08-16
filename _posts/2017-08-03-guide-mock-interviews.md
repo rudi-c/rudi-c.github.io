@@ -2,6 +2,7 @@
 title: Guide to conducting mock interviews on campus
 date: 2017-08-03 12:00:02
 disqus: y
+toc: true
 ---
 
 In the [previous blog post](/2017/08/03/why-offer-mock-interviews.html), I explained why you should consider offering mock interviews for other students to help them learn interview and algorithm skills. Now, assuming you're interested, I will guide you on how to do it effectively, all the way from logistics to creating a good experience for the interviewee. This blog post is a bit more of a manual/reference guide, but the TL;DR is:
