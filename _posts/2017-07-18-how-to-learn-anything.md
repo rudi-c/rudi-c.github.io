@@ -93,7 +93,7 @@ And I did, a year later. When I started another internship in New York in summer
 
 This time, I consciously intended to use skill granularization right from the start to improve quickly. After one climbing session, I went online and looked for subskills to focus on. After one week, I went online to [watch climbing tutorials](https://www.youtube.com/channel/UC9hD7Zk4OMG3Xa-4wHT2KBQ). After a month, I took a quick read through "The Self-Coached Climber" to make sure I didn't miss anything major and learned of fundamentals training drills.
 
-> What does a breakdown of climbing subskills look at the beginner level?
+> What does a breakdown of climbing subskills look like at the beginner level?
 > - Minimize amount of work done by the arms, which are weak
 >   - Focus on initiating movement from the legs
 >   - Keep arms straight - bent arms tire super fast
