@@ -152,7 +152,7 @@ It's also the least dynamic language among dynamic languages that I've tried so 
 
 Question: **Is writing *libraries* difficult as result of these lack of features**?
 
-Question: **How much does having a macro system compare with runtime dynamism?**
+Question: **How does having a macro system compare with runtime dynamism?**
 
 Optional typing
 ---------------
@@ -637,7 +637,7 @@ My personal experiences:
 
 - Having a One True Way of doing things eases the learning curve considerably
 - It's nice to have known design patterns that are part of the language, which collapses the two steps of "figure out what you need to do conceptually" and "figure out how to implement it in your language"
-- Having these nice building blocks has **made me interested in devops problems** which has no happened previously, probably because I perceived it as tedious work
+- Having these nice building blocks has **made me interested in devops problems** which has not happened previously, probably because I perceived it as tedious work
 - I've had a few experiences at this point where one technology (e.g. Elm) was much better at teaching you how to think in certain patterns (e.g. Reactive Programming) than others (e.g. React) because all the mist has been blown away and the view is super clear. *I suspect* learning Elixir/Erlang can make a programmer much better at devops by teaching clear patterns of thought.
 
 > "OTP doesn't do any design for you, it gives you building blocks to assemble something that's going to be fault-tolerant" - Fred Hebert, author of Learn You Some Erlang for Great Good! in an interview
@@ -703,7 +703,7 @@ I've found Elixir to be very "tastefully" designed. It cherry-picked the good pa
 The pipe operator
 -----------------
 
-I first discovered the pipe operator (&#124;>) in F# and it's by far my favorite operator. All it does is make `x &#124;> f` the same as `f(x)`. This allows chaining a sequence of transformations, one per line. There's nothing hard about understanding how it works, and most people probably already by virtue of using pipes in shell scripting.
+I first discovered the pipe operator (&#124;>) in F# and it's by far my favorite operator. All it does is make `x |> f` the same as `f(x)`. This allows chaining a sequence of transformations, one per line. There's nothing hard about understanding how it works, and most people probably already by virtue of using pipes in shell scripting.
 
 Not only are they available in the language, but used upfront in libraries and educational material (the subtitle of Programming Elixir is Functional &#124;> Concurrent &#124;> Pragmatic &#124;> Fun).
 
