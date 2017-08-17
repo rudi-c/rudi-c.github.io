@@ -60,16 +60,16 @@ Signup tracking
 
 The nice thing about Google Forms/Google Sheets integration is that you can setup the survey responses to automatically show up in a Google Sheets document. There, you can add new columns for interview status and assigned interviewer. To do so, create a new spreadsheet from the responses section:
 
-<center><a href="/images/2017/interview_prep_new_spreadsheet.png" data-lightbox="signup"><img src="/images/2017/interview_prep_new_spreadsheet.png" width="500" /></a></center>
+<center><a href="/images/2017/interview_prep_new_spreadsheet.png" data-lightbox="new-spreadsheet"><img src="/images/2017/interview_prep_new_spreadsheet.png" width="500" /></a></center>
 
 You can also use "select destination" from the dropdown menu.
 
-<center><a href="/images/2017/interview_prep_select_destination.png" data-lightbox="signup"><img src="/images/2017/interview_prep_select_destination.png" width="500" /></a></center>
-<center><a href="/images/2017/interview_prep_destination_popup.png" data-lightbox="signup"><img src="/images/2017/interview_prep_destination_popup.png" width="500" /></a></center>
+<center><a href="/images/2017/interview_prep_select_destination.png" data-lightbox="select-destination"><img src="/images/2017/interview_prep_select_destination.png" width="500" /></a></center>
+<center><a href="/images/2017/interview_prep_destination_popup.png" data-lightbox="destination-popup"><img src="/images/2017/interview_prep_destination_popup.png" width="500" /></a></center>
 
 Here is how it looks like on our end:
 
-<center><a href="/images/2017/interview_prep_tracking.png" data-lightbox="signup"><img src="/images/2017/interview_prep_tracking.png" width="500" /></a></center>
+<center><a href="/images/2017/interview_prep_tracking.png" data-lightbox="tracking"><img src="/images/2017/interview_prep_tracking.png" width="500" /></a></center>
 
 The statuses we use are [blank], Contacted, Scheduled, Completed, No Reply, Flopped (didn't show up), Cancelled. You can automatically assign color to different statuses by going in Format > Conditional Formatting... > Add New Rule + > Text contains.
 
@@ -226,7 +226,7 @@ However, you can get more out of the experience for yourself by going the extra 
 Feedback forms
 --------------
 
-<center><a href="/images/2017/interview_prep_feedback.png" data-lightbox="signup"><img src="/images/2017/interview_prep_feedback.png" width="300" /></a></center>
+<center><a href="/images/2017/interview_prep_feedback.png" data-lightbox="feedback"><img src="/images/2017/interview_prep_feedback.png" width="300" /></a></center>
 
 We have an anonymous feedback form that our interviewers send after the interview. This helps us know what we did well and what to improve.
 
