@@ -1,14 +1,13 @@
-const [contents] = document.getElementsByClassName("markdown-body");
+const contents = document.getElementsByClassName("markdown-body")[0];
 const headings = contents.querySelectorAll("h1, h2");
-const [tableOfContents] = document.getElementsByClassName("table-of-contents");
-console.log(headings);
+const tableOfContents = document.getElementsByClassName("table-of-contents")[0];
 
 function createListFromHeadings(headings, listClass, createElement) {
     const list = document.createElement("ul");
     list.className = listClass;
     let h1Header = null;
     let nested = null;
-    headings.forEach(heading => {
+    Array.from(headings).forEach(heading => {
         const item = createElement(heading);
         if (heading.tagName === "H1") {
             list.appendChild(item);
