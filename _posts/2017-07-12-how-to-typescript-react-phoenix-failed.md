@@ -23,7 +23,7 @@ It's a bit of an abuse of `package.json` to use it for build settings but it'd b
 - Make sure to reorder everything every time you add a new package.
 - Implement a configuration option in brunch to determine compilation order.
 
-The last solution is clearly the right way to do it in order to use Brunch as a general build tool, especially given that order of elements within JSON dictionaries is undefined. However, [an issue has been opened for a year](https://github.com/brunch/brunch/issues/1377). I don't feel comfortable creating a PR that implements plugin ordering as the maintainers seem dismissive of use cases that require it.
+The last solution is clearly the right way to do it in order to use Brunch as a general build tool, especially given that order of elements within JSON dictionaries is undefined. However, [an issue has been opened for a year](https://github.com/brunch/brunch/issues/1377). I don't feel comfortable creating a PR that implements plugin ordering as the maintainers seem uninterested in the use cases that require it.
 
 The file extensions don't get changed after Typescript compilation
 ------------------------------------------------------------------
