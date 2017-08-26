@@ -142,6 +142,8 @@ The definition of "strong vs weak typing" is not as well agreed-upon as "dynamic
 
 Elixir/Erlang is in this relatively rare category. You don't ever declare types, but the language does very little magic for you. There's also no operator overloading. For example, (`"Hello," + " World!"`) won't work, there's a separate operator (`"Hello," <> " World!"`).
 
+> Addendum (08/25/2017): Python and Ruby are technically strongly typed, but overloaded operators combined with many many ways to override basic language behavior make them closer to weakly typed for the purpose of this discussion.
+
 Resources:
 https://blog.codeship.com/understanding-elixir-types/
 http://stenmans.org/happi_blog/?p=176
