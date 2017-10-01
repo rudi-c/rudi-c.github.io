@@ -22,6 +22,8 @@ Since I have a decent compilers background, I'll make use of that too to answer 
 
 I don't intend this blog post to have a narrative, it's more like my public research diary or a compilation of summaries. It doesn't need to be read from top to bottom, though you can certainly skim through it and it should be pretty useful for getting a summary if you're new to Elixir, or generating leads of things to read next. It's quite long, but it's a couple weeks worth of Elixir learning, after all.
 
+> See also the [discussion on Hacker News](https://news.ycombinator.com/item?id=15036060) of this blog post - it has a lot of great clarifications and information that I omitted!
+
 What is Elixir?
 ===============
 
