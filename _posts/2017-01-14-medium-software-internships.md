@@ -17,7 +17,7 @@ More specifically, they tend to have the following traits.
 They tend to be large enough to have challenging technical problems worth solving
 ---------------------------------------------------------------------------------
 
-In general, startups have a pressure to optimize for speed. This is especially true if they are still figuring out their market. For example, there's no point in refactoring the code to be less decoupled if the whole thing could end up in the recycling bin next month.
+In general, startups have a pressure to optimize for speed. This is especially true if they are still figuring out their market. For example, there's no point in refactoring the code to be decouple tangled logic if the whole thing could end up in the recycling bin next month.
 
 Since they don't have many users, they don't run into many performance problems. Most technical challenges in programming fundamentally exist because of performance reasons. You can almost always come up with a naive solution to solve any problem, but algorithms exist because most naive solutions don't scale. If you only have 1000 users, your O(n^2) deduplication routine still only takes a millisecond.
 
