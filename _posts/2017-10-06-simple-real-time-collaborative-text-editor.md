@@ -122,7 +122,7 @@ o c c u r r   e n  c  e
 
 Therefore, we could use floats instead of integers to store our character IDs. In practice, we would want to store a list of integer representing the digits after the fraction so we don't ever run out of precision. There's also no need to have indices > 1 if we're going to have fractional indices anyway, so we'll just store the fractional digits.
 
-Fractional indices by themselves of course are not *globally* unique IDs. Our IDs will need to be a bit more clever than that.
+Fractional indices by themselves of course are not *globally* unique IDs. Our IDs will need to be a bit more clever than that to be unique like snowflakes ❄️.
 
 No two characters are the same
 ==============================
@@ -213,7 +213,7 @@ Now that we got:
 
 We got a collaborative, synchronized text editor! Well, mostly that's true. I guess I should talk about some implementations details.
 
-Show me ze money (ze code)
+Show me ze money <img src="/images/emojis/moneybag.png" width="28"> (ze code)
 ==========================
 
 Up to this point, I've been handwaving over all the details to give you an intuition of how this CRDT works. But those details are kind of important to make sure we've covered all edge cases. I recommend also reading the Logoot paper for completeness. It's a pretty readable paper. Note that I'll be using similar, but slightly different terminology at places for ease of presentation. Let's start with a proper definition of a position identifier.
@@ -530,3 +530,22 @@ Conclusion
 I'm not going to pretend writing a real-time collaborative text editor is an easy project. It took me 3-4 days just to write the core of it, and an order magnitude more to write tests, make the UI nice, and add other features on top of it (e.g. seeing the other people's cursors). It would take even more to make it resilient to failures, implement access control, etc. However, as I hope this article convinced you, there are approaches that can be fairly intuitive and the solution can be understood as a series of layers, and broken down into approachable tasks.
 
 Thanks for reading, and let me know if you have any feedback!
+
+<script>
+const mapping = [
+    ['🐋', 'whale'],
+    ['🐃', 'waterbuffalo'],
+    ['🍎', 'redapple'],
+    ['🍏', 'greenapple'],
+    ['🍌', 'banana'],
+    ['🍓', 'strawberry'],
+    ['🔥', 'fire'],
+    ['💥', 'collision'],
+    ['🙈', 'seenoevilmonkey'],
+    ['🙄', 'facewithrollingeyes'],
+    ['❄️', 'snowflake'],
+    ['🥝', 'kiwi']
+].forEach(([emoji, replacement]) => {
+    document.body.innerHTML = document.body.innerHTML.replace(new RegExp(emoji, 'g'), `<img src="/images/emojis/${replacement}.png"/ width="14">`);
+})
+</script>
