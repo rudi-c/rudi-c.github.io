@@ -8,7 +8,7 @@ disqus: y
 
 This post is my attempt to write an easy to understand introduction to the main ideas behind building a [real-time collaborative text editor](http://alchemy.digitalfreepen.com), which can be tricky as you want all clients to synchronize and see a sensible result even in the face of concurrent edits.
 
-In some ways, this is already a solved problem by Operational Transform (OT) and open-source implementations like [Firepad](https://github.com/firebase/firepad) and [ShareJS](https://github.com/josephg/ShareJS). So if you want a plug-in-play solution, use one of those and move along. I decided to use a **CRDT (Conflict-Free Replicated Data Type)**, a newer technique (more specifically, I adapted [Logoot](LINK)). There are technical pros and cons versus OTs that I'm not gonna bore you with, but for me the major advantage of the CRDT approach is that it's **simpler to understand and to convince yourself that it works** (and thus, to maintain it).
+In some ways, this is already a solved problem by Operational Transform (OT) and open-source implementations like [Firepad](https://github.com/firebase/firepad) and [ShareJS](https://github.com/josephg/ShareJS). So if you want a plug-in-play solution, use one of those and move along. I decided to use a **CRDT (Conflict-Free Replicated Data Type)**, a newer technique (more specifically, I adapted [Logoot](https://hal.archives-ouvertes.fr/inria-00432368/document)). There are technical pros and cons versus OTs that I'm not gonna bore you with, but for me the major advantage of the CRDT approach is that it's **simpler to understand and to convince yourself that it works** (and thus, to maintain it).
 
 I hope to demonstrate that in this post by splitting the problem of implementing a CRDT into multiple conceptual layers. Those layers should be fairly easy to understand one at a time. In contrast, OTs work by requiring you to handle every combination of operations arriving in different orders (i.e. all the weird shit users do) and proving that you've handled all of the edge cases. While the code itself may not be that complicated, if you make a mistake, you're screwed.
 
@@ -520,9 +520,9 @@ The downside, in addition to requiring a custom data structure, is that the bina
 Trie of positions
 -----------------
 
-You can reuse individual positions ("digits") in a position identifier by storing the whole thing as a trie. See also [TreeDoc](https://hal.inria.fr/inria-00445975/document)
+You can reuse individual positions ("digits") in a position identifier by storing the whole thing as a trie. Of course, this is a bit more challenging than a regular trie, since you will have to deal with the site tiebreakers and removal of characters. See also [TreeDoc](https://hal.inria.fr/inria-00445975/document).
 
-(Note that we can't use a hashtable since hashtables don't provide an ordering to the keys).
+(Note that in any case, can't use a hashtable on the client since hashtables don't provide an ordering to the keys).
 
 Conclusion
 ==========
