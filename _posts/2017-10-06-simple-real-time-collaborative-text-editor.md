@@ -2,6 +2,7 @@
 title: A simple approach to building a real-time collaborative text editor
 date: 2017-10-06 12:00:01
 disqus: y
+favorite: y
 ---
 
 <a href="http://alchemy.digitalfreepen.com" target="_blank"><img src="/images/2017/alchemybook.gif" /></a>
