@@ -550,3 +550,5 @@ const mapping = [
     document.body.innerHTML = document.body.innerHTML.replace(new RegExp(emoji, 'g'), `<img src="/images/emojis/${replacement}.png"/ width="14">`);
 })
 </script>
+
+<small>*Thanks to Ryan Kaplan for reading over and reviewing this blog post.*</small>
