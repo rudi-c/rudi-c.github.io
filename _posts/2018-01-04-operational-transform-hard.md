@@ -27,4 +27,4 @@ So what's the conclusion? I've never personally implemented an OT system, so I c
 - OT with a central server has been implemented enough times that there's a lot of resources and knowledge floating around
 - In those cases, the code for OT won't be too complicated either
 - Fully distributed OT and adding rich text operations are very hard, and that's why there's a million papers
-- The most difficult part of OT is not the code, but the difficulty in proving that your system is correct. Therefore, making *modification* to OT code difficult. Either you need to prove your code correct again (and historically people make mistakes), or you need a powerful testing infrastructure for concurrent/distributed systems (which is also hard to write)
+- The most difficult part of OT is not the code, but the difficulty in proving that your system is correct. Therefore, *maintaining* OT code is difficult. Either you need to prove your code correct repeatedly (and historically people make mistakes), or you need a powerful testing infrastructure for concurrent/distributed systems (which is also hard to write)
