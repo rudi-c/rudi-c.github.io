@@ -14,11 +14,7 @@ How To Win Friends And Influence People - Dale Carnegie
 1984 - George Orwell
 
 Things I've read
---------------------
-
-Zero To One - Peter Thiel
-
-Code Complete - Steve McConnell
+----------------
 
 Thinking, Fast and Slow - Daniel Kahneman
 
@@ -28,11 +24,17 @@ Animal Farm - George Orwell
 
 Brave New World - Aldous Huxley
 
+Harry Potter and the Methods of Rationality - Eliezer Yudkowsky
+
 Code Complete - Steve McConnell
+
+The Design of Everyday Things - Don Norman
+
+Zero To One - Peter Thiel
 
 Lean In - Sheryl Sandberg
 
-Liar's Poker - Michael Lewis
+The PhD Grind - Philip Guo
 
 Steve Jobs - Walter Isaacson
 
@@ -46,6 +48,8 @@ The Charisma Myth - Olivia Fox Cabane
 
 Who Gets What -- and Why - Alvin E. Roth
 
+Liar's Poker - Michael Lewis
+
 Flash Boys - Michael Lewis
 
 Flash Boys: Not so Fast - Peter Kovac
@@ -54,27 +58,23 @@ The New Confessions of an Economic Hit Man - John Perkins
 
 The Motivation Hacker - Nick Winter
 
-The PhD Grind - Philip Guo
-
-The Design of Everyday Things - Don Norman
-
 Strangers in Their Own Land - Arlie Russell Hochschild
 
-Harry Potter and the Methods of Rationality - Eliezer Yudkowsky
+Political Order and Political Decay - Francis Fukuyama
 
-Next on my reading list
------------------------
+Sapiens - Yuval Noah Harari
+
+
+Books that I want to read
+-------------------------
 
 How Asia Works
-
-Political Order and Political Decay
 
 David and Goliath
 
 Worm
 
-Books that I want to read
--------------------------
+Renegades of the Empire
 
 A Little History of the World
 
@@ -170,6 +170,22 @@ Just starting this. If I'm going to bookmark nice things from the Internet, why 
 **Silent Technical Privilege**. A great post about very implicit assumptions that are really easy to take granted, about the importance of something as simple as having letting people you try things. <a>http://www.slate.com/articles/technology/technology/2014/01/programmer_privilege_as_an_asian_male_computer_science_major_everyone_gave.html</a>
 
 **A Tale of Two Canadas**. How, even in a supposedly equalitarian country like Canada, there are a lot of differences in equality of opportunities. <a>https://www.theglobeandmail.com/news/national/a-tale-of-two-canadas-where-you-grow-up-affects-your-adult-income/article35444594/</a>
+
+**Blockchain Company's Smart Contracts Were Dumb**. By acclaimed financial writer Matt Levine, this article touches interesting subtle questions about the meaning of money and contracts. "Financial systems are supposed to work for humans. If the code rips off the humans, something has gone wrong." <a>https://www.bloomberg.com/view/articles/2016-06-17/blockchain-company-s-smart-contracts-were-dumb</a>
+
+**State of JS**. Comprehensive survey of web frontend trends, very good work by the authors. <a>https://stateofjs.com/</a>
+
+**Why do Game Developers Prefer Windows?**. An insider look into the history of the OpenGL vs DirectX battles, and how it was influenced by politics and the development of hardware. <a>https://softwareengineering.stackexchange.com/questions/60544/why-do-game-developers-prefer-windows</a>
+
+**Investigating the Potential for Miscommunication Using Emoji**. Having emoji's doesn't solve the potential for miscommunication of emotions over text. <a>https://grouplens.org/blog/investigating-the-potential-for-miscommunication-using-emoji/</a>
+
+**The Viridis Color Palette**. Sometimes, small low-level details like the number of color cones in the retina is crucial to making non-misleading data visualization. <a>https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html</a>
+
+**The Web We Have To Save**. A nostalgic look on the early days of the web. Modern web is rich and very powerful, but the old web also had some desirable properties. <a>https://medium.com/matter/the-web-we-have-to-save-2eb1fe15a426</a>
+
+**Boiling the Ocean, Incrementally - How Style Brought Rust and Servo to Firefox**. A discussion of the pragramtic decisions needed be made to achieve the monumental task of replacing a browser's rendering engine. <a>http://bholley.net/blog/2017/stylo.html</a>
+
+**Psychology v.s. the Graphics Pipeline**. How many cognitive psychology papers that involving timing might be wrong because of monitor refresh rates? <a>http://scattered-thoughts.net/blog/2017/12/11/psychology-vs-the-graphics-pipeline/</a>
 
 News/Magazines
 --------------
