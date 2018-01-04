@@ -4,9 +4,9 @@ title: About
 
 <img src="/images/profile_pic.jpg" style="float: left; margin: 5px 15px 0px 0px;" width="150" />
 
-My name is Rudi, currently a full-time software engineer at [Figma](https://www.figma.com/) after having recently finished a degree in Computer Science at University of Waterloo. I have previously interned at Airbnb, Jane Street, Dropbox and Side Effects Software and was in the Recurse Center Summer 1 '17 batch. In this blog, I try to put words together in sentences such that they may be interesting and occasionally useful. I tend to be a sucker for information and novelty myself, so I try to write in a way that will be worth your time.
+My name is Rudi, currently a full-time software engineer at [Figma](https://www.figma.com/) (we're hiring!) after having recently finished a degree in Computer Science at University of Waterloo. I have previously interned at Airbnb, Jane Street, Dropbox and Side Effects Software and was in the Recurse Center Summer 1 '17 batch. In this blog, I try to put words together in sentences such that they may be interesting and occasionally useful. I tend to be a sucker for information and novelty myself, so I try to write in a way that will be worth your time.
 
-In the spirit of being an engineer (read: this is easier), the rest of this About section will be a random bullet points. If you find any of these interesting, you should ask me about it over coffee.
+I'm not sure what's best to put in the About section. But if you find any of these interesting, ask me about it over coffee!
 
 - As described by a high school friend, I am "designed in China, made in Germany, imported to Canada, consumed in Quebec". And now refurbished in the US? I need more verbs
 - I took 5 psychology classes in undergrad, it's my second favorite subject (after CS of course).
