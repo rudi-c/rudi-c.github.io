@@ -20,6 +20,9 @@ I'm not sure what's best to put in the About section. But if you find any of the
 - "A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away"
 - I practice pen spinning (look it up if you've never hear of that term!) and have once appeared on [national television](http://www.youtube.com/watch?v=K5SxsDS0fHk). I'm not one of the best out there, but I know quite a few tricks
 
+<div class="rc-scout" style="height: 20px"></div>
+<script async defer src="https://www.recurse-scout.com/loader.js?t=034547b553d5c90c69cd181cc8edd7ed"></script>
+
 Contact
 -------
 
@@ -32,3 +35,4 @@ Email at **rudichen@gmail.com**
 <a href="https://www.youtube.com/user/Advecticity" target="_blank">[ My YouTube Channel ]</a>
 
 Twitter: **@digitalfreepen** (unused)
+
