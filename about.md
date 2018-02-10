@@ -12,7 +12,7 @@ I'm not sure what's best to put in the About section. But if you find any of the
 - I took 5 psychology classes in undergrad, it's my second favorite subject (after CS of course).
 - My two main motivations in life are "building cool things" and what I call "learning how the world works"
 - I spent a summer practicing DDR
-- My main hobby right now is rock climbing. Currently working on consistently doing V6s
+- My main hobby right now is rock climbing. Currently working on consistently doing V7s
 - I'm working on certain parts of communication skills by taking acting/improv classes
 - One of my goal is to consistently use "steel man arguments"
 - "Interested people are interesting"
