@@ -7,6 +7,23 @@ title: Works
 <table class="project-table">
   <tr>
     <td></td>
+    <td><h2>Alchemy Book</h2></td>
+  </tr>
+  <tr>
+    <td class="image-col">
+        <a href="https://github.com/rudi-c/alchemy-book">
+            <img width="200" src="/images/works/alchemybook.png" />
+        </a>
+    </td>
+    <td>
+        A real-time collaborative text editor using Conflict-Free Replicated Data Types
+        <p>
+        <a href="https://github.com/rudi-c/alchemy-book">[ Github page ]</a>
+        </p>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
     <td><h2>Stressed Syllables</h2></td>
   </tr>
   <tr>
@@ -19,7 +36,7 @@ title: Works
         An Elixir/Phoenix web app that takes English text and tells you where the stressed syllables
         are. very useful for non-native speakers or for preparing presentations.
         <p>
-        <a href="https://github.com/rudi-c/stressed-syllables">[ Project page ]</a>
+        <a href="https://github.com/rudi-c/stressed-syllables">[ Github page ]</a>
         </p>
     </td>
   </tr>
