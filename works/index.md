@@ -2,7 +2,30 @@
 title: Works
 ---
 
-*some of my personal projects, some quite old*
+*some of my personal projects*
+
+<table class="project-table">
+  <tr>
+    <td></td>
+    <td><h2>Stressed Syllables</h2></td>
+  </tr>
+  <tr>
+    <td class="image-col">
+        <a href="https://github.com/rudi-c/stressed-syllables">
+            <img width="200" src="/images/works/stressedsyllables.png" />
+        </a>
+    </td>
+    <td>
+        An Elixir/Phoenix web app that takes English text and tells you where the stressed syllables
+        are. very useful for non-native speakers or for preparing presentations.
+        <p>
+        <a href="https://github.com/rudi-c/stressed-syllables">[ Project page ]</a>
+        </p>
+    </td>
+  </tr>
+</table>
+
+<h2>Undergrad &amp; pre-undergrad projects</h2>
 
 <table class="project-table">
   <tr>
