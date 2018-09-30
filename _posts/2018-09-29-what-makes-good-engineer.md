@@ -36,8 +36,8 @@ At a very basic level, this means things like:
 - Refactor code that you think could cause confusion to your teammates
 
 A little bit more advanced would be things like:
-- Write a new testing infrastructure that make it faster and less tedious to write tests (real example, it's called interaction tests at Figma and it's great)
-- Replace a raw pointer with a weak pointer to make sure no one accidentally runs into undefined behavior (also a real example)
+- Write a new testing infrastructure that makes it faster and less tedious to write tests (real example, it's called interaction tests at Figma and it's great)
+- Replace a pattern of using raw pointers with weak pointers to make sure no one accidentally runs into undefined behavior (also a real example)
 
 But those things are pretty self-explanatory in how they help. It takes some skill and experience to learn to recognize them, but it's not too hard. Harder is figuring out your impact as an individual agent in a complex system made up of many humans. A driver changing lane abruptly has no awareness of the [traffic wave](https://en.wikipedia.org/wiki/Traffic_wave) that propagates miles backwards.
 
