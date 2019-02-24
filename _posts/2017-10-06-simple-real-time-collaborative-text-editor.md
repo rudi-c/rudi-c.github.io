@@ -73,7 +73,7 @@ Simultaneously, Ping puts in another kiwi, Pong removes the kiwi and Pang remove
 
 <center><img src="/images/2017/alchemy_kiwi2.jpg" width="500"/></center>
 
-The fact that both Pong and Pang both decided to remove a Kiwi from the bag at once is not a problem (although *jeez, Pong, Pang, why did you have to do that?*). Remember, operations are idempotent and the end result should just be that the kiwi got removed from the bag. The problem is that Ping has two kiwis in his bag (🥝🥝) when receiving the two DELETE(🥝) messages from Pong and Page so Ping deletes both kiwis 🥝🥝. In the meantime, Pong and Pang will end up with either one kiwi 🥝 or no kiwi 🥝 depending on whether ADD(🥝) or DELETE(🥝) arrived first.
+The fact that both Pong and Pang both decided to remove a Kiwi from the bag at once is not a problem (although *jeez, Pong, Pang, why did you have to do that?*). Remember, operations are idempotent and the end result should just be that the kiwi got removed from the bag. The problem is that Ping has two kiwis in his bag (🥝🥝) when receiving the two DELETE(🥝) messages from Pong and Pang so Ping deletes both kiwis 🥝🥝. In the meantime, Pong and Pang will end up with either one kiwi 🥝 or no kiwi 🥝 depending on whether ADD(🥝) or DELETE(🥝) arrived first.
 
 <center><img src="/images/2017/alchemy_kiwi3.jpg" width="500"/></center>
 
