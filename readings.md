@@ -140,3 +140,11 @@ _Bookmarks from the internet_
 **Boiling the Ocean, Incrementally - How Style Brought Rust and Servo to Firefox**. A discussion of the pragramtic decisions needed be made to achieve the monumental task of replacing a browser's rendering engine. <a>http://bholley.net/blog/2017/stylo.html</a>
 
 **Psychology v.s. the Graphics Pipeline**. How many cognitive psychology papers that involving timing might be wrong because of monitor refresh rates? <a>http://scattered-thoughts.net/blog/2017/12/11/psychology-vs-the-graphics-pipeline/</a>
+
+**Crashes, Hangs and Crazy Images By Adding Zero**. GPU compilers are so incredibly buggy. I've ran into these bugs too. <a>https://medium.com/@afd_icl/crashes-hangs-and-crazy-images-by-adding-zero-689d15ce922b</a>
+
+**How Discount Brokerages Make Money**. Helps understand the reality behind Robinhood which is getting so popular these days, and a lot of how money is really made in finance generally speaking. <a>https://www.kalzumeus.com/2019/6/26/how-brokerages-make-money/</a>
+
+**The Great Divide**. How the term "front-end developper" refers to two entirely separate groups of people, and how that's a great source of miscommunication. <a>https://css-tricks.com/the-great-divide/</a>
+
+**ooooops I guess we're full-stack developers now**. How abstractions and new tooling has made the "stack" shrink, and remaining developers responsible for learning the entire stack. <a>https://full-stack.netlify.com/</a>
