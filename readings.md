@@ -13,6 +13,8 @@ How To Win Friends And Influence People - Dale Carnegie
 
 1984 - George Orwell
 
+How Asia Works - Joe Studwell
+
 Things I've read
 ----------------
 
@@ -64,62 +66,14 @@ Political Order and Political Decay - Francis Fukuyama
 
 Sapiens - Yuval Noah Harari
 
+We Are The Nerds - Christine Lagorio-Chafkin
 
-Books that I want to read
--------------------------
-
-How Asia Works
-
-David and Goliath
-
-Worm
-
-Renegades of the Empire
-
-A Little History of the World
-
-The Art of War (if there's a nice cleaned up version somewhere)
-
-Thing Explainer: Complicated Stuff in Simple Words
-
-The Three-Body Problem
-
-The Dignitity of the Working Men
-
-Hillbilly Elegy: A Memoir of a Family and Culture in Crisis
-
-Unintended Consequences: How to Improve our Government, our Businesses, and our Lives
-
-Panic, Prosperity, and Progress: Five Centuries of History and the Markets
-
-The Rise of the West
-
-Nonviolent Communication
-
-Superforecasting
-
-The Jungle
-
-Powers of Mind
-
-Chimpanzee Politics: Power and Sex among Apes
-
-The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution
-
-Panic, Prosperity and Progress: Five Centuries of History and the Markets
-
-David and Goliath: Underdogs, Misfits, and the Art of Battling Giants
-
-Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future
-
-The Name of the Wind
-
-The Everything Store: Jeff Bezos and the Age of Amazon
+Speaking of books, I was also a reviewer for [Mastering Leap Motion](http://www.amazon.com/Mastering-Leap-Motion-Brandon-Sanders/dp/1783551399), for better or worse.
 
 Links
 -----
 
-Just starting this. If I'm going to bookmark nice things from the Internet, why not share it with everyone?
+_Bookmarks from the internet_
 
 **The Rise of Explorable Explanations**: On using interactive visualizations to explain things. <a>http://www.maartenlambrechts.be/the-rise-of-explorable-explanations/</a>
 
@@ -186,46 +140,3 @@ Just starting this. If I'm going to bookmark nice things from the Internet, why 
 **Boiling the Ocean, Incrementally - How Style Brought Rust and Servo to Firefox**. A discussion of the pragramtic decisions needed be made to achieve the monumental task of replacing a browser's rendering engine. <a>http://bholley.net/blog/2017/stylo.html</a>
 
 **Psychology v.s. the Graphics Pipeline**. How many cognitive psychology papers that involving timing might be wrong because of monitor refresh rates? <a>http://scattered-thoughts.net/blog/2017/12/11/psychology-vs-the-graphics-pipeline/</a>
-
-News/Magazines
---------------
-
-I periodically take a look at these.
-
-[Hacker News](https://news.ycombinator.com/) for a daily selection of interesting links relevant in the tech industry, and for being the only website where the comments on an article are occasionally more insightful than the article itself.
-
-[The Verge](http://theverge.com/) for an aggregation of tech news, as well as occasional random interesting articles about science, media, etc. Like Hacker News, but more like a regular news site.
-
-[Quartz](http://qz.com/) they have good non-tech articles.
-
-[Google News](https://news.google.com/) for most non-tech news stories.
-
-[Anandtech](http://www.anandtech.com/) occasionally when I'm in the mood to be a hardware geek.
-
-Blogs/Articles/Essays
----------------------
-
-[Coding Horror](http://blog.codinghorror.com/)
-
-[Joel on Software](http://www.joelonsoftware.com/) no longer active, but tons of timeless articles.
-
-[Paul Graham's Essays](http://www.paulgraham.com/articles.html)
-
-[The Architecture of Open Source Applications](http://aosabook.org/en/index.html)
-
-[TripleByte Blog](http://blog.triplebyte.com/) has interesting research on categorizing the strengths of different kinds of engineers and placing them where they fit best.
-
-[Dan Luu's Blog](http://danluu.com/)
-
-[Julia Evans' Blog](https://jvns.ca/)
-
-Misc
-----
-
-[XKCD](http://xkcd.com/)
-
-[PhD Comics](http://phdcomics.com/comics.php)
-
-A lot of Quora. I spend way too much time on that site.
-
-Speaking of books, I was also a reviewer for [Mastering Leap Motion](http://www.amazon.com/Mastering-Leap-Motion-Brandon-Sanders/dp/1783551399).
