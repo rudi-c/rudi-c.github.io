@@ -1,5 +1,5 @@
 ---
-title: Inside Figma: a case study on strict null checks
+title: Inside Figma - a case study on strict null checks
 date: 2020-12-17 12:00:02
 ---
 
