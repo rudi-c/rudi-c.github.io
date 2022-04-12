@@ -68,7 +68,11 @@ Sapiens - Yuval Noah Harari
 
 We Are The Nerds - Christine Lagorio-Chafkin
 
-Speaking of books, I was also a reviewer for [Mastering Leap Motion](http://www.amazon.com/Mastering-Leap-Motion-Brandon-Sanders/dp/1783551399), for better or worse.
+The Making of Asian America: A Histroy - Erika Lee
+
+Born a Crime - Trevor Noah
+
+Speaking of books, back in undergrad I reviewed [Mastering Leap Motion](http://www.amazon.com/Mastering-Leap-Motion-Brandon-Sanders/dp/1783551399), for better or worse.
 
 Links
 -----
