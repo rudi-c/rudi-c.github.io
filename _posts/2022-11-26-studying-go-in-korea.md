@@ -70,7 +70,7 @@ Funnily, I managed to get myself a “job” while there. They needed some extra
 
 ## Who were the other students?
 
-Most of the other students are this time were their country representatives for KPMC, and wanted to stay a few extra weeks in Korea before/after the tournament. There was only me and a Russian teenager who were not there for KPMC. The party grew quite large, at peak I think we were around 8 students. The mode was around 25-30 with the lowest being 14 and the oldest being in the 60s.
+Most of the other students this year were their country representatives for KPMC, and wanted to stay a few extra weeks in Korea before/after the tournament. There was only me and a Russian teenager who were not there for KPMC. The party grew quite large, at peak I think we were around 8 students. In terms of age, the mode was around 25-30 with the youngest being 14 and the oldest being in their 60s.
 
 Funnily, there was a significant French-speaking contingent there, between myself (from Quebec), the Canadian rep (also from Quebec), the French rep, the Belgian rep, a former BIBA student (also from Quebec) and some friends of BIBA (from France) who occasionally showed up so we spoke French a lot.
 
@@ -82,8 +82,8 @@ This gives a glimpse into the life of a baduk professional, not as those monstro
 
 Other than that, some notable moments involving recognizable names:
 
-- I got to play against [Choi Cheolhan](https://en.wikipedia.org/wiki/Choi_Cheol-han), who was the former #2 in Korea during the time of Lee Sedol. From my understanding, he was just being a dad that day and bringing his kid outside. But his son, also the strongest 5-year old in Korea, was actually about my level, so the teachers had us play against each other. I won, but I will almost certainly get crushed if I play him again in a few months. I guess that earned me a free a teaching game against Choi Cheolhan, which was quite lucky! Normally, it’s hard to get a game against the more famous players (or at least, it’s quite expensive).
-- At KPMC, there was a pair-go side tournament that anyone could play in (including the pros). I played with [Yoonyoung Kim](https://www.twitch.tv/kimyoonyoung), one of the few english-speaking baduk content producers, against Javier from Finland and Kenyi from Peru.
+- I got to play against [Choi Cheolhan](https://en.wikipedia.org/wiki/Choi_Cheol-han), who was the former #2 in Korea during the time of Lee Sedol. From my understanding, he was just being a dad that day and bringing his kid outside. But his son was the strongest 5-year old in Korea, and was actually about my level, so the teachers had us play against each other. I won, but I will almost certainly get crushed if I play him again in a few months. I guess that earned me a free a teaching game against Choi Cheolhan, which was quite lucky! Normally, it’s hard to get a game against the more famous players (or at least, it’s quite expensive).
+- At KPMC, there was a pair-go side tournament that anyone could play in (including the pros, referees, etc). I played with [Yoonyoung Kim](https://www.twitch.tv/kimyoonyoung), one of the few english-speaking baduk content producers, against Javier from Finland and Kenyi from Peru.
 - Robert van Zeijst, the Dutch representative and author of many Go books hung out with us at BIBA after the tournament.
 - Being around the KBA a lot, we saw notable people just pass by, like Lee Changho (former #1, ~1990-2005), Choi Jeong (current female #1), Byun Sangil (current #2). We didn’t see Shin Jinseo, but I did get a face mask and a cup with his face on it.
 - Lunch with Haewon Han and [Eunkyo Do](https://www.youtube.com/@mibellamiga) and learned more about their backgrounds as baduk pros.
