@@ -4,9 +4,9 @@ title: About
 
 <img src="/images/profile_pic.jpg" style="float: left; margin: 5px 15px 0px 0px;" width="150" />
 
-My name is Rudi, currently a full-time software engineer at [Figma](https://www.figma.com/) (we're [hiring](https://www.figma.com/careers/)!). I currently work in the infrastructure team on a framework for [serving real-time data](https://www.figma.com/blog/livegraph-real-time-data-fetching-at-figma/). I've also worked on many other areas of the design editor including product features, stability, and the plugin API.
+My name is Rudi, currently a full-time software engineer at [Figma](https://www.figma.com/) (we're [hiring](https://www.figma.com/careers/)!) based in NYC. I've worked on variety of areas including the design editor, product features, stability, frontend web infrastructure, the plugin API, [real-time data infrastructure](https://www.figma.com/blog/livegraph-real-time-data-fetching-at-figma/).
 
-Previously, I finished a degree in Computer Science at University of Waterloo. I have interned at Airbnb, Jane Street, Dropbox and Side Effects Software and was in the Recurse Center Summer 1 '17 batch. In this blog, I try to put words together in sentences such that they may be interesting and occasionally useful.
+Previously, I graduated with a degree in Computer Science at University of Waterloo. I have interned at Airbnb, Jane Street, Dropbox and Side Effects Software and was in the Recurse Center Summer 1 '17 batch. In this blog, I try to put words together in sentences such that they may be interesting and occasionally useful.
 
 <div class="rc-scout" style="height: 20px"></div>
 <script async defer src="https://www.recurse-scout.com/loader.js?t=034547b553d5c90c69cd181cc8edd7ed"></script>
