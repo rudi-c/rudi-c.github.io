@@ -18,6 +18,14 @@ How Asia Works - Joe Studwell
 Things I've read
 ----------------
 
+The Three-Body Problem - Cixin Liu
+
+Kim Jiyoung, Born 1982 - Cho Nam-joo
+
+The Master of Go - Yasunari Kawabata
+
+Tuesdays with Morrie - Mitch Albom
+
 Thinking, Fast and Slow - Daniel Kahneman
 
 Connected - Nicholas A. Christakis, James H. Fowler
