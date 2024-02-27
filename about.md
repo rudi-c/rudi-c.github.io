@@ -4,7 +4,7 @@ title: About
 
 <img src="/images/profile_pic.jpg" style="float: left; margin: 5px 15px 0px 0px;" width="150" />
 
-My name is Rudi, currently a full-time software engineer at [Arcol][https://www.arcol.io/) based in NYC. My professional interests are to bring the ideas of web-based collaborative software to improve professional tools.
+My name is Rudi, currently a full-time software engineer at [Arcol](https://www.arcol.io/) based in NYC. My professional interests are to bring the ideas of web-based collaborative software to improve professional tools.
 
 Previously, I worked at Figma for several years. I was approximately the 50th employee when I joined, and 10th most tenured by the time I left. I've worked on variety of areas including the design editor, product features, [stability](https://www.figma.com/blog/behind-the-feature-autosave/), [frontend web infrastructure](https://www.figma.com/blog/inside-figma-a-case-study-on-strict-null-checks/), the [plugin API](https://www.figma.com/blog/how-we-built-the-figma-plugin-system/), [real-time data infrastructure](https://www.figma.com/blog/livegraph-real-time-data-fetching-at-figma/).
 
