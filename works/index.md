@@ -7,7 +7,7 @@ title: Works
 <table class="project-table">
   <tr>
     <td></td>
-    <td><h2>Alchemy Book</h2></td>
+    <td><h2>Alchemy Book (2017)</h2></td>
   </tr>
   <tr>
     <td class="image-col">
@@ -24,7 +24,7 @@ title: Works
   </tr>
   <tr>
     <td></td>
-    <td><h2>Stressed Syllables</h2></td>
+    <td><h2>Stressed Syllables (2017)</h2></td>
   </tr>
   <tr>
     <td class="image-col">
@@ -47,7 +47,7 @@ title: Works
 <table class="project-table">
   <tr>
     <td></td>
-    <td><h2>Fractal Photographer</h2></td>
+    <td><h2>Fractal Photographer (2012)</h2></td>
   </tr>
   <tr>
     <td class="image-col">
@@ -66,7 +66,7 @@ title: Works
 
   <tr>
     <td></td>
-    <td><h2>Fractal Photographer 3D</h2></td>
+    <td><h2>Fractal Photographer 3D (2013)</h2></td>
   </tr>
   <tr>
     <td class="image-col">
@@ -84,7 +84,7 @@ title: Works
 
   <tr>
     <td></td>
-    <td><h2>Procedural Terrain</h2></td>
+    <td><h2>Procedural Terrain (2016)</h2></td>
   </tr>
   <tr>
     <td class="image-col">
@@ -102,7 +102,7 @@ title: Works
 
   <tr>
     <td></td>
-    <td><h2>Smart Resize</h2></td>
+    <td><h2>Smart Resize (2014)</h2></td>
   </tr>
   <tr>
     <td class="image-col">
@@ -120,7 +120,7 @@ title: Works
 
   <tr>
     <td></td>
-    <td><h2>Perlin Noise Range</h2></td>
+    <td><h2>Perlin Noise Range (2017)</h2></td>
   </tr>
   <tr>
     <td class="image-col">
@@ -138,7 +138,7 @@ title: Works
 
   <tr>
     <td></td>
-    <td><h2>Influence Game and Multi Column Swiss Tournament</h2></td>
+    <td><h2>Influence Game and Multi Column Swiss Tournament (2012)</h2></td>
   </tr>
   <tr>
     <td class="image-col">
@@ -156,7 +156,7 @@ title: Works
 
   <tr>
     <td></td>
-    <td><h2>Mandelbox370</h2></td>
+    <td><h2>Mandelbox370 (2014)</h2></td>
   </tr>
   <tr>
     <td class="image-col">
@@ -174,7 +174,7 @@ title: Works
 
   <tr>
     <td></td>
-    <td><h2>Harmonics TD</h2></td>
+    <td><h2>Harmonics TD (2009)</h2></td>
   </tr>
   <tr>
     <td class="image-col">
@@ -192,7 +192,7 @@ title: Works
 
   <tr>
     <td></td>
-    <td><h2>RPG Level Design</h2></td>
+    <td><h2>RPG Level Design (2005-2009)</h2></td>
   </tr>
   <tr>
     <td class="image-col">
@@ -201,7 +201,7 @@ title: Works
         </a>
     </td>
     <td>
-        Like many other programmers, I first got into computer science because I wanted to make games. More specifically, my entry point was a software called RPG Maker XP. I was particularly good at designing maps - it's harder than it looks! In RMXP lingo, that was called "mapping", and I did some independent contract work. This is really old stuff, 2005-2009.
+        Like many other programmers, I first got into computer science because I wanted to make games. More specifically, my entry point was a software called RPG Maker XP. I was particularly good at designing maps - it's harder than it looks! In RMXP lingo, that was called "mapping", and I did some independent contract work.
         <p>
         <a href="/works/rpg-level-design.html">[ Image gallery ]</a>
         </p>
@@ -211,8 +211,6 @@ title: Works
 
 ---------------------------------------
 
-**Making apps for Windows 8 [Part I](http://www.codeproject.com/Articles/485088/Making-apps-for-Windows-8-Part-I-A-Simple-Calculat) and [Part II](http://www.codeproject.com/Articles/485101/Making-apps-for-Windows-8-Part-II-Little-Notes-sam)** : Tutorial I have written for people interested in getting started with Windows 8 apps.
-
 [A interview tips video I made for fun](https://www.youtube.com/watch?v=7mR9PJDjRjo)
 
 ---------------------------------------
@@ -221,7 +219,7 @@ My [resume upon graduation](/files/documents/CV-RudiChen-April2017.pdf) for refe
 
 ---------------------------------------
 
-A transformer model I made for the hierarchical modelling assignment of Graphics class.
+A transformer model I made for the hierarchical modelling assignment of Graphics class (2016).
 
 <center>
   <img src="/images/jetfire.gif" />
