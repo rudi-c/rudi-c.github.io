@@ -22,6 +22,7 @@ title: Works
         </p>
     </td>
   </tr>
+  
   <tr>
     <td></td>
     <td><h2>Stressed Syllables (2017)</h2></td>
@@ -37,6 +38,24 @@ title: Works
         are. very useful for non-native speakers or for preparing presentations.
         <p>
         <a href="https://github.com/rudi-c/stressed-syllables">[ Github page ]</a>
+        </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td><h2>Perlin Noise Range (2017)</h2></td>
+  </tr>
+  <tr>
+    <td class="image-col">
+        <a href="https://github.com/rudi-c/perlin-range">
+            <img width="200" src="/images/works/perlin.png" />
+        </a>
+    </td>
+    <td>
+        Script to find the largest value in Perlin Noise and in the gradient of Perlin Noise using automatic differentiation.
+        <p>
+        <a href="https://github.com/rudi-c/perlin-range">[ GitHub page ]</a>
         </p>
     </td>
   </tr>
@@ -114,24 +133,6 @@ title: Works
         Created as part of the <a href="http://developer.nokia.com/futurecapture/">Nokia Future Capture</a> hackathon in Sweden, this app won first place and was presented to <a href="http://www.youtube.com/watch?v=QEZZ44ncnWI">journalists worldwide at Nokia World 2013, Abu Dhabi</a>.
         <p>
         <a href="/works/smart-resize.html">[ Project page ]</a>
-        </p>
-    </td>
-  </tr>
-
-  <tr>
-    <td></td>
-    <td><h2>Perlin Noise Range (2017)</h2></td>
-  </tr>
-  <tr>
-    <td class="image-col">
-        <a href="https://github.com/rudi-c/perlin-range">
-            <img width="200" src="/images/works/perlin.png" />
-        </a>
-    </td>
-    <td>
-        Script to find the largest value in Perlin Noise and in the gradient of Perlin Noise using automatic differentiation.
-        <p>
-        <a href="https://github.com/rudi-c/perlin-range">[ GitHub page ]</a>
         </p>
     </td>
   </tr>
