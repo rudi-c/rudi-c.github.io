@@ -22,6 +22,6 @@ Twitter/"X": **@digitalfreepen** (not active)
 
 <a href="https://github.com/rudi-c" target="_blank">[ My Github ]</a>
 
-<a href="https://www.youtube.com/user/Advecticity" target="_blank">[ My YouTube Channel ]</a>
+<a href="https://www.youtube.com/user/rudi-qc" target="_blank">[ My YouTube Channel ]</a>
 
 
